@@ -1,0 +1,41 @@
+ <div class="panel ng-scope default-controller" ng-controller="MenuManagementController" ng-show="menuManage">
+    <div class="default-container">
+        <div class="menu-management-container-left">
+            <div style="display:table-cell;">
+                SECOND TREE
+                <div class="menu-management-nav-cell"
+                     data-angular-treeview="true"
+                     data-tree-id="menu"
+                     data-tree-model="menuList"
+                     data-node-id="id"
+                     data-node-label="langSwitch"
+                     data-node-children="children">
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-management-container-right">
+            <div class="container-header" data-translate="devplatformApp.menuManagement.menuManagement"></div>
+            <div class="wrapper-md">
+                <div class="op-div button-block">
+                    <div component-model ng-click="newMenu()" class="button-op"
+			             component-form-englishName="menuManage"
+			             component-englishName="addBtn"
+			             component-dataName="devplatformApp.menuManagement.newMenu"
+			             component-icon-class="glyphicon glyphicon-plus">
+			        </div>
+                    <div component-model ng-click="deleteMenus()" class="button-op"
+			             component-form-englishName="menuManage"
+			             component-englishName="deleteBtn"
+			             component-dataName="devplatformApp.menuManagement.delMenu"
+			             component-icon-class="glyphicon glyphicon-minus">
+			         </div>
+        		</div>
+        		<div class="table-view-defalut" style="top: 80px">
+				<div class="table-view" tables-model2
+					tables-data-model="tablesConfig"></div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,1 @@
+"use strict";(function(){var b,d;b=hljs.configure;hljs.configure=function a(e){var f=e.highlightSizeThreshold;hljs.highlightSizeThreshold=f===+f?f:null;b.call(this,e)};d=hljs.highlightBlock;hljs.highlightBlock=function c(f){var g=f.innerHTML;var e=hljs.highlightSizeThreshold;if(e==null||e>g.length){d.call(hljs,f)}}})();

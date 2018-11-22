@@ -1,0 +1,1 @@
+(function(a){a.module("oc.lazyLoad").config(["$provide",function(b){b.decorator("$ocLazyLoad",["$delegate","$q",function(d,c){d.cssLoader=function(g,h,f){var e=[];a.forEach(g,function(i){e.push(d.buildElement("css",i,f))});c.all(e).then(function(){h()},function(i){h(i)})};d.cssLoader.ocLazyLoadLoader=true;return d}])}])})(angular);

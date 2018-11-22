@@ -1,0 +1,1 @@
+if(typeof define!=="function"){var requirejs=require("requirejs")}define([],function(){return function(){var d=requirejs.s.contexts;for(var b in d){if(d.hasOwnProperty(b)){var c=d[b].defined;for(var a in c){if(c.hasOwnProperty(a)&&!a.match(/cleanup|sinon/)){requirejs.undef(a)}}}}}});

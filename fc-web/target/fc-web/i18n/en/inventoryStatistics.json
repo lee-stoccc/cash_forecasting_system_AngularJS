@@ -1,0 +1,10 @@
+{
+	"inventoryStatistics":{
+		"termNo":"Terminal ID",
+	    "branchNo":"Branch Code",
+	    "bankName":"Branch Name",
+	    "regionName":"District",
+	    "replenishDate":"UseDate",
+	    "termType":"Terminal Type"
+	}
+}

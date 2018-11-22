@@ -1,0 +1,21 @@
+{   
+    	"termMonitor":{
+			"tempName": "设备监控数据模板",
+			"status": "运行状态",
+			"date": "监控时间",
+			"allAmount": "实时总余额",
+			"amount": "实时余额(张数)", 
+			"dateMsg": "输入的天数是{{day}},不能超14天", 
+			"formError":{
+				"emptyCusTermNo":"没有填设备自定义编号",
+				"invalidCusTermNo":"无效的设备自定义编号",
+				"invalidDenomination":"无效的面额填了金额",
+				"emptyStatus":"没有选择状态",
+				"emptyMonitorTime":"没有填监控时间",
+				"fileFormatError":"不是Excel文件",
+				"emptyData":"空文件或没数据",
+				"importError":"导入失败，请联系管理员",
+				"currencyMismatch":"币种和面额字段没有一一对应写全"
+			}
+		 }
+}

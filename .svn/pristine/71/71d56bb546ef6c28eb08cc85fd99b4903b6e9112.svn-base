@@ -1,0 +1,6 @@
+/*!
+ * angular-translate - v2.11.1 - 2016-07-17
+ * 
+ * Copyright (c) 2016 The angular-translate team, Pascal Precht; Licensed MIT
+ */
+(function(a,b){if(typeof define==="function"&&define.amd){define(["messageformat"],function(c){return(b(c))})}else{if(typeof exports==="object"){module.exports=b(require("messageformat"))}else{b(MessageFormat)}}}(this,function(a){b.$inject=["$translateSanitization","$cacheFactory","TRANSLATE_MF_INTERPOLATION_CACHE"];angular.module("pascalprecht.translate").constant("TRANSLATE_MF_INTERPOLATION_CACHE","$translateMessageFormatInterpolation").factory("$translateMessageFormatInterpolation",b);function b(c,h,e){var g={},i=h.get(e),f=new a("en"),d="messageformat";if(!i){i=h(e)}i.put("en",f);g.setLocale=function(j){f=i.get(j);if(!f){f=new a(j);i.put(j,f)}};g.getInterpolationIdentifier=function(){return d};g.useSanitizeValueStrategy=function(j){c.useStrategy(j);return this};g.interpolate=function(j,o){o=o||{};o=c.sanitize(o,"params");var n=i.get("mf:"+j);if(!n){for(var k in o){if(o.hasOwnProperty(k)){var m=parseInt(o[k],10);if(angular.isNumber(m)&&(""+m)===o[k]){o[k]=m}}}n=f.compile(j);i.put("mf:"+j,n)}var l=n(o);return c.sanitize(l,"text")};return g}b.displayName="$translateMessageFormatInterpolation";return"pascalprecht.translate"}));

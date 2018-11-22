@@ -1,0 +1,48 @@
+<div class="panel ng-scope re-panel">
+    <form class="form-horizontal form-inline " name="editComponent" role="component" novalidate ng-submit="saveComponent()">
+        <div class="modal-header">
+            <h4 class="modal-title" data-translate="devplatformApp.sysComponent.home.createOrEditLabel"></h4>
+        </div>
+        <div class="modal-body">
+            <jhi-alert-error></jhi-alert-error>
+            <div class="col-md-12 info-group-title">
+                <div class="col-sm-11">
+                    <div class="col-sm-12 col-info">
+                        <div class="form-group m-n" ng-show="sysComponent.id">
+                            <input type="hidden" class="form-control" id="id" name="id" ng-model="componentId" readonly />
+                            <input type="hidden" class="form-control" name="formId" ng-model="formId" readonly />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-info">
+                        <div class="form-group m-n" id="componentNameDiv">
+                            <label class="control-label" data-translate="devplatformApp.sysComponent.componentName" for="field_componentName">控件名称</label>
+                            <input class="form-control" ng-change="checkComponentName()" maxlength="10" required="required" name="componentName" id="field_componentName" ng-model="sysComponent.componentName"/> <span class="span_nec">*</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-info">
+                        <div class="form-group m-n" id="englishNameDiv">
+                            <label class="control-label" data-translate="devplatformApp.sysComponent.englishName" for="field_englishName">英语名称</label>
+                            <input class="form-control" ng-change="checkEnglishName()" maxlength="20" required="required" name="englishName" id="field_englishName" ng-model="sysComponent.englishName"/> <span class="span_nec">*</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-info">
+                        <div class="form-group m-n">
+                            <label class="control-label" data-translate="devplatformApp.sysComponent.delFlag">状态</label>
+                            <input type="radio"  name="visible" id="field_visible1"  ng-model="sysComponent.visible" value="1"  required="required"/><span data-translate="devplatformApp.sysComponent.select.enabled"></span>
+                            <input type="radio"  name="visible" id="field_visible2"  ng-model="sysComponent.visible" value="0" /><span data-translate="devplatformApp.sysComponent.select.disabled"></span>
+                            <span class="span_nec">*</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" ng-click="closeThisDialog()" data-dismiss="modal" class="btn btn-danger">
+                <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+            </button>
+            <button type="submit" ng-disabled="editComponent.$invalid || isSaving" class="btn btn-primary">
+                <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+            </button>
+        </div>
+    </form>
+</div>

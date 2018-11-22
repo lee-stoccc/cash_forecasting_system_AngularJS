@@ -1,0 +1,249 @@
+{
+    "global": {
+     	"timeMsgOverSevenDays":"请选择七天内的数据进行查询",
+     	"pleaseChoiceExplorerDate":"请选择导出的时间",  
+    	"noPlanId":"该设备暂无计划",
+    	"pleaseSelect":"--请选择--",
+    	"enabled":"启用",
+    	"disabled":"禁用",
+    	"go":"查询",
+    	"reset":"重置",
+    	"saveSuccess":"保存成功",
+    	"importSuccess":"导入成功",
+    	"uploadSuccess":"上传成功",
+   		"saveFailure":"保存失败",
+   		"deleteSuccess":"删除成功",
+   		"deleteFailure":"删除失败",
+   		"updated":"更新成功",
+   		"created":"创建成功",
+   		"notice":"提示",
+        "noPrivilege": "没有此页面权限",
+        "mine": "个人中心",
+        "editPassword": "修改密码",
+        "logout": "退出登录",
+        "uploadFile": "上传模板",
+        "downloadFile": "下载模板",
+        "selectFile": "请选择文件上传",
+        "selectFileUrl": "请选择文件路径",
+        "selectGoUrl": "请选择跳转路径",
+        "batchDelete": "批量删除",
+        "chooseOneEdit": "请选择要编辑的一条记录!",
+        "chooseOneData": "请选择一条数据!",
+        "selectDelete": "请选择要删除的记录!",
+        "selectEdit": "请选择要编辑的数据!",
+        "yes": "是",
+        "no": "否",
+        "now": "现在",
+        "today": "今天",
+        "clear": "清空",
+        "time": "时间",
+        "close": "关闭",
+        "inputTermNo":"请输入设备编号",
+        "inputDate":"请选择日期",
+        "termName":"设备名称",
+    	"averageValue":"平均值",
+       
+       	"timeMsg1": "起始日期需小于截止日期",
+	   	"timeMsg2": "截止日期需大于起始日期",
+	   	"timeMsg3": "日期需大于等于当前日期",
+       
+        "systemError": "系统异常,请联系管理员",
+        "browsehappy": "您目前使用<strong>过于老旧</strong>的浏览器, 建议您<a href=\"http://browsehappy.com/?locale=en\">升级浏览器</a>让您有更佳的上网体验.",
+        "dialog":{
+    		"errorMsg":"",
+    		"closeConfirm": "编辑中是否确认离开？\n\n请确认！"
+    	},
+        "menu": {
+            "home": "首页",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "数据",
+                "actActivity": "Act Activity",
+                "actUser": "用户查询",
+                "actActivityUser": "Act Activity User",
+                "actType": "活动类型",
+                "memberType": "会员类型",
+                "sysDict": "数据字典",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account": {
+                "main": "账号",
+                "settings": "设置",
+                "password": "密码",
+                "sessions": "会话",
+                "login": "登录",
+                "logout": "退出",
+                "register": "注册"
+            },
+            "admin": {
+                "main": "管理",
+                "userManagement": "用户管理",
+                "tracker": "追踪使用者",
+                "metrics": "资源监控",
+                "health": "服务状态",
+                "configuration": "配置",
+                "logs": "日志",
+                "audits": "审核",
+                "apidocs": "API",
+                "database": "数据库",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "语言"	
+        },
+        "form": {
+            "username": "账号",
+            "username.placeholder": "您的账号",
+            "newpassword": "新密码",
+            "newpassword.placeholder": "您的新密码",
+            "confirmpassword": "新密码确认",
+            "confirmpassword.placeholder": "确认您的新密码",
+            "email": "电子邮件",
+            "email.placeholder": "您的电子邮件"
+        },
+        "messages": {
+        	"deleteSuccess":"删除成功",
+        	 "forecastSuccess":"预测成功",
+            "info": {
+                "authenticated": "如果您要<a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">登录</a>, 您可以使用默认账号:<br/>- 管理员 (账号=\"admin\"和密码=\"admin\") <br/>- 普通用户 (账号=\"user\"和密码=\"user\").",
+                "register": "您还没有账号？<a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">注册一个新账号</a>"
+            },
+            "deleteConfirm":"您确定要删除它吗？",
+            
+            "saveSuccess":"保存成功!",
+            "error": {
+                "dontmatch" : "您输入的密码和确认密码不匹配!"
+            },
+            "validate": {
+      		  	"notNull":"不能为空",
+      		  	"choose":"至少选择",
+      		  	"item":"项",
+      			"select":"请选择",
+      			"inputNum":"需输入数字",
+      			"least":"最少",
+      			"more":"最多",
+      			"chars":"个字符",
+      			"char":"字符",
+      			"number":"数字",
+      			"integer":"整数",
+      			"plus":"正数",
+      			"plusAndZero":"正整数",
+      			"letter":"字母",
+      			"letterAndNum":"字母和数字",
+      			"userEmail":"邮箱",
+      			"telPhone":"手机号",
+      			"idCard":"身份证",
+      			"Chinese":"中文",
+      			"url":"链接",
+      			"date":"日期",
+      			"pleaseInput":"请输入",
+      			"format":"的格式",
+      			"inputRegular":"请输入正则表达式的格式",
+      			"notSame":"两次输入不一致",
+          		 "inputEnAndNum":"只能输入英文和数字",
+          		 "inputEnAndNumAndsolid":"只能输入英文和数字和'.'",
+                "newpassword": {
+                    "required": "您的密码是必填项.",
+                    "minlength": "您的密码长度至少要有5个字符",
+                    "maxlength": "您的密码长度不能超过50个字符",
+                    "strength": "密码强度:"
+                },
+                "confirmpassword": {
+                    "required": "您的确认密码是必填项.",
+                    "minlength": "您的确认密码长度至少要有5个字符",
+                    "maxlength": "您的确认密码长度不能超过50个字符"
+                },
+                "email": {
+                    "required": "您的电子邮件是必填项.",
+                    "invalid": "您的电子邮件格式格式不正确.",
+                    "minlength": "您的电子邮件长度至少要有5个字符",
+                    "maxlength": "您的电子邮件长度不能超过50个字符"
+                }
+            }
+        },
+        "field": {
+            "id" : "ID"
+        },
+        "ribbon": {
+            "dev":"Development"
+        },
+        "showing": "显示",
+        "items": "项",
+        "of": "项，共",
+        "item-count": "Showing {{first}} - {{second}} of {{total}} items."
+    },
+    "entity": {
+        "action": {
+            "addblob": "增加 BLOB",
+            "addimage": "增加图片",
+            "back": "返回",
+            "cancel": "取消",
+            "delete": "删除",
+            "detail": "详情",
+            "edit": "编辑",
+            "add": "新增",
+            "addDevice": "添加设备",
+            "signManage":"签到管理",
+            "viewActUser":"报名用户",
+            "publish":"发布",
+            "unShelve":"下架",
+            "remove":"移除",
+            "open": "打开",
+            "save": "保存",
+            "view": "查看",
+            "preview": "预览",
+            "qrcode": "二维码",
+            "confirm": "确认",
+            "downloadQrcode": "下载二维码",
+            "countSign": "签到统计",
+            "operation": "操作",
+            "sign": "签到",
+            "disable": "禁用",
+            "enable": "启用",
+            "search": "查询",
+            "reset": "重置",
+            "export": "导出",
+            "import": "导入"
+        },
+        "detail": {
+            "field": "字段",
+            "value": "值"
+        },
+        "delete": {
+            "title": "确认删除"
+        },
+        "validation": {
+            "required": "本字段不能为空.",
+            "minlength": "本字段最短长度为 {{min}} 个字符.",
+            "maxlength": "本字段最大长度为 {{max}} 个字符.",
+            "min": "本字段不能小于 {{min}}.",
+            "max": "本字段不能大于 {{max}}.",
+            "minbytes": "本字段不少于 {{min}} 字符.",
+            "maxbytes": "本字段不多余 {{max}} 字符.",
+            "pattern": "本字段必须符合模式 {{pattern}}.",
+            "number": "本字段必须为数字.",
+            "datetimelocal": "本字段必须为日期和时间."
+        }
+    },
+    "error": {
+        "internalServerError": "Internal server error",
+        "server.not.reachable": "服务器无法访问",
+        "url.not.found": "Not found",
+        "NotNull": "域 {{fieldName}} 不能为空!",
+        "Size": "域 {{fieldName}} 不满足最大/最小值限制!",
+        "userexists": "该用户名已存在!",
+        "emailexists": "该邮箱已被使用!",
+        "idexists": "新建的 {{entityName}} 不能包含ID",
+        "errorMsg": "系统错误，请联系管理员"
+    },
+    
+    "warningInformation":{
+		"networkName":"网点名称",
+		"termNo":"设备编号",
+		"realTimeBalance":"实时余额",
+		"runningState":"运行状态",
+		"monitoringTime":"监控时间"
+	},
+     
+    "footer": "这里是页脚",
+    "maxrange":"超出最大范围"
+}

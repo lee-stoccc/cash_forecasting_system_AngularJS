@@ -1,0 +1,11 @@
+{
+    "devplatformApp": {
+        "skip" : {
+            "home": {
+                "title": "页面跳转"
+            },
+            "secondAfterSkip": "秒后自动跳转……",
+            "operateSuccess":"操作成功！"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{   
+    	"detailTitle":"详情页面",
+    	"bankInfo":{
+            "title": "编辑银行信息",
+			"bankNo": "银行编号", 
+			"bankName": "银行名称",
+			"parentBankName": "上级银行名称",
+			"headquarter": "银行总行",
+			"firstBranch": "一级分行",
+			"secondBranch": "二级分行",
+			"branch": "支行",
+			"status": "状态" ,
+			"chooseOneAdd": "新增只能选择一个上级银行",
+			"deleteConfirm": "删除会把子银行一起删除，确定删除？",
+			"formError":{
+				"duplicateBankNo":"重复的编号",
+				"duplicateBankName":"重复的银行名称",
+				"overflowLevel":"超出层级上限",
+				"duplicateSecondBranch":"重复的二级分行",
+				"duplicateHeadquarter":"重复的总行",
+				"requiredSecondBranch":"必须先填二级分行",
+				"requiredFirstBranch":"必须先填一级分行",		
+				"cannotDelete":"已有设备的银行不可被删除"
+				}  
+			}
+}

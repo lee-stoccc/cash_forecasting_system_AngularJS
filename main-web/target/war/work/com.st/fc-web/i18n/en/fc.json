@@ -1,0 +1,30 @@
+{
+    "menu": {
+    	"privilegeManage":"Privilege",
+        "baseSetting":"Base Setting",
+        "resourceMessage":"Resource Message",
+        "cusRegion": "CusRegion",
+        "holiday": "Holiday Setting",
+        "bankInfo": "Bank Management",
+        "bankRule":"Bank Rule",
+        "termInfo": "Terminal Setting",
+        "forecastPlan": "Forecast Plan",
+        "forecastReportform":"Forecast Report Form",
+        "processData": "Process Data",  
+        "termMonitorData": "Terminal Monitoring",
+        "dailyUsing": "Daily Using",
+        "castData": "Replenish Data",
+        "returnData": "Return Data",
+        "eventManagement":"Event Setting",
+        "reportManagement":"Report Management",
+        "cashUseRate":"Cash Use Rate",
+        "cashGuaranteeRate":"Cash Guarantee Rate",
+        "inventoryStatistics":"Inventory Statistics"
+    },
+     "privilege": {
+        "mine": "Personal center",
+        "editPassword": "Edit Password",
+        "logout": "Log out",
+        "title": "Cash Intelligent Forecasting System "
+        }
+}

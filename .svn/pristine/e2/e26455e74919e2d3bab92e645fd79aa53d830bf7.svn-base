@@ -1,0 +1,91 @@
+<!-- <link rel="stylesheet" href="privilege/css/user/user-dialog.css">
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+    <div class="configuration-container">
+        <div class="configuration-container-left">
+            <div style="display:table-cell;width:210px;height:600px">
+                SECOND TREE
+                <div class="configuration-nav-tree"
+                     data-angular-treeview="true"
+                     data-tree-id="role"
+                     data-tree-model="roleList"
+                     data-node-checkbox="checked"
+                     data-node-id="id"
+                     data-node-label="menuName"
+                     data-node-children="children">
+                </div>
+            </div>
+        </div>
+
+        <div class="configuration-container-right">
+            <div class="configuration-header" data-translate="devplatformApp.roleManagerConfiguration.configTitle"></div>
+
+            <div class="right-container">
+                <div class="right-container-item">
+                    <div class="configuration-header" data-translate="devplatformApp.roleManagerConfiguration.configForm"></div>
+                    <div class="table-responsive">
+                        <div class="table-content configuration-table">
+                            <table class="table table-th-border">
+                                <thead>
+                                <tr class="table-title table-th-border" jh-sort="predicate" ascending="reverse"
+                                    callback="transition()">
+                                    <th class="td-center table-th-border-20"><input type="checkbox" ng-model="checked_All_Form" ng-click="checkedAllForm()"></th>
+                                    <th class="td-center table-th-border-50" data-translate="devplatformApp.roleManagerConfiguration.formName"></th>
+                                    <th class="td-center table-th-border-30" data-translate="devplatformApp.roleManagerConfiguration.state"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="form in formList track by form.id">
+                                    <td class="td-center table-th-border-20"><input type="checkbox" ng-model="form.checked"
+                                                                                    ng-click="checkedForm(form.id,form.menuId,form.checked)"></td>
+                                    <td class="td-center table-th-border-50">
+                                        <button type="submit" class="btn btn-table-warning btn-sm btn-op btn-intable"
+                                            ng-click="selectComponent(form.id)">
+                                            <span>{{form.formName}}</span>
+                                        </button>
+                                        </a></td>
+                                    <td class="td-center table-th-border-30">{{form.visible=="1"?"可见":"不可见"}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-container-item">
+                    <div class="configuration-header" data-translate="devplatformApp.roleManagerConfiguration.configBtn"></div>
+                    <div class="table-responsive">
+                        <div class="table-content configuration-table">
+                            <table class="table table-th-border">
+                                <thead>
+                                <tr class="table-title table-th-border" jh-sort="predicate" ascending="reverse"
+                                    callback="transition()">
+                                    <th class="td-center table-th-border-10"><input type="checkbox" ng-model="checked_All_Component" ng-click="checkedAllComponent()"></th>
+                                    <th class="td-center table-th-border-60" data-translate="devplatformApp.roleManagerConfiguration.btnName"></th>
+                                    <th class="td-center table-th-border-30" data-translate="devplatformApp.roleManagerConfiguration.state"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="component in componentList track by component.id">
+                                    <td class="td-center table-th-border-10"><input type="checkbox" ng-model="component.checked"
+                                                                                    ng-click="checkedComponent(component.formId,component.checked)"></td>
+                                    <td class="td-center table-th-border-60">{{component.componentName}}</td>
+                                    <td class="td-center table-th-border-30">{{component.visible=="1"?"可见":"不可见"}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-container-footer">
+                <div>
+                    <button class="btn btn-info pull-left" type="submit"
+                            data-translate="devplatformApp.roleManagerConfiguration.save" ng-click="saveRoleMenu()"></button>
+                    <button class="btn btn-info pull-left" data-translate="devplatformApp.roleManagerConfiguration.back"
+                            ng-click="clear(false)"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ -->

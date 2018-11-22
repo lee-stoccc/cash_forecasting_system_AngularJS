@@ -1,0 +1,60 @@
+{
+    "devplatformApp": {
+        "sysRole" : {
+            "home": {
+                "createLabel": "Create a new Sys Role",
+                "createOrEditLabel": "Create or edit a Sys Role",
+                "roleConfiguration":"Role Configuration"
+            },
+            "created": "A new Sys Role is created with identifier {{ param }}",
+            "updated": "A Sys Role is updated with identifier {{ param }}",
+            "deleted": "A Sys Role is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sys Role {{ id }}?"
+            },
+            "detail": {
+                "title": "Sys Role"
+            },
+            "roleNo": "Role No",
+            "roleName": "Role Name",
+            "description": "Description",
+            "delFlag": "DelFlag",
+            "createBy": "Create By",
+            "createAt": "Create At",
+            "lastUpdateBy": "Last Update By",
+            "lastUpdateAt": "Last Update At",
+            "sysAdmin": "Sys Admin",
+            "operation":"Operation",
+            "configuration":"Configuration",
+            "enterName":"Please Enter Name",
+            "enterNo":"Please Enter No",
+            "enterDescription":"Please Enter Description",
+            "inquire": "inquire",
+            "reset": "reset",
+            "createRole": "Create A Role",
+            "deleteRole": "Delete Roles",
+            "operation": "operation",
+            "assignUser": "Assign User",
+            "select": {
+	            	"noValue": "--select--",
+	            	"enabled": "enabled",
+	            	"disabled": "disabled"
+	        },
+	        "selectOne": "Please select at least one data to be operated again!",
+            "delDisabled": "You can only delete forbidden data.",
+            "delConfirm": "Are you sure you want to delete the selected roles? \n\n please confirm!",
+            "enableConfirm": "Are you sure you want to enable this role? \n\n please confirm!",
+            "disableConfirm": "Are you sure you want to disable this role? \n\n please confirm!",
+            "selectUser": "Please select the user",
+            "userName": "userName",
+            "department": "department",
+            "codeExists": "This number already exists. Please re-enter it",
+            "regular": "Numbers can only be letters and numbers, and the length is 3 to 10",
+            "messages": {
+            	"error": {
+            		"repeatRoleNo": "Role number repetition"
+            	}
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.warningInfo_view{
+	position:fixed;
+	display: flex;
+    flex-direction: column;
+	top:10%;
+	bottom:10%;
+	left:8%;
+	right:8%;
+	min-width:800px;
+	min-height:600px;
+}
+
+.ngdialog-content{
+ 	position:relative
+}
+.ngdialog-close{
+	position:fixed;
+	right:7.5%;
+	top:10%;
+	font-size:22px;
+}
+.warningInfo{
+	marign:0;
+	padding:0;
+}
+
+.warningInfo-table-view{
+	display: flex;
+	flex:1;
+}

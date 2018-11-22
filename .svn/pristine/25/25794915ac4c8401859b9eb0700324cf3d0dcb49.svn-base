@@ -1,0 +1,28 @@
+{
+    	"detailTitle":"Detail",
+        "bankInfo" : {
+        	"CR":"CR",
+         	"batchEdit": "Batch Edit",
+             "title": "Edit BankInfo",
+			"bankNo": "BankNo",
+			"bankName": "Branch Name",
+			"parentBankName": "Super Bank Name",
+			"headquarter": "Headquarter",
+			"firstBranch": "FirstBranch",
+			"secondBranch": "SecondBranch",
+			"branch": "Branch",
+			"status": "Status",  
+			"chooseOneAdd": "Only select one super bank",  
+			"deleteConfirm": "Deleting these banks and folders will delete all of their sub banks,Are you sure you want to delete all of the banks?",   
+			"formError":{
+				"duplicateBankNo":"The Bank.NO exist",
+				"duplicateBankName":"The bank exist",
+				"overflowLevel":"Over flow Level",
+				"duplicateSecondBranch":"The second-level branch exist",
+				"duplicateHeadquarter":"Headquarter exist",
+				"requiredSecondBranch":"The second-level branch do not empty",
+				"requiredFirstBranch":"The second-level branch exist do not empty",
+				"cannotDelete":"Can not delete the bank because of exists devices"
+			}
+		}
+}

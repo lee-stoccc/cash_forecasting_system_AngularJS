@@ -1,0 +1,36 @@
+<!-- <link rel="stylesheet" href="privilege/css/act-activity-preview.css" type="text/css"/>
+<link rel="stylesheet" href="privilege/css/user/user-editPassword.css" type="text/css"/>
+<form class="form-horizontal form-inline" name="editForm" role="form" novalidate ng-submit="save()">
+    <div class="Activity_Detail_Main" >
+        <div  align="center" class="code-title" ng-bind-html="title"></div>
+        <div class="col-sm-12 col-info">
+            <div class="form-group m-n">
+                <label class="control-label" data-translate="devplatformApp.user.oldPassword" for="field_oldPassword">oldPassword</label>
+                <input type="password" class="form-control" ng-change="checkOldPassword()" class="" required="required" name="oldPassword" id="field_oldPassword" ng-model="editParams.oldPassword"/> <span class="span_nec">*</span>
+            </div>
+        </div>
+        <div class="col-sm-12 col-info">
+            <div class="form-group m-n" id="newPasswordDiv1">
+                <label class="control-label" data-translate="devplatformApp.user.newPassword1" for="field_newPassword1">newPassword1</label>
+                <input type="password" class="form-control" ng-change="checkNewPassword1()" class="" required="required" name="newPassword1" id="field_newPassword1" ng-model="editParams.newPassword1"/> <span class="span_nec">*</span>
+            </div>
+        </div>
+        <div class="col-sm-12 col-info">
+            <div class="form-group m-n" id="newPasswordDiv2">
+                <label class="control-label" data-translate="devplatformApp.user.newPassword2" for="field_newPassword1">newPassword2</label>
+                <input type="password" class="form-control" ng-change="checkNewPassword2()" class="" required="required" name="newPassword2" id="field_newPassword2" ng-model="editParams.newPassword2"/> <span class="span_nec">*</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="preview-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back">back</span>
+            </button>
+            <button type="submit" ng-disabled="editForm.$invalid || isSaving || oldPasswordValid || newPasswordValid1 || newPasswordValid2 " class="btn btn-primary">
+                <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+            </button>
+        </div>
+    </div>
+</form>
+ -->

@@ -1,0 +1,31 @@
+{
+    "devplatformApp": {
+        "sysComponent" : {
+            "home": {
+                "createLabel": "Create a new Sys Component",
+                "createOrEditLabel": "Create or edit a Sys Component"
+            },
+            "created": "A new Sys Component is created with identifier {{ param }}",
+            "updated": "A Sys Component is updated with identifier {{ param }}",
+            "deleted": "A Sys Component is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sys Component {{ id }}?"
+            },
+            "detail": {
+                "title": "Sys Component"
+            },
+            "componentName": "Component Name",
+            "englishName": "English Name",
+            "formId": "Form Id",
+            "delFlag": "DelFlag",
+            "select": {
+            	"noValue": "--select--",
+            	"enabled": "enabled",
+            	"disabled": "disabled"
+	        },
+	        "onlyChinses": "Only input Chinese",
+            "onlyEnglish": "Input letters only"
+            
+        }
+    }
+}

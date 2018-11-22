@@ -1,0 +1,14 @@
+<div data-ng-include="'privilege/app/base/layouts/navbar/blocks/header.html'" class="app-header navbar"></div>
+<div data-ng-include="'privilege/app/base/layouts/navbar/blocks/aside.html'" class="app-aside hidden-xs {{app.settings.asideColor}}"></div>
+
+<div class="app-content">
+ <!--   <h3>内容页</h3>-->
+    <a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside"></a>
+        
+    <div class="app-content-body fade-in-up" ui-view></div>
+</div>
+
+<div class="footer bottom-footer">
+    	<p class="text-footer">@2017 suitong</p>
+</div>
+<toaster-container></toaster-container>

@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+
+.noPlanDiv{
+	background:#eee;
+	width:800px;
+	height:508px;
+	position: absolute;
+	right: -810px;
+	bottom: 159px;
+	z-index: 9999;
+	transition: all 0.25s
+}
+
+.table-input{
+	margin-left: 30px;
+}
+
+.table-input>tbody>tr>td{
+	width: 250px;
+}
+
+.forecastEchart{
+	width:650px;
+	height:458px;
+	position: absolute;
+	bottom: 109px;
+	right:-610px;
+	z-index: 20;
+	transition: all 0.25s
+}
+
+.forecastEchart-left{
+	position: relative;
+	float: left;
+	width:50px;
+	height:100%;
+	box-sizing:border-box;
+}
+
+.forecastEchart-left button{
+	width:50px;
+	height:40px;
+	margin-top:5px;
+  	border-top-right-radius: 0;
+  	border-bottom-right-radius: 0;
+  	background-color: #485058;
+}
+
+.forecastEchart-right{
+	position: relative;
+	float: left;
+	width:600px;
+	height:100%;
+	background-color: #eee;
+	box-sizing:border-box;
+}
+
+.plan-show{
+	right: -10px;
+}
+
+.table-view-top{
+    top: 120px;
+}
+
+/* .modal-main{
+	min-height:0;
+	height:350px;
+} */
+
+

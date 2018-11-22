@@ -1,0 +1,245 @@
+{
+    "global": {
+    	"noPlanId":"This Term Has No Forecast Plan",
+    	"pleaseSelect":"--Please Select--",
+    	"enabled":"enabled",
+    	"disabled":"disabled",
+    	"go":"Go",
+    	"reset":"Reset",
+	    "saveSuccess":"Save Successful",
+	    "compareCash":"The Max Cash Should Be More Than The Min Cash",
+	    "importSuccess":"import Successful",
+	    "uploadSuccess":"Upload Successful",
+	    "saveFailure":"save Failure",
+	    "deleteSuccess":"Delete Successful",
+   		"deleteFailure":"delete Failure",
+	    "updated":"Updated Success",
+   		"created":"Created Success",
+   		"notice":"Notice",
+        "noPrivilege": "No this page's privilege",
+        "uploadFile": "Upload",
+        "downloadFile": "Download",
+        "selectFile": "Please select files",
+        "selectFileUrl": "Please select RUL of files",
+        "selectGoUrl": "Please select URL",
+        "batchDelete": "Delete",
+        "chooseOneEdit": "Please choose one record!",
+        "selectEdit": "Please choose edit records!",
+        "chooseOneData": "Please choose Data!",
+        "selectDelete": "Please choose delete records!",
+        "yes": "Yes",
+        "no": "No",
+        "now": "now",
+        "today": "today",
+        "clear": "clear",
+        "time": "time",
+        "close": "close",
+        "inputTermNo":"Enter Term No.",
+        "inputDate":"Select Date",
+        "termName":"Term Name",
+    	"averageValue":"Average Value",
+             
+         "timeMsg1": "Start date should be less than expiration date",
+	     "timeMsg2": "The deadline should be greater than the start date",
+	     "timeMsg3": "The date should be greater than now time",
+       	 "timeMsgOverSevenDays":"Please Choice 7 Days to Query About Datas",
+       	 "pleaseChoiceExplorerDate":"Please Choice Explorer Date",
+        "systemError": "System Error,Please Contact Administrator",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+      	"dialog":{
+    		"errorMsg":"",
+    		"closeConfirm": "Do you want to close it ?"
+    	},
+        "menu": {
+            "home": "Home",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "Entities",
+                "actActivity": "Act Activity",
+                "actUser": "Act User",
+                "actActivityUser": "Act Activity User",
+                "actType": "Act Type",
+                "memberType": "Member Type",
+                "sysDict": "Sys Dict",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "account": {
+                "main": "Account",
+                "settings": "Settings",
+                "password": "Password",
+                "sessions": "Sessions",
+                "login": "Sign in",
+                "logout": "Sign out",
+                "register": "Register"
+            },
+            "admin": {
+                "main": "Administration",
+                "userManagement": "User management",
+                "tracker": "User tracker",
+                "metrics": "Metrics",
+                "health": "Health",
+                "configuration": "Configuration",
+                "logs": "Logs",
+                "audits": "Audits",
+                "apidocs": "API",
+                "database": "Database",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Language"
+        },
+        "form": {
+            "username": "Username",
+            "username.placeholder": "Your username",
+            "newpassword": "New password",
+            "newpassword.placeholder": "New password",
+            "confirmpassword": "New password confirmation",
+            "confirmpassword.placeholder": "Confirm the new password",
+            "email": "Email",
+            "email.placeholder": "Your email"
+        },
+        "messages": {
+            "info": {
+                "authenticated": "If you want to <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">sign in</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
+                "register": "You don't have an account yet? <a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">Register a new account</a>"
+            },
+            "error": {
+                "dontmatch": "The password and its confirmation do not match!"
+            },
+            "deleteConfirm":"Do you want you delete it?",
+            "forecastSuccess":"Forecast Success",
+            "forecastFail":"Forecast Fail",
+            "deleteSuccess":"Delete Success",
+            "saveSuccess":"Saved successfully!",
+            "validate": {
+            	"notNull":"Not Empty",
+      		  	"choose":"choose at least ",
+      		  	"item":" item",
+      			"select":"Please select",
+      			"inputNum":"input number",
+      			"least":"at least ",
+      			"more":"at more ",
+      			"chars":" characters",
+      			"char":" characters",
+      			"number":"number",
+      			"integer":"integer",
+      			"plus":"plus",
+      			"plusAndZero":"plus and 0",
+      			"letter":"letter",
+      			"letterAndNum":"letter and number",
+      			"userEmail":"email",
+      			"telPhone":"telPhone No.",
+      			"idCard":"identity card",
+      			"Chinese":"Chinese",
+      			"url":"URL",
+      			"date":"date",
+      			"pleaseInput":"please input ",
+      			"format":" format",
+      			"inputRegular":"Please input a regular expression format",
+      			"notSame":"The new passwords do not match! as the first one!",
+            	"inputEnAndNum":"Input letters and Numbers",
+               	"inputEnAndNumAndsolid":"Input letters and Numbers and '.'",
+               
+                "newpassword": {
+                    "required": "Your password is required.",
+                    "minlength": "Your password is required to be at least 4 characters.",
+                    "maxlength": "Your password cannot be longer than 50 characters.",
+                    "strength": "Password strength:"
+                },
+                "confirmpassword": {
+                    "required": "Your confirmation password is required.",
+                    "minlength": "Your confirmation password is required to be at least 4 characters.",
+                    "maxlength": "Your confirmation password cannot be longer than 50 characters."
+                },
+                "email": {
+                    "required": "Your email is required.",
+                    "invalid": "Your email is invalid.",
+                    "minlength": "Your email is required to be at least 5 characters.",
+                    "maxlength": "Your email cannot be longer than 50 characters."
+                }
+            }
+        },
+        "field": {
+            "id": "ID"
+        },
+        "ribbon": {
+            "dev":"Development"
+        },
+        "showing": "showing",
+        "items": "items",
+        "of": "of",
+        "item-count": "Showing {{first}} - {{second}} of {{total}} items."
+    },
+    "entity": {
+        "action": {
+            "addblob": "Add blob",
+            "addimage": "Add image",
+            "back": "Back",
+            "cancel": "Cancel",
+            "detail": "Detail",
+            "delete": "Delete",
+            "edit": "Edit",
+            "add": "Add",
+            "addDevice": "Add Device",
+            "signManage":"SignManage",
+            "viewActUser":"ViewActUser",
+            "publish":"Publish",
+            "unShelve":"UnShelve",
+            "remove":"Remove",
+            "open": "Open",
+            "save": "Save",
+            "view": "View",
+            "preview": "Preview",
+            "qrcode": "QRcode",
+            "confirm": "Confirm",
+            "downloadQrcode": "Download QRcode",
+            "countSign": "Count Sign",
+            "operation": "Operation",
+            "sign": "Sign",
+            "disable": "Disable",
+            "enable": "Enable",
+            "search": "Search",
+            "reset": "Reset",
+            "export": "Export",
+            "import": "Import"
+        },
+        "detail": {
+            "field": "Field",
+            "value": "Value"
+        },
+        "delete": {
+            "title": "Confirm delete operation"
+        },
+        "validation": {
+            "required": "This field is required.",
+            "minlength": "This field is required to be at least {{ min }} characters.",
+            "maxlength": "This field cannot be longer than {{ max }} characters.",
+            "min": "This field should be at least {{ min }}.",
+            "max": "This field cannot be more than {{ max }}.",
+            "minbytes": "This field should be at least {{ min }} bytes.",
+            "maxbytes": "This field cannot be more than {{ max }} bytes.",
+            "pattern": "This field should follow pattern for {{ pattern }}.",
+            "number": "This field should be a number.",
+            "datetimelocal": "This field should be a date and time."
+        }
+    },
+    "error": {
+        "internalServerError": "Internal server error",
+        "server.not.reachable": "Server not reachable",
+        "url.not.found": "Not found",
+        "NotNull": "Field {{ fieldName }} cannot be empty!",
+        "Size": "Field {{ fieldName }} does not meet min/max size requirements!",
+        "userexists": "Login name already used!",
+        "emailexists": "Email is already in use!",
+        "idexists": "A new {{ entityName }} cannot already have an ID",
+        "errorMsg": "System error, please contact the administrator"
+    },
+    "warningInformation":{
+		"networkName":"NetworkName",
+		"termNo":"Terminal ID",
+		"realTimeBalance":"RealTimeBalance",
+		"runningState":"RunningState",
+		"monitoringTime":"MonitoringTime"
+	},
+    "footer": "This is your footer",
+    "maxrange":"Beyond maximum range"
+}

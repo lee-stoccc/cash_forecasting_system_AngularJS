@@ -1,0 +1,1 @@
+describe("inputElem",function(){var b;var a;before(function(c){var d=requirejs.config({context:Math.random().toString().slice(2),baseUrl:"../src",paths:{cleanup:"../test/cleanup"}});d(["inputElem","cleanup"],function(f,e){b=f;a=e;c()})});it("returns an input element",function(){expect(b.nodeName).to.equal("INPUT")});after(function(){a()})});

@@ -1,0 +1,1 @@
+describe("contains",function(){var a;var b;before(function(c){var d=requirejs.config({context:Math.random().toString().slice(2),baseUrl:"../src",paths:{cleanup:"../test/cleanup"}});d(["contains","cleanup"],function(f,e){a=f;b=e;c()})});it("finds substrings",function(){expect(a("fakeDetect","akeDet")).to.be(true)});after(function(){b()})});

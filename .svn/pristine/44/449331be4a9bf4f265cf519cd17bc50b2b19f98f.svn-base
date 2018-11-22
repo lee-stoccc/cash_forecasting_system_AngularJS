@@ -1,0 +1,45 @@
+<!-- <link rel="stylesheet" href="privilege/css/user/user-select-roles.css">
+<div class="select-roles" >
+    <span class="title" data-translate="devplatformApp.user.home.selectRoles">selectRoles</span>
+    <div class="select-roles-top">
+        <div class="select-roles-item">
+            <ul >
+                <li ng-class="{isActiveClass:isRoleActive === $index}"
+                    ng-click="checkRole($index)"
+                    ng-repeat="role in roleList track by role.id">{{role.roleName}}</li>
+            </ul>
+        </div>
+
+        <div class="select-roles-btn">
+            <button class="btn btn-info roles-btn-1" ng-click="selectRole()" data-translate="devplatformApp.user.home.add">add</button>
+            <button class="btn btn-info roles-btn-2" ng-click="selectUserRole()" data-translate="devplatformApp.user.home.remove">remove</button>
+            <button class="btn btn-info roles-btn-2" ng-click="selectAllRole()" data-translate="devplatformApp.user.home.addAll">addAll</button>
+            <button class="btn btn-info roles-btn-2" ng-click="selectAllUserRole()" data-translate="devplatformApp.user.home.removeAll">removeAll</button>
+        </div>
+
+        <div class="select-roles-item" >
+            <ul >
+                <li ng-class="{isActiveClass:isUserRoleActive === $index}"
+                    ng-click="checkUserRole($index)"
+                    ng-repeat="role in userRoleList track by role.id">{{role.roleName}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-default" ng-click="saveUserRole()">
+            <span data-translate="entity.action.save">Save</span>
+        </button>
+        <button type="submit" class="btn btn-default" ng-click="cancelDialog()" >
+            <span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+
+ -->

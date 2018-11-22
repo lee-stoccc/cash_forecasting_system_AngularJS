@@ -1,0 +1,28 @@
+{
+	"forecastPlan":{
+        "termNo":"设备编号",
+        "branchNo":"网点编号",
+        "bankName":"银行名称",
+        "regionName":"自定义区域",
+        "lastCash":"上次加钞金额",
+        "replenishDate":"加钞时间",
+        "planCash":"预测加钞金额",
+        "termType":"设备类型",
+        "forecastStatus":"预测状态",
+        "NotForecastTerm":"未预测设备",
+        "addForecastPlan":"加入预测",
+        "detail":"详情",
+        "stock":"可用库存",
+        "AddingFailure":"加入失败",
+        "AddingSuccess":"加入成功",
+        "AddOrEdit":"新增或编辑",
+        "addCashDate":"加钞时间",
+        "denomination":"面额",
+        "number":"张数",
+        "tooMuch":"计划金额不能超过库存",
+        "forecast":"预测",
+        "forecastDate":"预测日期",
+        "monitorTime":"监控时间",
+        "export":"导出"     
+	}
+}

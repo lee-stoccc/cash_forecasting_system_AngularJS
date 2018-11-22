@@ -1,0 +1,1 @@
+(function(){angular.module("devplatformApp").directive("activeMenu",a);a.$inject=["$translate","$locale","tmhDynamicLocale"];function a(e,c,d){var f={restrict:"A",link:b};return f;function b(i,h,g){var j=g.activeMenu;i.$watch(function(){return e.use()},function(k){if(j===k){d.set(j);h.addClass("active")}else{h.removeClass("active")}})}}})();

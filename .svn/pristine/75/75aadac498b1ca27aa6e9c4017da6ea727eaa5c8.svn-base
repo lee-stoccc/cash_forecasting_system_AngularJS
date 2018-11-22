@@ -1,0 +1,105 @@
+ <div class="panel ng-scope re-panel">
+
+    <div class="form-component-container">
+
+        <div class="form-component-center">
+            <div class="configuration-header" data-translate="devplatformApp.menuManagement.menuSetting"></div>
+
+            <div class="form-container">
+                <div class="form-container-item">
+                    <input type="hidden" ng-model="menuFormId"/>
+                    <div class="configuration-header" data-translate="devplatformApp.menuManagement.formList"></div>
+                    <div class="form-btn-css p-b clear">
+                        <button class="btn btn-primary" ng-click="addForm()">
+                            <span class="glyphicon glyphicon-plus"></span> <span
+                            data-translate="devplatformApp.menuManagement.newForm"></span>
+                        </button>
+                        <button class="btn btn-primary" ng-click="editForm()">
+                            <span class="glyphicon glyphicon-edit"></span> <span
+                            data-translate="devplatformApp.menuManagement.editForm"></span>
+                        </button>
+                        <button class="btn btn-primary" ng-click="deleteForm()">
+                            <span class="glyphicon glyphicon-minus"></span> <span
+                            data-translate="devplatformApp.menuManagement.delForm"></span>
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <div class="table-content configuration-table">
+                            <table class="table table-striped table-th-border">
+                                <thead>
+                                <tr class="table-title table-th-border" jh-sort="predicate" ascending="reverse"
+                                    callback="transition()">
+                                    <th class="td-center table-th-border-10"><input type="checkbox" ng-model="select_all_form" ng-click="selectAllForms()"></th>
+                                    <th class="td-center table-th-border-60" data-translate="devplatformApp.menuManagement.formName"><span></span></th>
+                                    <th class="td-center table-th-border-30" data-translate="devplatformApp.menuManagement.englishName"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="form in formList track by form.id">
+                                    <td class="td-center table-th-border-10"><input type="checkbox" ng-model="form.checked" ng-click="selectOneForm()"></td>
+                                    <td class="td-center table-th-border-60">
+                                        <button type="submit" class="btn btn-table-warning btn-sm btn-op btn-intable"
+                                                ng-click="loadComponent(form.id)">
+                                            <span>{{form.formName}}</span>
+                                        </button>
+                                        </a></td>
+                                    <td class="td-center table-th-border-30">{{form.englishName}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container-item">
+                    <div class="configuration-header" data-translate="devplatformApp.menuManagement.componentList"></div>
+                    <div class="form-btn-css p-b clear">
+                        <button class="btn btn-primary" ng-click="addComponent()">
+                            <span class="glyphicon glyphicon-plus"></span> <span
+                            data-translate="devplatformApp.menuManagement.newComponent"></span>
+                        </button>
+                        <button class="btn btn-primary" ng-click="editComponent()">
+                            <span class="glyphicon glyphicon-edit"></span> <span
+                            data-translate="devplatformApp.menuManagement.editComponent"></span>
+                        </button>
+                        <button class="btn btn-primary" ng-click="deleteComponent()">
+                            <span class="glyphicon glyphicon-minus"></span> <span
+                            data-translate="devplatformApp.menuManagement.delComponent"></span>
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <div class="table-content configuration-table">
+                            <table class="table table-striped table-th-border">
+                                <thead>
+                                <tr class="table-title table-th-border" jh-sort="predicate" ascending="reverse"
+                                    callback="transition()">
+                                    <th class="td-center table-th-border-10"><input type="checkbox" ng-model="select_all_component" ng-click="selectAllComponents()"></th>
+                                    <th class="td-center table-th-border-60" data-translate="devplatformApp.menuManagement.componentName"></th>
+                                    <th class="td-center table-th-border-30" data-translate="devplatformApp.menuManagement.englishName"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="component in componentList track by component.id">
+                                    <td class="td-center table-th-border-10"><input type="checkbox" ng-model="component.checked" ng-click="selectOneComponent()"></td>
+                                    <td class="td-center table-th-border-60">{{component.componentName}}</td>
+                                    <td class="td-center table-th-border-30">{{component.englishName}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<br>
+<br>
+<div align="center" class="ui-grid-pager-panel ng-scope pager-panel">
+    <div class="ui-grid-pager-container">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back">back</span>
+        </button>
+    </div>
+</div>

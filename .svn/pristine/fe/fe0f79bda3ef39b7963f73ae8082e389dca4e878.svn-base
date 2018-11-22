@@ -1,0 +1,18 @@
+<script type="text/javascript" charset="utf-8">
+
+</script>
+<div class="padder-md msg-title">
+	<h4 class="m-t-none m-b-none modal-title font-mu" id="ngdialog1-aria-labelledby" data-translate="global.notice">提示</h4>
+	<!-- <span class="glyphicon glyphicon-remove modal-delete"></span> -->
+</div>
+ <div class="msg-div">
+	<span class="msg-error" data-translate={{message}}>{{message}}</span>
+</div>
+<div class="modal-footer button-block" style="width: 450px;">
+    <button type="button" ng-click="confirm()" ng-if="type==='confirm'">
+        <span data-translate="entity.action.confirm">confirm</span>
+    </button>
+    <button type="button" ng-click="closeThisDialog()" ng-if="type==='confirm'">
+        <span data-translate="entity.action.cancel">cancel</span>
+    </button>
+</div>

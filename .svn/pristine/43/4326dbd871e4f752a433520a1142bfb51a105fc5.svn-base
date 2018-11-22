@@ -1,0 +1,1 @@
+define(["Modernizr","docElement","isSVG"],function(c,a,d){function b(g){var h=a.className;var f=c._config.classPrefix||"";if(d){h=h.baseVal}if(c._config.enableJSClass){var e=new RegExp("(^|\\s)"+f+"no-js(\\s|$)");h=h.replace(e,"$1"+f+"js$2")}if(c._config.enableClasses){h+=" "+f+g.join(" "+f);d?a.className.baseVal=h:a.className=h}}return b});

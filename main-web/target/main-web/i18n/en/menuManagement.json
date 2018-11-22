@@ -1,0 +1,52 @@
+{
+    "devplatformApp":{
+        "menuManagement":{
+            "home":"Home",
+            "menuManagement":"Menu Management",
+            "checkTitle":"Menu Name：",
+            "menuName":"Menu Name",
+            "query":"Query",
+            "checkOut":"CheckOut",
+            "new":"Create a Menu",
+            "del":"Delete a Menu",
+            "CNM":"Chinese Name of Menu",
+            "ENM":"English Name of Menu",
+            "url":"Menu Url",
+            "pId":"Parent menu ID",
+            "order":"Order",
+            "pName":"Parent menu",
+            "operation":"Operation",
+            "reviser":"Reviser",
+            "delFlag":"DelFlag",
+            "formName":"Form Name",
+            "englishName":"English Name",
+            "formList":"Form List",
+            "menuSetting":"Menu Setting",
+            "componentList":"Component List",
+            "componentName":"Component Name",
+            "langSwitch":"Language Switch",
+            "select": {
+	            	"noValue": "--select--",
+	            	"enabled": "enabled",
+	            	"disabled": "disabled"
+	        },
+	        "selectOne": "Please select at least one data to be operated again!",
+	        "delConfirm": "Are you sure you want to delete the selected menus? \n\n please confirm!",
+	        "enableConfirm": "Are you sure you want to enable this menu? \n\n please confirm!",
+            "disableConfirm": "Are you sure you want to disable this menu? \n\n please confirm!",
+            "notParent": "Your current selection cannot be used as a parent menu",
+            "noMenuMsg": "The menu information is not available. Please try again!",
+            "mustSelect": "Please select a data",
+            "delConfirmForm": "Are you sure you want to delete the selected form? \n\n please confirm!",
+            "onlyDelDisable": "You can only delete forbidden data",
+            "newMenu": "Create a menu",
+            "delMenu": "delete Menus",
+            "newForm": "Create",
+            "newComponent": "Create",
+            "editForm":"Edit",
+            "editComponent":"Edit",
+            "delForm":"Delete",
+            "delComponent":"Delete"
+        }
+    }
+}

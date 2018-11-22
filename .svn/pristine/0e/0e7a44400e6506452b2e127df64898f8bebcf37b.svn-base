@@ -1,0 +1,40 @@
+<div class="panel ng-scope openwindow-panel">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+        <div class="modal-header">
+           <h4 class="modal-title font-mu" data-translate="cusRegion.title">编辑CusRegion</h4>
+           <span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>
+        </div>
+		<div class="modal-main">
+      		 <div class="modal-body">         
+                    <div class="col-sm-12 col-info" input-pop verifyTips-sp>
+						<div>
+                            <label data-translate="cusRegion.regionNo">自定义区域编号</label>
+							<input type="text" ng-verify="max:20" ng-model="cusRegion.regionNo" />
+                        </div>                
+                    </div>
+   	                <div class="col-sm-12 col-info" input-pop verifyTips-sp>
+						<div>
+                            <label data-translate="cusRegion.regionName">自定义区域名称</label>
+							<input type="text" ng-verify="max:32" ng-model="cusRegion.regionName" />
+                        </div>                
+                    </div>
+   	                <div class="col-sm-12 col-info" input-pop verifyTips-sp>
+						<div>
+                            <label data-translate="cusRegion.taskCeiling">加钞任务上限</label>
+							<input type="plusInteger" ng-verify="required:false,max:4" ng-model="cusRegion.taskCeiling" />
+                        </div>                
+                    </div>
+   	 		</div>
+	    	<div class="modal-footer button-block">
+				<button type="submit" ng-verify>
+					<span class="glyphicon glyphicon-save"></span>
+					<span data-translate="entity.action.save">Save</span>
+				</button>
+				 <button type="button" ng-click="clear(false)">
+	                <span class="glyphicon glyphicon-ban-circle"></span>
+	                <span data-translate="entity.action.cancel">Cancel</span>
+	            </button>
+	 	  </div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,24 @@
+{   
+    	"detailTitle":"详情页面",
+    	"stock":{
+            "title": "编辑银行库存",
+            "setBankStock": "银行当前库存设置",
+			"date": "日期",
+			"bankName": "银行",
+			"time": "时间",
+			"currentStock": "当前预测库存",
+			"denomination": "面额",
+			"actualCount": "当前实际库存",
+			"returnAmount": "预测回笼金额",
+			"total": "合计",
+			"currentCount": "当前预测库存",   
+			"formError":{
+				"currentTime": "不能超过系统当前时间",    
+				"overflowCount": "面额预测库存不能超过银行最大的库存",
+				"actualCount": "当前实际库存已有面额",
+				"notNull": "面额预测库存必填",
+				"duplicateTime": "此银行当前时间已有库存"
+				}
+			}
+			
+}

@@ -1,0 +1,72 @@
+{
+    "devplatformApp": {
+        "user" : {
+            "home": {
+                "createLabel": "创建",
+                "createOrEditLabel": "创建或编辑",
+                "edit":"编辑",
+                "delete":"删除",
+                "selectRoles":"选择角色",
+                "resetPassword":"重置密码",
+                "add":"添加",
+                "remove":"移除",
+                "addAll":"全部添加",
+                "removeAll":"全部移除"
+            },
+            "created": "创建成功！",
+            "updated": "更新成功！",
+            "deleted": "删除成功！",
+            "delete": {
+                "question": "你确定删除用户吗？"
+            },
+            "detail": {
+                "title": "用户详情"
+            },
+            "prompt": {
+            	"inDevelopment" : "此功能开发中！",
+            	"selectOne" : "请至少选中一条数据！",
+            	"cannotBeDelete" : "不能删除已启用的用户！",
+            	"confirmReset" : "确认要重置密码吗？",
+            	"confirmEnable" : "确认启用吗？",
+            	"confirmDisable" : "确认禁用吗？",
+            	"resetSuccess" : "密码重置成功！",
+            	"pleaseChoose" : "--请选择--",
+            	"oldPasswordError" : "原密码错误！",
+            	"samePassword" : "新密码不能和原密码一样！",
+            	"passwordLength" : "密码长度最少4位！",
+            	"passwordStrength" : "必须同时包含数字和字母！",
+            	"differentPasswords" : "两次密码不一样！",
+            	"enterLogin" : "请输入账号",
+            	"enterFirstName" : "请输入用户名",
+            	"failedData" : "获取数据失败！",
+            	"selectRoles" : "请先选择角色！",
+            	"saveSuccess" : "保存成功！",
+            	"saveFailed" : "保存失败！"
+            },
+            "login": "账号",
+            "firstName": "用户名",
+            "password": "密码",
+            "deptId": "所属部门",
+            "charNo": "工号",
+            "email": "邮箱",
+            "mobile": "手机",
+            "expireDate": "账号失效时间",
+            "passwordExpireDate": "密码失效时间",
+            "activated": "状态",
+            "oldPassword": "原密码",
+            "newPassword1": "新密码",
+            "newPassword2": "确认新密码",
+            "department": "所属部门",
+            "error": {
+            	"duplicateLogin": "重复的账号!",
+            	"invalidLogin": "无效的账号！",
+            	"invalidFirstName": "无效的用户名！",
+            	"invalidExpireDate": "无效的账号失效时间！",
+            	"invalidPasswordExpire": "无效的密码失效时间！",
+            	"errorOldPassword": "原密码错误！",
+            	"errorAccount": "账号只能包含字母，数字，下划线，减号！",
+            	"duplicateEmail": "邮箱已被用！"
+            }
+        }
+    }
+}

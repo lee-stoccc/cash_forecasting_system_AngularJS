@@ -1,0 +1,1 @@
+describe("classes",function(){var a;var b;before(function(c){var d=requirejs.config({context:Math.random().toString().slice(2),baseUrl:"../src",paths:{cleanup:"../test/cleanup"}});d(["classes","cleanup"],function(e,f){a=e;b=f;c()})});it("is an array",function(){expect(a).to.be.an("array")});after(function(){b()})});

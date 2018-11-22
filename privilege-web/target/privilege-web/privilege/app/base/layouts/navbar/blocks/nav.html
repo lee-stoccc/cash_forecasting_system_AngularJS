@@ -1,0 +1,24 @@
+
+<ul class="nav new-nav" id="navC" ng-controller="navCtrl" >
+  <!--   动态菜单列表 -->
+    <li ng-repeat="item in items">
+        <a ng-click="check(item,item.children)" ng-show="item.checked">
+            <i class="glyphicon {{item.icon}}"> </i>
+            <span class="ng-binding" data-translate="{{item.langSwitch}}"></span>
+        </a>
+        <ul class="nav second-menu" ng-if="item.children" style="text-align: center;width: 120px;">
+            <li ng-repeat="item in item.children">
+                <a class="second-a" ng-click="second(item);" ng-show="item.checked">
+                    <span class="second-span" data-translate="{{item.langSwitch}}"></span>
+                </a>
+                <ul class="nav nav-sub-navs" ng-if="item.children">
+                    <li ng-repeat="item in item.children">
+                        <a ui-sref="{{item.url}}" ng-click="three(item);" ng-show="item.checked">
+                            <span data-translate="{{item.langSwitch}}"></span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>

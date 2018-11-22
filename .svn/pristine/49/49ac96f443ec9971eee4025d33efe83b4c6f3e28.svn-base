@@ -1,0 +1,20 @@
+{
+    	"detailTitle":"Detail",
+        "holiday" : {
+            "title": "Edit Holiday",
+			"year": "Year",
+			"date": "Holiday",
+			"supplement":"Supplement",
+			"holidayName": "Holiday Name",
+			"typeName": "Type Name",
+			"formError":{
+				"duplicateHoliday":"It had exist,choose other one",
+				"sameYear":"Please select the same year",
+				"chooseHoliday":"Pleasae select holiday",
+				"dateConflict":"time conflict",
+				"startDateConflict":"With the start time for conflict",
+				"endDateConflict":"With the end time for conflict",
+				"lastOne":"can not delete last one"
+					}        
+			}
+}

@@ -1,0 +1,129 @@
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+        <div class="modal-header">
+           <h4 class="modal-title font-mu" data-translate="stock.title">编辑Stock</h4>
+		   <span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>
+        </div>
+		<div class="modal-main">
+			<div class="modal-body">         
+                  <div class="col-sm-6 input-pop verifyTips-sp">
+						<div>
+							<span class="form-group">
+	  	 					<label class="forecastLabel" data-translate="stock.bankName"></label>
+	  	 					<select ng-model="formParam.bankId" ng-verify ng-disabled="disabled"
+	  	 						ng-options="bank.id as bank.bankName for bank in bankList"
+	  	 						ng-change="changeBank(formParam.bankId)">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+							</span>	
+	                      </div>                
+                    </div>
+                  <div class="col-sm-6">
+						<div>
+				            <label data-translate="stock.time">时间</label>
+							<div class="input-group input-group-time">
+				                <input ng-readonly="true" type="text" 
+									datetime-picker="{{dateformat}}" ng-change="getTime()" 
+									ng-model="formParam.time" is-open="datePickerOpenStatus.time"/>
+				                <span class="input-group-btn">
+				                      <button type="button" class="btn btn-default" ng-click="openCalendar('time')" ng-show="type != 'edit'"><i class="glyphicon glyphicon-calendar"></i></button> 
+								</span><span class="span_nec">*</span>
+							</div>								            
+						</div>
+				</div>
+				<div class="col-sm-12 col-info">
+					<div ng-repeat="item in formParam.stockDetails">
+						<div>
+							<!-- <label data-translate="bankRule.stockCeiling">币种</label> -->
+							<label data-translate="bankRule.currency" >币种</label> <select ng-model="item.type"
+								ng-change="changeCurrency(item.type,$index)">
+								<option value="" data-translate="global.pleaseSelect"></option>
+								<option ng-repeat="type in deTypeList" value="{{type.dictKey}}">{{type.dictDesc}}</option>
+							</select> <span ng-click="add()" class="glyphicon glyphicon-plus"></span>
+							<span ng-click="del($index)" class="glyphicon glyphicon-minus"></span><br />
+						</div>
+						<div class="col-sm-12 col-info">
+							<div>
+								<table class="table-bordered table-pop">
+									<tr>
+										<th align="center"><label
+											data-translate="bankRule.denomination">面额</label></th>
+										<th align="center"><label
+											data-translate="stock.actualCount">当前实际库存</label></th>
+										<th align="center"><label
+											data-translate="stock.returnAmount">预测回笼金额</label></th>
+										<th align="center"><label
+											data-translate="stock.total">合计</label></th>
+										<th align="center"><label
+											data-translate="stock.currentCount">当前预测库存</label></th>
+									</tr>
+									<tr ng-repeat="denomination in item.denominationList">
+										<input type="hidden" name="denomination"
+											ng-value="{{denomination.dictKey || denomination.denomination}}" />
+										<td>{{denomination.dictKey || denomination.denomination}}</td>
+										<td><input type="number" ng-change="calculteAmount(true)"
+											ng-verify ng-model="denomination.actualCount" /></td>
+										<td><input type="number" ng-change="calcultePencent()"
+											ng-model="denomination.returnAmount" 
+											ng-readonly="true"  /></td>
+										<td><input type="number" ng-model="denomination.total"
+											ng-readonly="true" /></td>
+										<td><input type="number" ng-change="calculteAmount(false)"
+										    ng-verify ng-model="denomination.currentCount" /></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+<!-- 					  <div ng-repeat="item in formParam.stockDetails">
+						  <div class="col-sm-12 col-info">
+							  <div>
+				                    <label data-translate="bankRule.stockCeiling">币种</label>
+				                    <label>币种</label>
+									<select ng-model="item.type" ng-change="changeCurrency(item.type,$index)">
+										<option value="" data-translate="global.pleaseSelect"></option>
+										<option ng-repeat="type in deTypeList" value="{{type.dictKey}}">{{type.dictDesc}}</option>
+									</select>	
+							  			<span ng-click="add()"  class="glyphicon glyphicon-plus"></span>
+										<span ng-click="del($index)" class="glyphicon glyphicon-minus"></span><br/> 
+							  </div>   
+						  </div>
+	                      <div class="col-sm-12 col-info">
+							 	<div>
+							     	<label></label>
+									<table class="table-bordered table-pop">
+										<tr>
+											<th align="center"><label data-translate="bankRule.denomination">面额</label></th>
+											<th align="center"><label data-translate="stock.actualCount">当前实际库存</label></th>
+										 	<th align="center"><label data-translate="stock.returnAmount">预测回笼金额</label></th>
+											<th align="center"><label data-translate="stock.total">合计</label></th>
+											<th align="center"><label data-translate="stock.currentCount">当前预测库存</label></th>
+										</tr>
+										<tr ng-repeat="s in item.denominationList">
+										<input type="hidden" name="denomination" ng-value="{{s.dictKey}}"/>
+											<td>{{s.dictDesc}}</td>
+	 										<td><input type="plusInteger" name="actualCount" ng-change="calculteAmount(true)" ng-verify="required:false,max:5,tipStyle:2" ng-model="s.actualCount"/></td> 
+	 										<td><input type="text"  ng-readonly="true" ng-model="s.returnAmount"/></td> 
+	 										<td><input type="text"  ng-readonly="true" ng-model="s.total"/></td> 
+	 										<td><input type="plusInteger" ng-change="calculteAmount(false)" ng-verify="required:false,max:5,tipStyle:2" ng-model="s.currentCount"/></td> 
+										</tr>
+									</table>
+								</div>
+					      </div>
+				</div>    -->   
+   	 		</div>
+		<div class="modal-footer button-block">
+			<button type="submit" ng-verify>
+				<span class="glyphicon glyphicon-save"></span>
+				<span data-translate="entity.action.save">Save</span>
+			</button>
+			 <button type="button" ng-click="clear(false)">
+                <span class="glyphicon glyphicon-ban-circle"></span>
+				<span data-translate="entity.action.cancel">Cancel</span>
+            </button>
+			
+		 </div>
+	</div>
+</form>
+</div>

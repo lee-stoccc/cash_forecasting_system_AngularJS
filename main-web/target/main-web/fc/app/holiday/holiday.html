@@ -1,0 +1,73 @@
+<div class="panel ng-scope default-controller" ng-init="init()"
+	ng-controller="HolidayController">
+	<div class="default-container">
+		<form class="form-inline">
+			<div class="wrapper-md row">
+				<div class="col-sm-12">
+					<span class="form-group"> <label
+						data-translate="holiday.holidayName"></label> <input type="text" placeholder="Holiday Name"
+						ng-model="formParam.holidayName" />
+					</span> <span class="form-group"> <label
+						data-translate="holiday.date"></label> <span
+						class="input-group input-group-time"> <input type="text"
+							ng-change="checkStartTime()" readonly="readonly"
+							uib-datepicker-popup="{{dateformat}}"
+							ng-model="formParam.startTime"
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							is-open="datePickerOpenStatus.startTime" /> <span
+							class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('startTime')">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</button>
+						</span>&mdash; <input type="text" ng-change="checkEndTime()" 
+							readonly="readonly" uib-datepicker-popup="{{dateformat}}"
+							ng-model="formParam.endTime"
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							is-open="datePickerOpenStatus.endTime" /> <span
+							class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('endTime')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>
+						</span>
+					</span>
+					</span> <span class="form-group button-block">
+						<button ng-click="loadAll()">
+							<span class="glyphicon glyphicon-search"></span> <span
+								data-translate="global.go"></span>
+						</button>
+						<button ng-click="resetSearch()">
+							<span class="glyphicon glyphicon-refresh"></span> <span
+								data-translate="global.reset"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+
+		<div class="wrapper-md">
+			<div class="op-div button-block">
+				<button ng-click="addHoliday()">
+					<span class="glyphicon glyphicon-plus"></span> <span
+						data-translate="entity.action.add">Create a new holiday</span>
+				</button>
+				<button ng-click="editHoliday()">
+					<span class="glyphicon glyphicon-edit"></span> <span
+						data-translate="entity.action.edit">edit a new holiday</span>
+				</button>
+				<button ng-click="batchDelete()">
+					<span class="glyphicon glyphicon-minus"></span> <span
+						data-translate="global.batchDelete"></span>
+				</button>
+			</div>
+		</div>
+
+		<div class="table-view-defalut" style="top: 90px">
+			<div class="table-view" tables-model2
+				tables-data-model="tablesConfig"></div>
+		</div>
+	</div>
+</div>

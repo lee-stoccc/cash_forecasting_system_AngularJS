@@ -1,0 +1,64 @@
+<!-- <link rel="stylesheet" href="privilege/css/user/user-select-roles.css">
+<div class="panel ng-scope re-panel" >
+    <form class="form-horizontal form-inline">
+        <div class="wrapper-md">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group m-n">
+                        <label class="control-label" data-translate="devplatformApp.sysRole.userName"></label>
+                        <div class="padder inline">
+                            <input type="text" class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.userName" placeholder="{{'devplatformApp.sysRole.selectUser' | translate}}">
+                        </div>
+                    </div>
+                    <div class="form-group m-n">
+                        <button class="btn btn-info pull-left" ng-click="getAllUsers()" data-translate="devplatformApp.sysRole.inquire"></button>
+                    </div>
+                    <div class="form-group m-n">
+                        <button class="btn btn-info pull-left" ng-click="clear()" data-translate="devplatformApp.sysRole.reset"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="wrapper-md">
+        <div class="table-responsive">
+            <div class="table-content">
+                <table class="table table-striped">
+                    <thead>
+                    <tr class="table-title" jh-sort="predicate" ascending="reverse" callback="transition()">
+                        <th><input id="flag" type="checkbox" ng-model="select_all" ng-click="selectAll()"></th>
+                        <th data-translate="devplatformApp.sysRole.userName"></th>
+                        <th data-translate="devplatformApp.sysRole.department"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="userDTO in userDTOs track by userDTO.id">
+                        <td><input ng-model="userDTO.checked" type="checkbox" ng-click="selectOne()" ></td>
+                        <td>{{userDTO.firstName}}</td>
+                        <td>{{userDTO.department}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="ui-grid-pager-panel ng-scope">
+            <div class="ui-grid-pager-container">
+                <div class="ui-grid-pager-control">
+                    <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="transition()"></uib-pagination>
+                </div>
+                <div class="ui-grid-pager-row-count-picker ng-scope">
+                    <jhi-item-count page="page" total="queryCount" items-per-page="itemsPerPage"></jhi-item-count>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" ng-click="save()">
+                <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+            </button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelDialog()">
+                <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back">back</span>
+            </button>
+        </div>
+    </div>
+</div>
+ -->

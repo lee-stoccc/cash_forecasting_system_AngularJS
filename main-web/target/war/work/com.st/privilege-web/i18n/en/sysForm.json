@@ -1,0 +1,38 @@
+{
+    "devplatformApp": {
+        "sysForm" : {
+            "home": {
+                "title": "Sys Forms",
+                "createLabel": "Create a new Sys Form",
+                "createOrEditLabel": "Create or edit a Sys Form"
+            },
+            "created": "A new Sys Form is created with identifier {{ param }}",
+            "updated": "A Sys Form is updated with identifier {{ param }}",
+            "deleted": "A Sys Form is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sys Form {{ id }}?"
+            },
+            "detail": {
+                "title": "Sys Form"
+            },
+            "formName": "Form Name",
+            "englishName": "English Name",
+            "menuId": "Menu Id",
+            "accessEdit": "Access Edit",
+            "delFlag": "DelFlag",
+            "select": {
+            	"noValue": "--select--",
+            	"enabled": "enabled",
+            	"disabled": "disabled"
+	        },
+	        "onlyChinses": "Only input Chinese",
+            "onlyEnglish": "Input letters only",
+            "nameExists": "The name already exists",
+            "messages":{
+            	"error":{
+            		"repeatFormEnglishName" : "Repeat Form English Name"
+            	}
+            }
+        }
+    }
+}

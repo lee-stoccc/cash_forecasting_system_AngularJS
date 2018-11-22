@@ -1,0 +1,362 @@
+.table-margin{
+    margin: 0;
+    padding: 0;
+}
+
+.tables-view-content{
+	width:100%;
+	flex: 1;
+	display: flex;
+    flex-direction: column;
+	overflow-x: hidden;
+}
+
+.tables-view-header{
+	background: #D6EEFC;
+}
+
+.overScrollx{
+	overflow-x: scroll;
+}
+
+.th-width1{
+	width:100px;
+}
+
+.th-width2{
+	width:10%;
+}
+
+.tables-view-header{
+	width: 100%;
+    height: auto;
+}
+
+.table-content {
+   /*原来的影响角色配置权限的保存按钮不能点击  height: 480px; */
+    height: 450px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    clear: both;
+    overflow-x: hidden;
+    display: table-caption;
+}
+
+/**
+新的表格专用
+**/
+.table-content2 {
+   /*原来的影响角色配置权限的保存按钮不能点击  height: 480px; */
+/*     height: 430px; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex: 1;
+    width: 100%;
+}
+
+  /*滚动条样式*/
+ .table-content2::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 0px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 0px;
+ }
+
+.table-select{
+	width:60px;
+	line-height: normal;
+}
+
+.table-page{
+   float:left
+}
+.table-go{
+   margin-left: 10px;
+}
+
+.table-go input{
+    float: left;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+}
+
+.table-go button{
+    float: left;
+    margin-left: 5px;
+    width: 40px;
+    height: 25px;
+}
+
+
+.table-title-span{
+  display: block;
+  max-width: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#table-title-span:hover{
+	color:#328ee3;
+}
+
+table tr{
+	height:36px;
+}
+.tr-gray-background{
+	background:#eee;
+}
+
+.tr-white-background{
+	background:#fff;
+}
+th{
+	position:relative;
+    border: 1px solid #ccc;
+    min-height:40px;
+    overflow: hidden;
+	white-space: nowrap;  
+	text-overflow: ellipsis;
+}
+
+td{
+	position:relative;
+    border: 1px solid #ccc;
+    min-height:40px;
+    overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.table-checkbox {
+	width: 4%;
+	height: 40px;
+}
+
+.table-showview{
+	position:absolute;
+	display:none;
+	border:1px solid silver;
+	background:silver;
+	left:100px;
+	top:100px;
+	width:auto;
+	height:auto;
+	padding:5px 10px;
+}
+
+
+@media screen and (min-width: 1300px) {
+	.table-default-width{
+		width:1250px;
+		min-width:1250px;
+	}
+	
+	.table-goods-width{
+		width:1130px;
+		min-width:1130px;
+	}
+	
+	.table-menu-width{
+		width:1030px;
+		min-width:1030px;
+	}
+	
+	.table-item-pre-1 {
+		width: 8%;
+		max-width: 80px;
+	}
+	
+	.table-item-pre-2 {
+		width: 16%;
+		max-width: 160px;
+	}
+	
+	.table-item-pre-3 {
+		width: 24%;
+		max-width: 240px;
+	}
+	
+	.table-item-pre-4 {
+		width: 32%;
+		max-width: 320px;
+	}
+	
+	.table-item-pre-6 {
+		width: 48%;
+		max-width: 480px;
+	}
+	
+	.table-item-pre-1-nocheck {
+		width: 8.3%;
+		max-width: 80px;
+	}
+	
+	.table-item-pre-2-nocheck {
+		width: 16.7%;
+		max-width: 160px;
+	}
+	
+	.table-item-pre-3-nocheck {
+		width: 25%;
+		max-width: 240px;
+	}
+	
+	.table-item-pre-4-nocheck {
+		width: 33.3%;
+		max-width: 320px;
+	}
+	
+	.table-item-pre-6-nocheck {
+		width: 50%;
+		max-width: 480px;
+	}
+}
+
+.table-width{
+	width:600px;
+	min-width:850px;
+	}
+
+@media screen and (min-width: 1000px) and (max-width:1299px){
+	.table-default-width{
+		width:1100px;
+		min-width:1100px;
+	}
+	
+	.table-goods-width{
+		width:1000px;
+		min-width:1000px;
+	}
+	
+	.table-menu-width{
+		width:900px;
+		min-width:900px;
+	}
+	
+	.table-item-pre-1 {
+		width: 8%;
+		max-width: 70px;
+	}
+	
+	.table-item-pre-2 {
+		width: 16%;
+		max-width: 140px;
+	}
+	
+	.table-item-pre-3 {
+		width: 24%;
+		max-width: 210px;
+	}
+	
+	.table-item-pre-4 {
+		width: 32%;
+		max-width: 280px;
+	}
+	
+	.table-item-pre-6 {
+		width: 48%;
+		max-width: 420px;
+	}
+	
+	.table-item-pre-1-nocheck {
+		width: 8.3%;
+		max-width: 70px;
+	}
+	
+	.table-item-pre-2-nocheck {
+		width: 16.7%;
+		max-width: 140px;
+	}
+	
+	.table-item-pre-3-nocheck {
+		width: 25%;
+		max-width: 210px;
+	}
+	
+	.table-item-pre-4-nocheck {
+		width: 33.3%;
+		max-width: 280px;
+	}
+	
+	.table-item-pre-6-nocheck {
+		width: 50%;
+		max-width: 420px;
+	}
+}
+
+@media screen and (max-width: 999px){
+	.table-default-width{
+		width:800px;
+		min-width:800px;
+	}
+	
+	.table-goods-width{
+		width:700px;
+		min-width:700px;
+	}
+	
+	.table-menu-width{
+		width:600px;
+		min-width:600px;
+	}
+	
+	.table-item-pre-1 {
+		width: 8%;
+		max-width: 50px;
+	}
+	
+	.table-item-pre-2 {
+		width: 16%;
+		max-width: 100px;
+	}
+	
+	.table-item-pre-3 {
+		width: 24%;
+		max-width: 150px;
+	}
+	
+	.table-item-pre-4 {
+		width: 32%;
+		max-width: 200px;
+	}
+	
+	.table-item-pre-6 {
+		width: 48%;
+		max-width: 300px;
+	}
+	
+	.table-item-pre-1-nocheck {
+		width: 8.3%;
+		max-width: 50px;
+	}
+	
+	.table-item-pre-2-nocheck {
+		width: 16.7%;
+		max-width: 100px;
+	}
+	
+	.table-item-pre-3-nocheck {
+		width: 25%;
+		max-width: 150px;
+	}
+	
+	.table-item-pre-4-nocheck {
+		width: 33.3%;
+		max-width: 200px;
+	}
+	
+	.table-item-pre-6-nocheck {
+		width: 50%;
+		max-width: 300px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.table-content {
+	    height: 480px;
+	    overflow-y: auto;
+	    overflow-x: auto;
+	}
+}

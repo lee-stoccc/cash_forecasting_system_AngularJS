@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/webapp/fc/app/forecastPlan/forecastPlan.html=UTF-8
+encoding//src/main/webapp/fc/app/processData/dailyUsing/dailyUsing.html=UTF-8
+encoding//src/main/webapp/fc/app/processData/termMonitor/termMonitor.html=UTF-8
+encoding//src/main/webapp/fc/app/termInfo/batch-edit.html=UTF-8
+encoding//src/main/webapp/fc/app/termInfo/termInfo-detail.html=UTF-8
+encoding//src/main/webapp/fc/app/termInfo/termInfo-edit.html=UTF-8
+encoding//src/main/webapp/fc/app/termInfo/termInfo.html=UTF-8
+encoding//src/main/webapp/i18n/en/bankRule.json=UTF-8
+encoding//src/test/java=UTF-8

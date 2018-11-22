@@ -1,0 +1,13 @@
+{
+    	"detailTitle":"详情页面",
+    	"cusRegion":{
+            "title": "编辑区域",
+			"regionNo": "自定义区域编号",
+			"regionName": "自定义区域名称",
+			"taskCeiling": "加钞任务上限",
+			"formError":{
+				"duplicateCusRegionNo":"重复的自定义区域编号",
+				"duplicateCusRegionName":"重复的自定义区域名称"
+				}
+			}
+    }

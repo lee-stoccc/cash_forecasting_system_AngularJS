@@ -1,0 +1,199 @@
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+		<form class="form-horizontal form-inline">
+	        <div class="modal-header">
+	           <h4 class="modal-title font-mu" data-translate="detailTitle">详情页面</h4>
+				<span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>	      
+ 			</div>
+ 			<div class="modal-main">
+	 			 <ul class="nav nav-tabs" ng-init="activeTab=1">
+				     <li ng-class="{active: activeTab == 1}"><a href="javascript:;" ng-click="activeTab = 1"><span data-translate="bankRule.basicMsg"></span></a></li>
+				     <li ng-class="{active: activeTab == 2}"><a href="javascript:;" ng-click="activeTab = 2"><span data-translate="bankRule.deviceParam"></span></a></li>
+				     <li ng-class="{active: activeTab == 3}"><a href="javascript:;" ng-click="activeTab = 3"><span data-translate="bankRule.cashRule"></span></a></li>
+				  </ul>
+			        <div class="modal-body title-flex" ng-show="activeTab == 1">         
+						<div class="col-md-4 tree-bg">银行名称
+	                		<tree-select id="bank_div" class="configuration-nav-tree"
+									tree-view="true"
+									tree-id="bankDetail"
+									tree-list="bankList"
+									object-id="id"
+									object-label="bankName"
+									object-children="children"
+									model-key="bankName"
+									model-val="bankNo"
+									single="false">
+							</tree-select>
+						</div>
+						<div class="col-md-8 no-padding">
+						  <div class="col-sm-12 col-info">
+							  <div class="form-group m-n">
+				                    <label data-translate="bankRule.stockCeiling">最大允许库存</label>
+									<input type="text" ng-readonly="true" ng-model="amount" />
+							  </div>
+						 </div>
+						<div ng-repeat="item in formParam.stockCeilings">
+							<div class="col-sm-12 col-info">
+								<div>
+									<label data-translate="bankRule.currency" >币种</label> 
+									<input disabled="disabled" ng-model="item.type" />
+								</div>
+							</div>
+							<div class="col-sm-12 col-info">
+								<div>
+									<label></label>
+									<table class="table-bordered table-pop">
+										<tr>
+											<th align="center"><label
+												data-translate="bankRule.denomination">面额</label></th>
+											<th align="center"><label
+												data-translate="bankRule.stockCeiling">最大允许库存</label></th>
+										</tr>
+										<tr ng-repeat="d in item.denominationList">
+											<input type="hidden" name="denomination"
+												ng-value="{{d.dictKey}}" />
+											<td>{{d.dictDescs || d.denomination}}</td>
+											<td><input type="number" disabled="disabled"
+												ng-model="d.count" /></td>
+	
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+				             <div class="col-sm-12 col-info">
+						  		<div class="form-group m-n">
+		                            <label data-translate="bankRule.indCashSecurit">现金保障率权重</label>
+									<input type="text" ng-model="formParam.indCashSecurity" ng-disabled="true" />
+							 	</div>
+				     		 </div> 
+							<div class="col-sm-12 col-info">
+							  	<div class="form-group m-n">
+		                            <label data-translate="bankRule.indCashReturn">现金成本系数</label>
+									<input type="text" ng-model="formParam.indReplenishCost" ng-disabled="true"/>
+				            	</div>
+				            </div>
+			         </div> 
+						</div>
+			            <div ng-show="activeTab == 2">
+				            <div class="col-sm-12 col-info">
+								  	<div class="form-group m-n">
+								  	<label class="control-label"></label>
+								  	  <label class="control-label marginL" data-translate="bankRule.fullCash">满钞预警%</label>
+	                                  <label class="control-label marginL" data-translate="bankRule.lackCash">缺钞预警%</label>
+								  	</div>
+						    </div>
+						    <div class="col-sm-12 col-info input-pop">
+								  	<div class="form-group m-n">
+								  	    <label data-translate="bankRule.camFullWarn">存款机</label>
+								  	    <input type="text" ng-model="formParam.camFullWarn" ng-disabled="true"/><span class="per-span">%</span>
+	                                    <input type="text"  ng-disabled="true" />
+								  	</div>
+						    </div>
+						    <div class="col-sm-12 col-info input-pop">
+								  	<div class="form-group m-n">
+								  	    <label data-translate="bankRule.atmLackWarn">取款机</label>
+							            <input type="text" disabled="disabled"/><span class="per-span"></span>
+							            <input type="text" ng-disabled="true" ng-model="formParam.atmLackWarn" /><span class="per-span">%</span>
+								  	</div>
+						    </div>
+	  	                    <div class="col-sm-12 col-info input-pop">
+								  	<div class="form-group m-n">
+								  	    <label data-translate="bankRule.crsLackWarn">循环机</label>
+							            <input type="text" ng-disabled="true" ng-model="formParam.crsFullWarn"/><span class="per-span">%</span>
+                                        <input type="text" ng-disabled="true" ng-model="formParam.crsLackWarn"/><span class="per-span">%</span>
+								  	</div>
+						    </div>
+						    <div class="col-sm-12 col-info input-pop">
+								  	<div class="form-group m-n">
+								  	    <label data-translate="bankRule.imLackWarn">一体机</label>
+										<input type="text" ng-disabled="true" ng-model="formParam.imFullWarn"/><span class="per-span">%</span>
+                                        <input type="text" ng-disabled="true" ng-model="formParam.imLackWarn"/><span class="per-span">%</span>
+								  	</div>
+						    </div>
+			            </div>
+					
+	    				<div ng-show="activeTab == 3">
+		    				<div class="col-sm-12 col-info">
+								  <div class="form-group m-n">
+					                    <label data-translate="bankRule.replenishRule">一周加钞规则</label>
+										<input type="checkbox" ng-model="select_all" ng-disabled="true"><span data-translate="bankRule.selectAll"></span>
+			        					<input type="checkbox" ng-model="select_workDay" ng-disabled="true"><span data-translate="bankRule.workDay"></span>
+								  </div>
+							 </div>
+							 <div class="col-sm-12 col-info">
+								  <div class="form-group m-n">
+							        <label class="control-label"></label>
+				                    <span class="control-label marginR" ng-repeat="i in replenishRule">
+										<input type="checkbox" ng-model="i.checked" ng-disabled="true">
+					                	<span>{{i.value}}</span>
+					                </span>
+								  </div>
+							 </div>
+							 <div class="col-sm-12 col-info">
+								  <div class="form-group m-n">
+								      <label data-translate="bankRule.holidayAdd">节假日是否加钞</label>
+					                  <input type="radio" ng-model="formParam.holidayAdd" ng-disabled="true" ng-value="'1'" name="cashRule"><span data-translate="global.yes"></span>
+		        				      <input type="radio" ng-model="formParam.holidayAdd" ng-disabled="true" ng-value="'2'" name="cashRule"><span data-translate="global.no"></span>
+								  </div>
+							 </div>
+							 <div class="col-sm-12 col-info input-pop">
+								  <div class="form-group m-n">
+								     <label data-translate="bankRule.frequency">加钞频次</label>
+					                 <input type="plusInteger" ng-disabled="true" class="cursonLen" ng-model="formParam.day" />
+					                 <label style="width:30px" data-translate="bankRule.day"></label>
+							         <input type="plusInteger" ng-disabled="true" class="cursonLen" ng-model="formParam.time" />
+							         <label style="width:30px" data-translate="bankRule.time"></label>
+								  </div>
+							 </div>
+	                        <div class="col-sm-12 col-info input-pop verifyTips-sp">
+						  		<div class="form-group m-n">
+			                        <label data-translate="bankRule.unitCount">加钞张数规则</label>
+									<input type="text" ng-disabled="true"  ng-model="formParam.unitCount" />
+								</div>
+							</div>
+							<div class="col-sm-12 col-info input-pop">
+						  		<div class="form-group m-n">
+			                        <label class="control-label"></label>
+									<span data-translate="bankRule.camFullJudge"></span><input type="checkbox" ng-true-value="'0'" ng-false-value="1" ng-disabled="true" ng-model="formParam.camFullJudge">
+								</div>
+							</div>
+							<div class="col-sm-12 col-info input-pop">
+						  		<div class="form-group m-n">
+			                        <label class="control-label"></label>
+									<span data-translate="bankRule.atmLackJudge"></span><input type="checkbox" ng-true-value="'0'" ng-false-value="'1'" ng-disabled="true" ng-model="formParam.atmLackJudge">
+								</div>
+							</div>
+							<div class="col-sm-12 col-info input-pop">
+						  		<div class="form-group m-n">
+			                        <label class="control-label"></label>
+			                        <span data-translate="bankRule.crsLackJudge"></span><input type="checkbox" ng-true-value="'0'" ng-false-value="'1'" ng-disabled="true" ng-model="formParam.crsLackJudge">
+			                    </div>
+			                </div>
+			                <div class="col-sm-12 col-info input-pop">
+						  		<div class="form-group m-n">
+			                        <label class="control-label"></label>
+			                       <span data-translate="bankRule.crsFullJudge"></span><input type="checkbox" ng-true-value="'0'" ng-false-value="'1'" ng-disabled="true" ng-model="formParam.crsFullJudge">
+			                    </div>
+			                </div>
+			                <div class="col-sm-12 col-info input-pop">
+						  		<div class="form-group m-n">
+			                        <label class="control-label"></label>
+			                        <span data-translate="bankRule.imLackJudge"></span><input type="checkbox" ng-true-value="'0'" ng-false-value="'1'" ng-disabled="true" ng-model="formParam.imLackJudge">
+			                    </div>
+			                </div>
+			                <div class="col-sm-12 col-info input-pop">
+						  		<div class="form-group m-n">
+			                        <label class="control-label"></label>
+			                        <span data-translate="bankRule.imFullJudge"></span><input type="checkbox" ng-true-value="'0'" ng-false-value="'1'" ng-disabled="true" ng-model="formParam.imFullJudge">
+			                    </div>
+			                </div>
+						</div>
+				<div class="modal-footer button-block">
+					 <button type="button" ng-click="clear(false)">
+		                <span class="glyphicon glyphicon-ban-circle"></span>
+		                <span data-translate="entity.action.cancel">Cancel</span>
+		            </button>
+				 </div>
+		</div>
+	</form>
+</div>

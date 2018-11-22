@@ -1,0 +1,1 @@
+define(function(){function a(b,c){return function(){return b.apply(c,arguments)}}return a});

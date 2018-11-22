@@ -1,0 +1,10 @@
+{
+	"cashGuaranteeRate":{
+		"termNo":"Terminal ID",
+	    "branchNo":"Branch Code",
+	    "bankName":"Branch Name",
+	    "regionName":"District",
+	    "replenishDate":"Use Date",
+	    "termType":"Terminal Type"
+	}
+}

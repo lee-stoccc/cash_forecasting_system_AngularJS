@@ -1,0 +1,1 @@
+describe("Modernizr Base",function(){var b;var a;before(function(c){define("package",[],function(){return{}});var d=requirejs.config({context:Math.random().toString().slice(2),baseUrl:"../src",paths:{cleanup:"../test/cleanup"}});d(["Modernizr","cleanup"],function(f,e){b=f;a=e;c()})});it("should return an object",function(){expect(b).to.be.an("object")});after(function(){a()})});

@@ -1,0 +1,1 @@
+(function(a){a.module("oc.lazyLoad").config(["$provide",function(b){b.decorator("$ocLazyLoad",["$delegate","$q",function(d,c){d.jsLoader=function(f,g,e){require(f,g.bind(null,undefined),g,e)};d.jsLoader.requirejs=true;return d}])}])})(angular);

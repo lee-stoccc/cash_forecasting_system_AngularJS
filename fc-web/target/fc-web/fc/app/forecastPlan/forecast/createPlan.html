@@ -1,0 +1,64 @@
+<div class="panel ng-scope openwindow-panel" ng-init="initView()">
+	<form class="form-inline page-top" ng-submit="forecast()" verify-scope>
+		<div class="modal-header">
+			<h4 class="modal-title font-mu"
+				data-translate="forecastPlan.forecast"></h4>
+			<span class="glyphicon glyphicon-remove modal-delete"
+				ng-click="clear(false)"></span>
+		</div>
+		<div class="modal-main wrapper-md row" style="min-height:480px">
+			<div style="padding:0;margin-left:150px;margin-top:50px">
+				<!-- 银行 -->
+				<div class="col-sm-12" style="padding:10px 0">
+  	 				<span class="form-group" style="display:flex">
+  	 					<label class="forecastLabel" data-translate="forecastPlan.bankName"></label>
+  	 					<select ng-model="formParam.bankName" id="bankName" ng-verify ng-options="bank.id as bank.bankName for bank in bankList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select>
+					</span>
+				</div>
+
+				<!-- 时间 -->
+				<div class="col-sm-12" style="padding:10px 0">
+					<span class="form-group form-inline">
+						<label class="forecastLabel" data-translate="forecastPlan.forecastDate"></label>
+						 <span class="input-group input-group-time">
+								<input type="text" 
+								placeholder="{{'forecastPlan.forecastDate' | translate}}" 
+								readonly="readonly"  uib-datepicker-popup="{{dateformat}}" 
+								ng-model="formParam.forecastDate" 
+								is-open="datePickerOpenStatus.forecastDate" 
+								current-text="{{'global.today' | translate}}"
+								close-text="{{'global.close' | translate}}"
+								datepicker-options="dateOptions"/>
+	                        <span class="input-group-btn">
+			                	<button type="button" class="btn btn-default" ng-click="openCalendar('forecastDate')"><i class="glyphicon  glyphicon-calendar"></i></button>
+			                </span>
+		                </span>
+					</span>
+				</div>
+				
+							<!--  -->
+				<div class="col-sm-12" style="padding:10px 0">
+					<span class="form-group">
+						<label class="forecastLabel" data-translate="forecastPlan.monitorTime"></label>
+						<input type="text" ng-model="formParam.timePoint" ng-disabled="true"  />
+<!-- 						<select ng-model="formParam.timePoint" ng-disabled="true"  ng-options="timePoint.dictKey as timePoint.dictDesc for timePoint in timePointList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select> -->
+					</span>	
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer button-block">
+			<button type="submit" ng-verify> 
+				<span class="glyphicon glyphicon-grain"></span> <span
+					data-translate="forecastPlan.forecast">Forecast</span>
+			</button>
+			<button type="button" ng-click="clear(false)">
+				<span class="glyphicon glyphicon-ban-circle"></span> <span
+					data-translate="entity.action.cancel">Cancel</span>
+			</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,71 @@
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+        <div class="modal-header">
+           	<h4 class="modal-title font-mu" data-translate="bankInfo.title">编辑BankInfo</h4>
+        	<span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>
+        </div>
+        <div class="modal-main">
+        	<div class="modal-body">   
+        	 	<div class="col-sm-12 col-info input-pop verifyTips-sp">
+					<div>
+                        <label  data-translate="bankInfo.parentBankName"></label>
+						<input type="text" ng-model="bankInfo.parentName" ng-readonly="true"/>
+                   	</div>                
+                </div>      
+            	<div class="col-sm-12 col-info input-pop verifyTips-sp">
+					<div>
+                        <label  data-translate="bankInfo.bankNo">银行编号</label>
+						<input type="text" ng-verify="max:20" ng-model="bankInfo.bankNo" />
+                      </div>                
+                  </div>
+ 	      <!--      	<div class="col-sm-12 col-info">
+					<div>
+            	        <label  data-translate="bankInfo.headquarter">银行总行</label>
+						<input type="text" ng-verify="max:32"  ng-model="bankInfo.headquarter" />
+                      </div>                
+                </div>
+ 	            <div class="col-sm-12 col-info">
+					<div>
+                        <label  data-translate="bankInfo.firstBranch">一级分行</label>
+						<input type="text" ng-verify="required:false,max:32"  ng-model="bankInfo.firstBranch" />
+                     </div>                
+                </div>
+ 	            <div class="col-sm-12 col-info">
+					<div>
+                         <label  data-translate="bankInfo.secondBranch">二级分行</label>
+						<input type="text" ng-verify="required:false,max:32"  ng-model="bankInfo.secondBranch" />
+                     </div>                
+                  </div>
+                 <div class="col-sm-12 col-info">
+					<div>
+                        <label  data-translate="bankInfo.branch">支行</label>
+						<input type="text"   ng-model="bankInfo.branch" />
+                   	</div>                
+                  </div> -->
+                  <div class="col-sm-12 col-info input-pop verifyTips-sp">
+					<div>
+                        <label  data-translate="bankInfo.bankName"></label>
+						<input type="text" ng-model="bankInfo.bankName" ng-verify="max:32"/>
+                   	</div>                
+                  </div>
+				<div class="col-sm-12 col-info">
+					<div>
+					   <label data-translate="bankInfo.status">状态</label>
+					   <select ng-model="bankInfo.status" ng-options="status.dictKey as status.dictDesc for status in bankStatusList"></select>
+					   <span class="span_nec">*</span>
+	               </div>
+				</div>	
+			</div>
+			<div class="modal-footer button-block">
+				<button type="submit" ng-verify >
+					<span class="glyphicon glyphicon-save"></span>
+					<span data-translate="entity.action.save">Save</span>
+				</button>
+				 <button type="button" ng-click="clear(false)">
+	                <span class="glyphicon glyphicon-ban-circle"></span>
+	                <span data-translate="entity.action.cancel">Cancel</span>
+	            </button>
+			 </div>
+		</div>
+	</form>
+</div>

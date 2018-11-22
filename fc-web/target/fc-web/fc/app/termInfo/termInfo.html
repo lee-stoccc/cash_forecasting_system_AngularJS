@@ -1,0 +1,121 @@
+<div class="panel ng-scope default-controller"
+	ng-controller="TermInfoController" ng-init="init()">
+	<div class="default-container">
+		<form class="form-inline">
+			<div class="wrapper-md row">
+				<div class="col-sm-12">
+					<span class="form-group"> <label
+						data-translate="termInfo.termNo">璁惧缂栧彿</label> <input type="text" placeholder="Terminal ID"
+						ng-model="formParam.termNo" />
+					</span> 
+					<!-- 自定义区域、自定义编号 -->
+					<!-- <span class="form-group"> <label
+						data-translate="termInfo.cusTermNo">鑷畾涔夌紪鍙�</label> <input
+						type="text" ng-model="formParam.cusTermNo" />
+					</span> 
+					<span class="form-group"> <label
+						data-translate="termInfo.cusRegion">鑷畾涔夊尯鍩�</label> <select
+						ng-model="formParam.cusRegionId" id="cusRegionTerm"
+						ng-options="cusgion.id as cusgion.regionName for cusgion in cusgionList">
+							<option value="" data-translate="global.pleaseSelect"></option>
+					</select>
+					</span> --> 
+					
+				 <!--  <span class="form-group m-n"> 
+						<label class="control-label" data-translate="bankRule.bankName">鎵�灞為摱琛�</label>
+						<select ng-model="formParam.bankId" ng-verify ng-options="bank.id as bank.bankName for bank in bankList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select> 
+					</span>  -->
+					
+						<!--  鍘婚櫎Id 鍚� -->
+					<span class="form-group">
+						<label data-translate="bankRule.bankName">鎵�灞為摱琛�</label> 
+							<select class="eventSelect"  
+								ng-model="formParam.bankId" 
+								id="bankNameTerm" 
+								ng-options="bank.id as bank.bankName for bank in bankList">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+					</span>
+					<span class="form-group"> 
+					<label
+						data-translate="termInfo.branchNo">缃戠偣鍚嶇О</label>
+						<select
+							ng-model="formParam.branchNo"  id="branchNameTerm"  
+							ng-options="branch.dictKey as branch.dictDesc for branch in branchList">
+							<option value="" data-translate="global.pleaseSelect"></option>
+					</select>
+					</span> <span class="form-group"> 
+					<label data-translate="termInfo.status">璁惧鐘舵��</label>
+						<select id="statusTerm"
+							ng-model="formParam.status"
+							ng-options="status.dictKey as status.dictDesc for status in termStatusList">
+							<option value="" data-translate="global.pleaseSelect"></option>
+						</select>
+					</span> 
+					<!-- <span class="form-group"> <label data-translate="termInfo.escort">鎶艰繍鍏徃</label> 
+						<select id="escortTerm"
+								ng-model="formParam.escort"
+								ng-options="escort.dictKey as escort.dictDesc for escort in escortList">
+								<option value="" data-translate="global.pleaseSelect"></option>
+						</select>
+					</span> -->
+					 <span class="form-group button-block">
+						<button ng-click="loadAll()">
+							<span class="glyphicon glyphicon-search"></span> <span
+								data-translate="global.go"></span>
+						</button>
+						<button ng-click="resetSearch()">
+							<span class="glyphicon glyphicon-refresh"></span> <span
+								data-translate="global.reset"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+
+
+		<div class="wrapper-md">
+			<div class="op-div button-block">
+				<!-- <button ng-click="addTermInfo()">
+					<span class="glyphicon glyphicon-plus"></span> <span
+						data-translate="entity.action.add"></span>
+				</button> -->
+				<button ng-click="editTermInfo()">
+					<span class="glyphicon glyphicon-edit"></span> <span
+						data-translate="entity.action.edit"></span>
+				</button> 
+				<button ng-click="batchEdit()">
+					<span class="glyphicon glyphicon-edit"></span> <span
+						data-translate="termInfo.batchEdit"></span>
+				</button>
+				<!-- <button ng-click="batchDelete()">
+					<span class="glyphicon glyphicon-minus"></span> <span
+						data-translate="global.batchDelete"></span> -->
+				<!-- </button>
+				<button ngf-select ng-model="fileSetting" ngf-change="importSettingExcel($file)">
+					<span class="glyphicon glyphicon-import"></span> <span
+						data-translate="termInfo.importSetting"></span>
+				</button>
+				<button ngf-select ng-model="file" ngf-change="importExcel($file)">
+					<span class="glyphicon glyphicon-import"></span> <span
+						data-translate="termInfo.import"></span>
+				</button>
+				<button ngf-select ng-model="file"
+					ngf-change="upLoadTempFile($file)">
+					<span class="glyphicon glyphicon-upload"></span> <span
+						data-translate="global.uploadFile"></span>
+				</button>
+				<button ng-click="downLoadFile()">
+					<span class="glyphicon glyphicon-download"></span> <span
+						data-translate="global.downloadFile"></span>
+				</button> -->
+			</div>
+		</div>
+		<div class="table-view-defalut" style="top: 120px">
+				<div class="table-view" tables-model2
+				tables-data-model="tablesConfig"></div>
+		</div>
+	</div>
+</div>

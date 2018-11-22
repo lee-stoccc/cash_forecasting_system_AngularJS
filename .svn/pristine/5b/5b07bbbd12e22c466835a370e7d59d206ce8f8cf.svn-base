@@ -1,0 +1,107 @@
+<!-- <link rel="stylesheet" href="privilege/css/user/user-dialog.css">
+<div class="panel ng-scope re-panel new-menu-container" ng-controller="NewMenuController">
+    <div class="new-menu-info">
+        <div class="base-nav-list">
+            <a data-translate="devplatformApp.newMenu.home"></a>
+            <img src="content/images/icon_next.png">
+            <a ui-sref="app.menu-management" data-translate="devplatformApp.newMenu.menuManagement"></a>
+            <img src="content/images/icon_next.png">
+            <a data-translate="devplatformApp.newMenu.newMenu"></a>
+            <form>
+                <div class="new-menu-info-container">
+                    <div class="container-header" data-translate="{{dataTranslate}}"></div>
+                    <div class="new-menu-container-content">
+                        <span class="new-menu-sub-title" data-translate="devplatformApp.newMenu.menuInfo"></span>
+                         <div class="col-sm-12 col-info">
+                                 <label data-translate="devplatformApp.newMenu.fatherMenuName"></label>
+                                 <input type="text"  ng-readonly="true" ng-model="menu.parentName"
+                                        placeholder="{{'devplatformApp.newMenu.fatherMenuName' | translate}}">
+                         </div>
+                            
+                          <div class="col-sm-12 col-info">
+                              <label data-translate="devplatformApp.newMenu.menuName"></label>
+                              <input type="text" ng-model="menu.menuName" maxlength="20"
+                                     placeholder="{{'devplatformApp.newMenu.menuName' | translate}}"><span class="span_nec">*</span>
+                              <p class="error-message" ng-show="menuNameError.length > 0" data-translate="devplatformApp.newMenu.menuNameError"></p>
+                          </div>
+                            
+                        <div class="col-sm-12 col-info">
+                             <label  data-translate="devplatformApp.newMenu.ENM"></label>
+                              <input type="text" ng-model="menu.englishName" maxlength="50"
+                                     placeholder="{{'devplatformApp.newMenu.ENM' | translate}}"><span class="span_nec">*</span>
+                              <p class="error-message" ng-show="englishNameError.length > 0" data-translate="devplatformApp.newMenu.englishNameError"></p>
+                              <p class="error-message" ng-show="chnEnglishNameError.length > 0" data-translate="devplatformApp.newMenu.chnError"></p>
+                        </div>
+                            
+
+                       <div class="col-sm-12 col-info">
+                              <label  data-translate="devplatformApp.newMenu.menuUrl"></label>
+                              <input type="text" ng-model="menu.url" maxlength="50"
+                                     placeholder="{{'devplatformApp.newMenu.menuUrl' | translate}}"> <span class="span_nec">*</span>
+                              <p class="error-message" ng-show="urlError.length > 0" data-translate="devplatformApp.newMenu.urlError"></p>
+                              <p class="error-message" ng-show="chnError.length > 0" data-translate="devplatformApp.newMenu.chnError"></p>
+                        </div>
+                            
+                       <div class="col-sm-12 col-info">
+                            <label data-translate="devplatformApp.newMenu.menuLangSwitch"></label>
+                            <input type="text" ng-model="menu.langSwitch" maxlength="50"
+                                   placeholder="{{'devplatformApp.newMenu.menuLangSwitch' | translate}}"><span class="span_nec">*</span>
+                            <p class="error-message" ng-show="langSwitchError.length > 0" data-translate="devplatformApp.newMenu.menuLangSwitchError"></p>
+                            <p class="error-message" ng-show="chnError.length > 0" data-translate="devplatformApp.newMenu.chnError"></p>
+                        </div>
+
+                        <div class="col-sm-12 col-info">
+                               <label  data-translate="devplatformApp.newMenu.order"></label>
+                           <div class="padder inline lineSort">
+                               <div class="glyphicon glyphicon-minus divView" ng-click="decrease()"></div>
+                               <p ng-maxlength="3">{{menu.sort}}</p>
+                               <div class="glyphicon glyphicon-plus divView" ng-click="increase()"></div>
+                               <span class="span_nec">*</span>
+                           </div>
+                      </div>
+
+                        <div class="col-sm-12 col-info">
+                             <span class="span_nec">*</span>
+                             <label data-translate="devplatformApp.newMenu.state"></label>
+                             <div class="padder inline lineSort">
+                                <div class="state" data-translate="devplatformApp.newMenu.select.disabled"></div>
+                                <label class="i-switch i-switch-md bg-info m-t-xs m-r state switch">
+                                    <input type="checkbox" ng-model="isOpen" name="enable_flag"
+                                           class="ng-valid ng-dirty ng-valid-parse ng-touched">
+                                    <i></i>
+                                </label>
+                                <div class="state" data-translate="devplatformApp.newMenu.select.enabled"></div>
+                             </div>
+                        </div>
+                          <div >
+                            <div class="menu-activated-check">
+                                <label data-translate="devplatformApp.newMenu.state"></label>
+                            </div>
+                            <div class="user-padder user-state">
+                                <div class="user-state" data-translate="entity.action.disable">disable</div>
+                                <label class="i-switch i-switch-md bg-info user-m-t-xs m-r state switch">
+                                    <input type="checkbox" ng-model="isOpen" name="enable_flag"
+                                           class="ng-valid ng-dirty ng-valid-parse ng-touched">
+                                    <i></i>
+                                </label>
+                                <div class="user-state" data-translate="entity.action.enable">enable</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="new-menu-footer button-block">
+                           <button type="button" ng-click="saveMenu()">
+							<span class="glyphicon glyphicon-save"></span>
+							<span data-translate="entity.action.save">Save</span>
+						</button>
+						 <button type="button" ui-sref="app.menu-management({menuId:menuId})">
+			                <span class="glyphicon glyphicon-ban-circle"></span>
+							<span data-translate="entity.action.back">Cancel</span>
+			            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ -->

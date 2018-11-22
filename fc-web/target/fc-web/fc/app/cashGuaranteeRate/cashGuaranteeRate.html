@@ -1,0 +1,70 @@
+<div class="panel ng-scope default-controller"
+	ng-controller="cashGuaranteeRateController">
+	<div class="default-container">
+		<form class="form-inline">
+			<div class="wrapper-md row">
+				<div class="col-sm-12">
+					<span class="form-group"> <label
+						data-translate="cashGuaranteeRate.termNo"></label> <input type="text"
+						placeholder="{{'cashGuaranteeRate.termNo' | translate}}"
+						ng-model="formParam.termNo" />
+					</span> <span class="form-group"> <label
+						data-translate="cashGuaranteeRate.termType"></label> <!-- <input type="text" placeholder="{{'forecastPlan.termType' | translate}}"
+							 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.termType" /> -->
+						<select ng-model="formParam.termType"
+						ng-options="type.dictKey as type.dictDesc for type in termTypeList">
+							<option data-translate="global.pleaseSelect"></option>
+					</select>
+					</span> <span class="form-group"> <label
+						data-translate="cashGuaranteeRate.regionName"></label> <!-- <input type="text" placeholder="{{'forecastPlan.regionName' | translate}}"
+							 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.cusRegionId" /> -->
+						<select ng-model="formParam.cusRegionId" ng-verify
+						ng-options="cusgion.id as cusgion.regionName for cusgion in cusgionList">
+							<option data-translate="global.pleaseSelect"></option>
+					</select>
+					</span> <span class="form-group"> <label
+						data-translate="cashGuaranteeRate.replenishDate"></label> <span
+						class="input-group input-group-time"> <!-- <input type="text" placeholder="{{'forecastPlan.replenishDate' | translate}}"
+								 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.replenishDate" /> -->
+							<input type="text"
+							placeholder="{{'cashGuaranteeRate.replenishDate' | translate}}"
+							readonly="readonly" uib-datepicker-popup="{{dateformat}}"
+							ng-model="formParam.replenishDate"
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							is-open="datePickerOpenStatus.replenishDate"
+							datepicker-options="dateOptions" /> <span class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('replenishDate')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>
+						</span>
+					</span>
+					</span>
+
+					<!-- <span class="form-group">
+						<label data-translate="forecastPlan.forecastStatus"></label>
+						<input type="text" placeholder="{{'forecastPlan.forecastStatus' | translate}}"
+							 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.forecastStatus" />
+					</span> -->
+
+					<span class="form-group button-block">
+						<button ng-click="loadAll()">
+							<span class="glyphicon glyphicon-search"></span> <span
+								data-translate="global.go"></span>
+						</button>
+						<button ng-click="resetSearch()">
+							<span class="glyphicon glyphicon-refresh"></span> <span
+								data-translate="global.reset"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+		<div class="table-view-defalut" style="top: 90px">
+			<div class="table-view" tables-model3
+				tables-data-model="tablesConfig"></div>
+		</div>
+	</div>
+
+</div>

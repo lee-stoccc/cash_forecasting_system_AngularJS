@@ -1,0 +1,30 @@
+{
+    "devplatformApp":{
+        "newMenu":{
+            "home":"Home",
+            "menuManagement":"Menu Management",
+            "newMenu":"New Menu",
+            "reviserMenu":"Reviser Menu",
+            "menuInfo":"Menu Information",
+            "fatherMenuName":"Parent Name",
+            "menuName":"Menu Name",
+            "menuNameError":"Please input Menu Name",
+            "ENM":"English Name of Menu",
+            "englishNameError":"Please input English Name of Menu",
+            "menuUrl":"Menu Url",
+            "urlError":"Please input Menu Url",
+            "menuLangSwitch":"Language Switch",
+			"menuLangSwitchError":"Please input Language Switch",
+            "chnError":"Cannot include Chinese ",
+            "order":"Order",
+            "state":"State",
+            "save":"Save",
+            "back":"Back",
+            "select": {
+            	"noValue": "--select--",
+            	"enabled": "enabled",
+            	"disabled": "disabled"
+	        }
+        }
+    }
+}

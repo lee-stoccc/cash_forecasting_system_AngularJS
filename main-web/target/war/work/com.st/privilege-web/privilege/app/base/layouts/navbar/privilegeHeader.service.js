@@ -1,0 +1,1 @@
+(function(){angular.module("devplatformApp").factory("privilegeHeaderService",a);a.$inject=["$resource","globalConstant","utilService"];function a(e,f,d){function c(g){return d.requestPost(f.devplatform_web_apiPath+"api/mobileValidate/sendCode",g)}var b={getWarningBells:c};return b}})();

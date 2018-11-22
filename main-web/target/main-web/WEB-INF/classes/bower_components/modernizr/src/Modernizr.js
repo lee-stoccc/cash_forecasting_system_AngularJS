@@ -1,0 +1,1 @@
+define(["ModernizrProto"],function(b){var a=function(){};a.prototype=b;a=new a();return a});

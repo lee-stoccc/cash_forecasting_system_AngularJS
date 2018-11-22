@@ -1,0 +1,26 @@
+{
+    "devplatformApp": {
+        "sysOperateLog": {
+            "sort": "sort",
+            "account": "Account",
+            "userName": "UserName",
+            "enterAccount": "Please enter your account number",
+            "enterName": "Please enter your user name",
+            "type": "Type",
+            "select": {
+            	"noValue": "--Select--",
+            	"login": "Login",
+            	"action": "Action"
+	        },
+	        "time": "Time",
+	        "inquire": "Inquire",
+	        "reset": "Reset",
+	        "enterContent": "Please enter your content",
+	        "operationContent": "Operation",
+	        "address": "Address",
+	        "logTime": "Log Time",
+	        "timeMsg1": "Start date should be less than expiration date",
+	        "timeMsg2": "The deadline should be greater than the start date"
+        }
+    }
+}

@@ -1,0 +1,1 @@
+define(["isSVG"],function(b){function a(){if(typeof document.createElement!=="function"){return document.createElement(arguments[0])}else{if(b){return document.createElementNS.call(document,"http://www.w3.org/2000/svg",arguments[0])}else{return document.createElement.apply(document,arguments)}}}return a});

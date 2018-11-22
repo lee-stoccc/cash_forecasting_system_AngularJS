@@ -1,0 +1,13 @@
+{
+	"forecastReportform":{
+	    "title":"日测预用表",
+	    "other":"查询其他设备",
+	    "termNo":"设备编号",
+        "branchNo":"网点编号",
+        "bankName":"银行名称",
+        "regionName":"自定义区域",
+        "region":"行政区域",
+        "termType":"设备类型",
+        "replenishDate":"开始时间"  
+	}
+}

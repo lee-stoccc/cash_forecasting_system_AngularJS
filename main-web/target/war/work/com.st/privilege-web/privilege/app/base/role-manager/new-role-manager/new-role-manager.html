@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="privilege/css/user/user-dialog.css">
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+        <div class="modal-header">
+           	<h4 class="modal-title font-mu" >Creat</h4>
+        	<span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>
+        </div>
+        <div class="modal-main">
+        <div class="modal-body">
+            <div class="col-md-12 info-group-title">
+                <div class="col-sm-12 col-info">
+                    <div class="form-group m-n" ng-show="sysRole.id">
+                        <input type="hidden" id="id" name="id" ng-model="sysRole.id" readonly />
+                    </div>
+                </div>
+                <div class="col-sm-12 col-info input-pop">
+                    <div id="roleNoDiv">
+                        <label data-translate="devplatformApp.sysRole.roleNo" for="field_roleNo"></label>
+                        <input type="text" id="roleNo" ng-change="checkRoleNo()" maxlength="10" required="required" name="roleNo" id="field_roleNo" ng-model="sysRole.roleNo"/><span class="span_nec">*</span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-info input-pop">
+                    <div>
+                        <label data-translate="devplatformApp.sysRole.roleName" for="field_roleName"></label>
+                        <input type="text" maxlength="50" required="required" name="roleName" id="field_roleName" ng-model="sysRole.roleName"/> <span class="span_nec">*</span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-info input-pop">
+                    <div>
+                        <label data-translate="devplatformApp.sysRole.delFlag"></label>
+                        <input type="radio"  name="delFlag" id="field_delFlag1"  ng-model="sysRole.delFlag" value="1" required="required"/><span data-translate="devplatformApp.sysRole.select.enabled"></span>
+                        <input type="radio"  name="delFlag" id="field_delFlag2"  ng-model="sysRole.delFlag" value="0" /><span data-translate="devplatformApp.sysRole.select.disabled"></span>
+                        <span class="span_nec">*</span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-info">
+                    <div>
+                        <label style="position:relative;top:-10px" data-translate="devplatformApp.sysRole.description" for="field_description"></label>
+                        <textarea required="required" maxlength="100" rows="3" cols="30" name="address" id="field_description" ng-model="sysRole.description" />
+                        <span class="span_nec">*</span>
+                    </div>
+	             </div>
+	            </div>
+	        </div>
+        </div>
+		<div class="modal-footer button-block">
+			<button type="submit" ng-verify >
+				<span class="glyphicon glyphicon-save"></span>
+				<span data-translate="entity.action.save">Save</span>
+			</button>
+			 <button type="button" ng-click="clear(false)">
+                <span class="glyphicon glyphicon-ban-circle"></span>
+                <span data-translate="entity.action.cancel">Cancel</span>
+            </button>
+		 </div>
+		</div>
+	</form>
+</div>

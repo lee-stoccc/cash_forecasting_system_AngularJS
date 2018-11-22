@@ -1,0 +1,136 @@
+<div class="panel ng-scope openwindow-panel" ng-init="initData()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+		<div class="modal-header">
+			<h4 class="modal-title font-mu" data-translate="eventManagement.conflictSetting">冲突设置</h4>
+			<span class="glyphicon glyphicon-remove modal-delete"
+				ng-click="clear(false)"></span>
+		</div>
+		<div class="edit-container add-container-height">
+			<div class="terms-left">
+				<div class="conflictHeader">
+					<div class="textItem" style="width:48px">
+						<label data-translate="eventManagement.select"></label>
+					</div>
+					<div class="textItem">
+						<label data-translate="forecastReportform.regionName"></label>
+					</div>
+					<div class="textItem">
+						<label data-translate="termInfo.termNo"></label>
+					</div>
+				</div>
+				<div class="conflictContrainer">
+					<div
+						class="conflictHeader {{($index%2)==0?'tr-white-background':'tr-gray-background'}}"
+						ng-repeat="item in conflictTermsList">
+						<div class="inputItem">
+							<input type="checkbox" ng-model="item.checked" ng-change="changeConlictTerms(item)">
+						</div>
+						<div class="textItem">item</div>
+						<div class="textItem">item</div>
+					</div>
+				</div>
+			</div>
+			<div class="terms-right">
+				<div class="terms-right-item">
+					<div class="item-header">
+						<input type="radio" name="a" ng-value="event.id">
+						<span style="margin-left:5px">111</span> 
+					</div>
+					<div class="item-container">
+						<h4 class="modal-title font-mu" data-translate="eventManagement.rulesSet"></h4>
+						<div class="edit-container-right-container">
+							<div class="right-top">
+								<h4 class="modal-title font-mu"
+									data-translate="eventManagement.cashRule"></h4>
+								<div class="right-col-info">
+									<div>
+										<label data-translate="eventManagement.replenishRule">一周加钞规则</label>
+									</div>
+								</div>
+								<div class="right-col-info">
+									<div style="line-height:30px">
+										<span class="marginR" ng-repeat="i in replenishRule"> 
+											<input type="checkbox" ng-model="i.checked" disabled="disabled">
+											<span style="margin-left:10px">{{i.value}}</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="right-bottom">
+								<h4 class="modal-title font-mu"
+									data-translate="eventManagement.limits"></h4>
+								<div class="right-col-info">
+									<label data-translate="eventManagement.maxCash"></label> 
+									<input disabled="disabled"
+										type="number" min="0"
+										placeholder="{{'eventManagement.maxCash' | translate}}"
+										ng-model="formParam.ceiling" />
+								</div>
+								<div class="right-col-info">
+									<label data-translate="eventManagement.minCash"></label> 
+									<input disabled="disabled"
+										type="number" min="0"
+										placeholder="{{'eventManagement.minCash' | translate}}"
+										ng-model="formParam.lowest" />
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="terms-right-item item-left-line">
+						<div class="item-header">
+							<input type="radio" name="a" ng-value="event.id"> <span
+								style="margin-left: 5px">111</span>
+						</div>
+						<div class="item-container">
+							<h4 class="modal-title font-mu"
+								data-translate="eventManagement.rulesSet"></h4>
+							<div class="edit-container-right-container">
+								<div class="right-top">
+									<h4 class="modal-title font-mu"
+										data-translate="eventManagement.cashRule"></h4>
+									<div class="right-col-info">
+										<div>
+											<label data-translate="eventManagement.replenishRule">一周加钞规则</label>
+										</div>
+									</div>
+									<div class="right-col-info">
+										<div style="line-height: 30px">
+											<span class="marginR" ng-repeat="i in replenishRule">
+												<input type="checkbox" ng-model="i.checked"
+												disabled="disabled"> <span style="margin-left: 10px">{{i.value}}</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="right-bottom">
+									<h4 class="modal-title font-mu"
+										data-translate="eventManagement.limits"></h4>
+									<div class="right-col-info">
+										<label data-translate="eventManagement.maxCash"></label> <input
+											disabled="disabled" type="number" min="0"
+											placeholder="{{'eventManagement.maxCash' | translate}}"
+											ng-model="formParam.ceiling" />
+									</div>
+									<div class="right-col-info">
+										<label data-translate="eventManagement.minCash"></label> <input
+											disabled="disabled" type="number" min="0"
+											placeholder="{{'eventManagement.minCash' | translate}}"
+											ng-model="formParam.lowest" />
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="modal-footer">
+					<button type="button" ng-click="saveConflict()">
+						<span class="glyphicon glyphicon-save"></span> <span
+							data-translate="entity.action.save">Save</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

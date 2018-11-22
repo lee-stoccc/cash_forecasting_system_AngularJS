@@ -1,0 +1,1 @@
+"use strict";SwaggerUi.Models.ApiKeyAuthModel=Backbone.Model.extend({defaults:{"in":"",name:"",title:"",value:""},initialize:function(){this.on("change",this.validate)},validate:function(){var a=!!this.get("value");this.set("valid",a);return a}});

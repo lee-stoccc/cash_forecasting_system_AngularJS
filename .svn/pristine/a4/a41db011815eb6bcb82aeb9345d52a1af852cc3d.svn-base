@@ -1,0 +1,63 @@
+
+<link rel="stylesheet" href="fc/css/bankInfo/bankInfo.css">
+<div class="panel ng-scope default-controller"
+	ng-controller="BankInfoController" ng-init="init()">
+	<div class="default-container">    
+		<form class="form-inline">
+			<div class="wrapper-md row">
+				<div class="bankInfo-left" style="height: 640px;overflow-y:auto;">
+					<tree-select  tree-view="true" tree-id="bankInfo"
+					tree-list="bankList" object-id="id" object-label="bankName"
+					object-children="children" model-key="bankName" model-val="bankNo"
+					single="false"> </tree-select>
+				</div>
+				<div class="bankInfo-right">
+						<div class="default-container">
+							<span class="form-group"> <label
+								data-translate="bankInfo.bankNo">银行编号</label> <input type="text"
+								ng-model="formParam.bankNo" />
+							</span> <span class="form-group"> <label
+								data-translate="bankInfo.headquarter">银行总行</label> <select
+								ng-model="formParam.headquarter"
+								ng-options="b.id as b.bankName for b in bankNameList">
+									<option value="" data-translate="global.pleaseSelect"></option>
+							</select>
+							</span> <span class="form-group"> <label
+								data-translate="bankInfo.status">状态</label> <select
+								ng-model="formParam.status"
+								ng-options="status.dictKey as status.dictDesc for status in bankStatusList"></select>
+							</span> <span class="form-group button-block">
+								<button ng-click="loadAll()">
+									<span class="glyphicon glyphicon-search"></span> <span
+										data-translate="global.go"></span>
+								</button>
+								<button ng-click="resetSearch()">
+									<span class="glyphicon glyphicon-refresh"></span> <span
+										data-translate="global.reset"></span>
+								</button>
+							</span>
+							<div class="op-div button-block">
+								<button ng-click="addBankInfo()">
+									<span class="glyphicon glyphicon-plus"></span> <span
+										data-translate="entity.action.add">Create a new
+										bankInfo</span>
+								</button>
+								<button ng-click="editBankInfo()">
+									<span class="glyphicon glyphicon-edit"></span> <span
+										data-translate="entity.action.edit">edit a new bankInfo</span>
+								</button>
+								<button ng-click="batchDelete()">
+									<span class="glyphicon glyphicon-minus"></span> <span
+										data-translate="global.batchDelete"></span>
+								</button>
+							</div>
+						<div class="table-view-defalut" style="top: 70px">
+							<div class="table-view" tables-model2
+								tables-data-model="tablesConfig"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

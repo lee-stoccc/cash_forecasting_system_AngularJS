@@ -1,0 +1,13 @@
+{
+    	"detailTitle":"Detail",
+        "cusRegion" : {
+             "title": "Edit CusRegion",
+			"regionNo": "District ID",
+			"regionName": "District",
+			"taskCeiling": "TaskCeiling",
+			"formError":{
+				"duplicateCusRegionNo":"Duplicate CusRegionNo",
+				"duplicateCusRegionName":"Duplicate CusRegionName"
+				}
+		 }
+    }

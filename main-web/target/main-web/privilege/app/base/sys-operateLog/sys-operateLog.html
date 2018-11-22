@@ -1,0 +1,58 @@
+<div class="panel ng-scope re-panel page-bottom" ng-controller="SysOperateLogController" ng-show="sysOperateLog">
+    <form class="form-inline page-top">
+        <div class="wrapper-md">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label data-translate="devplatformApp.sysOperateLog.account"></label>
+                        <input type="text"  ng-model="formParam.account" placeholder="{{'devplatformApp.sysOperateLog.enterAccount' | translate}}">
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="devplatformApp.sysOperateLog.userName"></label>
+                        <input type="text" ng-model="formParam.userName" placeholder="{{'devplatformApp.sysOperateLog.enterName' | translate}}">
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="devplatformApp.sysOperateLog.type"></label>
+                        <div class="padder inline input-group" >
+                            <select class="ng-pristine ng-valid" ng-model="formParam.type" >
+                                <option value="" data-translate="devplatformApp.sysOperateLog.select.noValue"></option>
+                                <option value="1" data-translate="devplatformApp.sysOperateLog.select.login"></option>
+                                <option value="2" data-translate="devplatformApp.sysOperateLog.select.action"></option>
+                            </select>
+                        </div>
+                    </div>
+                    	<span class="form-group">
+                        <label data-translate="devplatformApp.sysOperateLog.time"></label>
+                        <span class="input-group input-group-time">
+                            <input type="text" ng-change="checkStartTime()" 
+                            current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+                            readonly="readonly" uib-datepicker-popup="{{dateformat}}" ng-model="formParam.startTime" is-open="datePickerOpenStatus.startTime"/>
+                            <span class="input-group-btn">
+				                 <button type="button" class="btn btn-default" ng-click="openCalendar('startTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+				             </span>&mdash;
+                            <input type="text" ng-change="checkEndTime()" 
+                            current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+                            readonly="readonly" uib-datepicker-popup="{{dateformat}}" ng-model="formParam.endTime" is-open="datePickerOpenStatus.endTime"/>
+                            <span class="input-group-btn">
+				                 <button type="button" class="btn btn-default" ng-click="openCalendar('endTime')"><i class="glyphicon  glyphicon-calendar"></i></button>
+				             </span>
+                        </span>
+                    </span>		
+                    <div class="form-group">
+                         <label data-translate="devplatformApp.sysOperateLog.operationContent"></label>
+                         <input type="text" ng-model="formParam.operateContent" placeholder="{{'devplatformApp.sysOperateLog.enterContent' | translate}}">
+                    </div>
+                    <div class="form-group button-block">
+                        <button ng-click="loadAll()"><span class="glyphicon glyphicon-search"></span><span data-translate="global.go"></span></button>
+                        <button ng-click="clear()"><span class="glyphicon glyphicon-refresh"></span><span data-translate="global.reset"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+	<div class="wrapper-md">
+        <div tables-model2 tables-data-model="tablesConfig"></div>
+    </div>
+</div>

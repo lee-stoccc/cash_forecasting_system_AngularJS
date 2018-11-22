@@ -1,0 +1,21 @@
+{
+    "menu": {
+        "menuManagement": "Menu",
+        "sys-operateLog": "Log",
+        "sys-dict": "Dictionaries",
+        "role-manager": "Role",
+        "activityManege": "Activity",
+        "act-activity": "Activity",
+        "act-type": "Activity Type",
+        "act-user": "User",
+        "member-type": "Member Type",
+        "userManage": "User Manage",
+        "playerTest": "Video",
+        "shop": "Shop",
+        "bb": "Goods",
+        "singleItem": "Single Item",
+        "orgManagement": "Organization",
+        "deviceManagement": "Device",
+        "cusRegion": "CusRegion"
+    }
+}

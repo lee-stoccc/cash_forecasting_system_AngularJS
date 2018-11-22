@@ -1,0 +1,23 @@
+{   
+    	"castData":{
+			"tempName": "加钞数据模板",
+			"returnTempName": "回笼数据模板",
+			"cast": "加钞(张数)",
+			"return": "回笼(张数)",
+			"castAmount": "加钞金额",
+			"returnAmount": "回笼金额",
+			"castTime": "加钞时间",
+			"returnTime": "回笼时间",
+			"formError":{
+				"fileFormatError":"不是Excel文件",
+				"emptyData":"空文件或没数据",
+				"uploadError":"上传失败",
+				"importError":"导入失败，请联系管理员",
+				"invalidDenomination":"无效的面额填了金额",
+				"currencyMismatch":"币种和面额字段没有一一对应写全",
+				"emptyCusTermNo":"没有填设备自定义编号",
+				"invalidCusTermNo":"无效的设备自定义编号",
+				"emptySnNo":"没有填需求编号"
+			}
+		}
+}

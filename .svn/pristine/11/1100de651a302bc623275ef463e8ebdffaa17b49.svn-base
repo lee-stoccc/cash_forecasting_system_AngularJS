@@ -1,0 +1,39 @@
+{
+    "devplatformApp": {
+        "sysForm" : {
+            "home": {
+                "title": "表单",
+                "createLabel": "新增",
+                "createOrEditLabel": "编辑"
+            },
+            "created": "A new Sys Form is created with identifier {{ param }}",
+            "updated": "A Sys Form is updated with identifier {{ param }}",
+            "deleted": "A Sys Form is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sys Form {{ id }}?"
+            },
+            "detail": {
+                "title": "Sys Form"
+            },
+            "formName": "表单名称",
+            "englishName": "英语名称",
+            "menuId": "菜单ID",
+            "accessEdit": "访问权限",
+            "visible": "是否可见",
+            "delFlag": "状态",
+            "select": {
+            	"noValue": "--请选择--",
+            	"enabled": "启用",
+            	"disabled": "禁用"
+            },
+            "onlyChinses": "只能输入中文",
+            "onlyEnglish": "只能输入字母",
+            "nameExists": "该名称已存在",
+            "messages":{
+            	"error":{
+            		"repeatFormEnglishName" : "该名称已存在"
+            	}
+            }
+        }
+    }
+}

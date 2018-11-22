@@ -1,0 +1,1 @@
+Tinytest.add("example",function(a){a.equal(true,true)});

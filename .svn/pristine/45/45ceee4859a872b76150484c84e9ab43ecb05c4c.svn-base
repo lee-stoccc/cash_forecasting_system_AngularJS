@@ -1,0 +1,75 @@
+.select-roles{
+    height: 500px;
+}
+
+.title{
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.select-roles-top{
+    width: 480px;
+    height: 390px;
+    margin: 0 20px;
+}
+
+.select-roles-bottom{
+    height: 40px;
+}
+
+.select-roles-item{
+    width: 185px;
+    height: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.select-roles-item ul{
+    padding: 0;
+    margin: 0;
+    height: 380px;
+    list-style: none;
+    overflow: scroll;
+}
+
+.select-roles-item ul li{
+    width: 185px;
+    height: 40px;
+    list-style: none;
+    text-align: left;
+    padding: 0 10px;
+    line-height: 40px;
+    overflow: hidden;
+}
+
+.select-roles-btn{
+    width: 90px;
+    height: 400px;
+    float: left;
+}
+
+.roles-btn-1{
+    width: 70px;
+    height: 30px;
+    margin-top: 200px;
+    margin-left: 10px;
+}
+
+.roles-btn-2{
+    width: 70px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.isActiveClass{
+    background: #eee;
+}
+
+
+

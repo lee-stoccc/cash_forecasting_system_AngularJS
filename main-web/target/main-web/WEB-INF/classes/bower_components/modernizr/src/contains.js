@@ -1,0 +1,1 @@
+define(function(){function a(c,b){return !!~(""+c).indexOf(b)}return a});

@@ -1,0 +1,1 @@
+(function(){angular.module("devplatformApp").factory("LoginService",a);a.$inject=["globalConstant"];function a(b){}})();

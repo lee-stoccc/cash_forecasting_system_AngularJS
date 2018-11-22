@@ -1,0 +1,119 @@
+<link rel="stylesheet" href="privilege/css/user/user-dialog.css" />
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+        <div class="modal-header">
+           	<h4 class="modal-title font-mu" data-translate="devplatformApp.sysDict.home.createOrEditLabel"></h4>
+        	<span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>
+        </div>
+        <div class="modal-main">
+	        <div class="modal-body">
+	            <div class="col-sm-12 col-info">
+	           	    <div class="form-group">
+	           	    	<label  data-translate="devplatformApp.sysDict.parentGroup" for="field_parentName">parentName</label>
+	                    <input type="text"  ng-readonly="true" name="parentName" id="field_parentName" ng-model="parentGroup"/>
+	           	    </div>
+	           	</div>
+	            <div class="col-sm-12 col-info">
+	           	    <div class="form-group">
+	           	    	<label  data-translate="devplatformApp.sysDict.group" for="field_group">group</label>
+	                    <input type="text"  ng-verify="max:100,pattern:/^[A-Za-z0-9.]+$/,errmsg:'global.messages.validate.inputEnAndNumAndsolid'" name="group" id="field_group" ng-model="sysDict.group" ng-if="type != 'edit'"/>
+	                    <input type="text"  readonly="readonly" name="group" id="field_group" ng-model="sysDict.group" ng-if="type == 'edit'"/>
+	           	    </div>
+	           	</div>
+	           	<div class="col-sm-12 col-info">
+	           	    <div class="form-group ">
+	           	    	<label  data-translate="devplatformApp.sysDict.dictKey" for="field_dictKey">dictKey</label>
+	                    <input type="text"  ng-verify="max:20" name="dictKey" id="field_dictKey" ng-model="sysDict.dictKey"/>
+	           	    </div>
+	           	</div>
+	           	<div class="col-sm-12 col-info">
+	           	    <div class="form-group">
+	           	    	<label  data-translate="devplatformApp.sysDict.dictDesc" for="field_dictDesc">dictDesc</label>
+	                    <input type="text"  ng-verify="max:50" name="dictDesc" id="field_dictDesc" ng-model="sysDict.dictDesc"/>
+	           	    </div>
+	           	</div>
+	            <div>
+	                <div class="form-group user-width">
+	                    <div class="user-activated-check">
+	                        <label  data-translate="devplatformApp.sysDict.sort"></label>
+	                    </div>
+	                    <div class="inline lineSort user-state user-top">
+	                        <div class="glyphicon glyphicon-minus divView" ng-click="decrease()"></div>
+	                        <p ng-maxlength="3">{{sysDict.sort}}</p>
+	                        <div class="glyphicon glyphicon-plus divView" ng-click="increase()"></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+			<div class="modal-footer button-block">
+				<button type="submit" ng-verify >
+					<span class="glyphicon glyphicon-save"></span>
+					<span data-translate="entity.action.save">Save</span>
+				</button>
+				 <button type="button" ng-click="clear(false)">
+	                <span class="glyphicon glyphicon-ban-circle"></span>
+	                <span data-translate="entity.action.cancel">Cancel</span>
+	            </button>
+			 </div>
+		</div>
+	</form>
+</div>
+
+<!-- <div class="panel ng-scope save-panel" ng-controller="SysDictDialogController" style="margin-top:30px">
+    <form class="form-horizontal form-inline" name="editForm" role="form" novalidate ng-submit="save()" verify-scope>
+        <div class="modal-header,modal-header2">
+            <h4 class="modal-title" id="mySysDictLabel" data-translate="devplatformApp.sysDict.home.createOrEditLabel">Create or edit a Act Type</h4>
+        </div>
+        <div class="modal-body">
+            <div class="col-sm-12 col-info">
+           	    <div class="form-group">
+           	    	<label  data-translate="devplatformApp.sysDict.parentGroup" for="field_parentName">parentName</label>
+                    <input type="text"  ng-readonly="true" name="parentName" id="field_parentName" ng-model="parentGroup"/>
+           	    </div>
+           	</div>
+            <div class="col-sm-12 col-info">
+           	    <div class="form-group">
+           	    	<label  data-translate="devplatformApp.sysDict.group" for="field_group">group</label>
+                    <input type="text"  ng-verify="max:100,pattern:/^[A-Za-z0-9.]+$/,errmsg:'global.messages.validate.inputEnAndNumAndsolid'" name="group" id="field_group" ng-model="sysDict.group" ng-if="type != 'edit'"/>
+                    <input type="text"  readonly="readonly" name="group" id="field_group" ng-model="sysDict.group" ng-if="type == 'edit'"/>
+           	    </div>
+           	</div>
+           	<div class="col-sm-12 col-info">
+           	    <div class="form-group ">
+           	    	<label  data-translate="devplatformApp.sysDict.dictKey" for="field_dictKey">dictKey</label>
+                    <input type="text"  ng-verify="max:20" name="dictKey" id="field_dictKey" ng-model="sysDict.dictKey"/>
+           	    </div>
+           	</div>
+           	<div class="col-sm-12 col-info">
+           	    <div class="form-group">
+           	    	<label  data-translate="devplatformApp.sysDict.dictDesc" for="field_dictDesc">dictDesc</label>
+                    <input type="text"  ng-verify="max:50" name="dictDesc" id="field_dictDesc" ng-model="sysDict.dictDesc"/>
+           	    </div>
+           	</div>
+            <div>
+                <div class="form-group user-width">
+                    <div class="user-activated-check">
+                        <label  data-translate="devplatformApp.sysDict.sort"></label>
+                    </div>
+                    <div class="inline lineSort user-state user-top">
+                        <div class="glyphicon glyphicon-minus divView" ng-click="decrease()"></div>
+                        <p ng-maxlength="3">{{sysDict.sort}}</p>
+                        <div class="glyphicon glyphicon-plus divView" ng-click="increase()"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer button-block">
+        	<button type="submit" ng-verify>
+                <span class="glyphicon glyphicon-save"></span>
+                <span data-translate="entity.action.save">Save</span>
+            </button>
+            <button type="button" ui-sref="app.sys-dict({parentGroup:parentGroup})">
+                <span class="glyphicon glyphicon-ban-circle"></span>
+                <span data-translate="entity.action.cancel">Cancel</span>
+            </button>
+             
+        </div>
+    </form>
+</div> -->

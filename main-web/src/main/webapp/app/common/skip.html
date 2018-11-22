@@ -1,0 +1,29 @@
+<div ng-controller="SkipController">
+    <form class="form-horizontal form-inline" name="editForm" role="form" novalidate ng-init="autoSkip()">
+        <div class="modal-body" style="text-align: center;">
+            <span style="font-size:30px;" data-translate="devplatformApp.skip.home.title">Skip</span>
+        </div>
+        <div class="modal-body" style="text-align: center; height: 30px;">
+
+        </div>
+        <div class="modal-body" style="background-color:#ffffff;box-shadow: 0 10px 30px 0 rgba(38,40,42,.1),0 6px 12px 0 rgba(32,36,42,.2);">
+            <div class="col-info">
+                <div style="margin:0 auto; width:400px; text-align: center">
+                    <div class="form-group m-n" style="width:120px; display: inline-block;text-align: center">
+                        <img src="/content/images/success.png" />
+                    </div>
+                    <div class="form-group m-n" style="width:250px; display: inline-block;text-align: center">
+                        <span style="font-size: 25px; color: forestgreen;"  data-translate="devplatformApp.skip.operateSuccess">
+                            Operate Success
+                        </span>
+                        <br/>
+                        <span style="font-size: 16px;">
+                            <span style="font-weight: bold;">{{timeText}}</span>
+                            <label data-translate="devplatformApp.skip.secondAfterSkip">second</label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

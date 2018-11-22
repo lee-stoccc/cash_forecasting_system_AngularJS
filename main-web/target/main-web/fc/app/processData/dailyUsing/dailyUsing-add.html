@@ -1,0 +1,65 @@
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+        <div class="modal-header">
+           <h4 class="modal-title font-mu" data-translate="termInfo.createDailyUse"></h4>
+           <span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>
+        </div>
+		<div class="modal-main">
+      		 <div class="modal-body">   
+      		    	<div class="col-sm-12 col-info" input-pop verifyTips-sp>
+						<div style="display:flex">
+	   	 					<label class="forecastLabel" data-translate="termInfo.bankId"></label>
+	  	 					<select ng-model="dailyUsing.bankId" id="BankNameDUEdit" ng-verify ng-options="bank.id as bank.bankName for bank in bankList">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+                        </div>                
+                    </div>      
+   	                <div class="col-sm-12 col-info" input-pop verifyTips-sp>
+						<div style="display:flex">
+                            <label data-translate="termInfo.dailyUserTime">时间段</label>
+							<select  ng-model="dailyUsing.time" ng-verify id="timeDUEdit">
+								<option value="" data-translate="global.pleaseSelect"></option>
+								<option ng-repeat="list in timeArr" value="{{list}}">{{list}}</option>
+							</select>
+                        </div>                
+                    </div>
+   	                <div class="col-sm-12 col-info" input-pop verifyTips-sp>
+						<div>
+                             <label data-translate="termInfo.date">日期</label>
+                        	<span class="input-group input-group-time">
+                            <input type="text" readonly="readonly" 
+                            ng-change="checkStartTime()" 
+                            current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+                            uib-datepicker-popup 
+                            ng-verify="asterisk:false,tipStyle:1" ng-model="dailyUsing.startDate" is-open="datePickerOpenStatus.startTime"/>
+                            <span class="input-group-btn">
+				                 <button type="button" class="btn btn-default" ng-click="openCalendar('startTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+				             </span><span class="span_nec">*</span>&nbsp;&mdash;
+                            <input type="text" readonly="readonly" 
+                            ng-change="checkEndTime()"
+                            current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}" 
+                            uib-datepicker-popup 
+                            ng-verify="asterisk:false,tipStyle:1" 
+                            ng-model="dailyUsing.endDate" is-open="datePickerOpenStatus.endTime"/>
+                            <span class="input-group-btn">
+				                 <button type="button" class="btn btn-default" ng-click="openCalendar('endTime')"><i class="glyphicon  glyphicon-calendar"></i></button>
+				             </span><span class="span_nec">*</span>
+                        </span>
+                        </div>                
+                    </div>
+   	 		</div>
+	    	<div class="modal-footer button-block">
+				<button type="submit" ng-verify ng-disabled="editForm.$invalid || isSaving">
+					<span class="glyphicon glyphicon-save"></span>
+					<span data-translate="entity.action.save">Save</span>
+				</button>
+				 <button type="button" ng-click="clear(false)">
+	                <span class="glyphicon glyphicon-ban-circle"></span>
+	                <span data-translate="entity.action.cancel">Cancel</span>
+	            </button>
+	 	  </div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,67 @@
+<div class="panel ng-scope default-controller" ng-controller="SysDictManagementController" ng-show="sysDictManage">
+    <div class="default-container">
+        <form class="form-inline page-top" ng-submit="myFunc()">
+	        <div class="wrapper-md">
+	            <div class="row">
+	                <div class="col-sm-12">
+	                    <div class="form-group">
+	                        <label data-translate="devplatformApp.sysDict.group">group</label>
+	                        <input type="text" ng-model="formParam.group" placeholder="{{'devplatformApp.sysDict.prompt.enterGroup' | translate}}">
+	                    </div>
+	                    <div class="form-group">
+	                        <label data-translate="devplatformApp.sysDict.dictKey">dictKey</label>
+	                        <input type="text" ng-model="formParam.dictKey" placeholder="{{'devplatformApp.sysDict.prompt.enterKey' | translate}}">
+	                    </div>
+	                    <div class="form-group">
+	                        <label data-translate="devplatformApp.sysDict.dictDesc">dictDesc</label>
+	                         <input type="text" ng-model="formParam.dictDesc" placeholder="{{'devplatformApp.sysDict.prompt.enterDesc' | translate}}">
+	                    </div>
+	                   <div class="form-group button-block">
+	                        <button ng-click="loadAll()">
+		                        <span class="glyphicon glyphicon-search"></span>
+		                        <span data-translate="global.go"></span>
+	                        </button>
+	                        <button ng-click="clear()">
+		                        <span class="glyphicon glyphicon-refresh"></span>
+		                        <span data-translate="global.reset"></span>
+	                        </button>
+	                    <!-- <div class="form-group m-n">
+	                        <button class="btn btn-info pull-left" ng-click="importExcel()" data-translate="导入">import</button>
+	                    </div> -->
+	                        <button  ng-click="exportExcel()">
+	                        	<span class="glyphicon glyphicon-export"></span>
+	                        	<span data-translate="entity.action.export"></span>
+	                        </button>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </form>
+	    <div class="wrapper-md">
+	         <div class="op-div button-block">
+	         <!-- ui-sref="app.sys-dict-save({parentGroup:parentGroup,parentName:parentName})" -->
+	            <div component-model  class="button-op" ng-click="toEditDict('')" 
+		             component-form-englishName="sysDictManage"
+		             component-englishName="addBtn"
+		             component-dataName="devplatformApp.sysDict.home.createLabel"
+		             component-icon-class="glyphicon glyphicon-plus"></div>
+	            <div component-model  class="button-op" ng-click="deleteSysDict()"
+		             component-form-englishName="sysDictManage"
+		             component-englishName="deleteBtn"
+		             component-dataName="devplatformApp.sysDict.home.delete"
+		             component-icon-class="glyphicon glyphicon-minus"></div>
+		        <div class="button-op">
+			        <button type="button" ng-click="toPage(lastParent)"  ng-show="parentGroup != '0' ">
+		               <span class="glyphicon glyphicon-arrow-left"></span>
+		               <span data-translate="entity.action.back">back</span>
+		            </button>
+		        </div>
+	        </div>
+	        <div class="table-view-defalut" style="top: 80px">
+				<div class="table-view" tables-model2
+					tables-data-model="tablesConfig"></div>
+			</div>
+	<!--         <div tables-model tables-data-model="tablesConfig"></div> -->
+	    </div>
+    </div>
+</div>

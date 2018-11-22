@@ -1,0 +1,1 @@
+(function(){angular.module("devplatformApp").factory("sidebarService",a);a.$inject=["globalConstant","utilService"];function a(e,c){function d(f){var f={dd:"",ee:""};return c.requestPost(e.devplatform_web_apiPath+"api/sys-menu/getMenuRightList",f)}var b={getSidebar:d};return b}})();

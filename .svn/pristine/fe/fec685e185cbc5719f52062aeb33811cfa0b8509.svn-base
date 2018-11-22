@@ -1,0 +1,8 @@
+{
+    "privilege": {
+        "mine": "Personal center",
+        "editPassword": "Edit Password",
+        "logout": "Log out",
+        "title": "Devplatform"
+        }
+}

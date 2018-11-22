@@ -1,0 +1,1 @@
+define(["createElement"],function(a){var b=a("input");return b});

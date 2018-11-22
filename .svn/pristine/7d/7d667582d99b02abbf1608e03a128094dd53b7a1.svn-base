@@ -1,0 +1,62 @@
+<!-- <div class="panel ng-scope default-controller" ng-controller="RoleManagerController" ng-show="roleManage">
+    <div class="default-container">
+        <form class="form-inline page-top">
+	        <div class="wrapper-md">
+	            <div class="row">
+	                <div class="col-sm-12">
+	                    <span class="form-group">
+	                        <label  data-translate="devplatformApp.sysRole.roleName"></label>
+	                        <input type="text" ng-model="formParam.roleName" placeholder="{{'devplatformApp.sysRole.enterName' | translate}}">
+	                    </span>
+	                    <span class="form-group">
+	                        <label  data-translate="devplatformApp.sysRole.roleNo"></label>
+	                        <input type="text" ng-model="formParam.roleNo" placeholder="{{'devplatformApp.sysRole.enterNo' | translate}}">
+	                    </span>
+	                    <span class="form-group">
+	                        <label data-translate="devplatformApp.sysRole.delFlag"></label>
+	                        <span class="padder inline input-group" >
+	                            <select class="ng-pristine ng-valid" ng-model="formParam.delFlag" >
+	                            	<option ng-repeat="a in list" data-translate="{{a.key}}" value="{{a.value}}"></option>
+	                                <option data-translate="devplatformApp.sysRole.select.noValue"  value=""></option>
+	                                <option data-translate="devplatformApp.sysRole.select.enabled" value="1"></option>
+	                                <option data-translate="devplatformApp.sysRole.select.disabled" value="0"></option>
+	                            </select>
+	                        </span>
+	                    </span>
+	                    <span class="form-group">
+	                        <label  data-translate="devplatformApp.sysRole.description"></label>
+	                         <input type="text"  ng-model="formParam.description" placeholder="{{'devplatformApp.sysRole.enterDescription' | translate}}">
+	                    </span>
+	
+	                    <span class="form-group button-block">
+	                        <button ng-click="loadAll()"><span class="glyphicon glyphicon-search"></span><span data-translate="global.go"></span></button>
+	                        <button  ng-click="resetSearch()"><span class="glyphicon glyphicon-refresh"></span><span data-translate="global.reset"></span></button>
+	                    </span>
+	                </div>
+	            </div>
+	        </div>
+	    </form>
+	    <div class="wrapper-md">
+	   		 <div class="op-div button-block">
+	            <div component-model ng-click="toEdit('')" class="button-op"
+		             component-form-englishName="roleManage"
+		             component-englishName="addBtn"
+		             component-dataName="devplatformApp.sysRole.createRole"
+		             component-icon-class="glyphicon glyphicon-plus"></div>
+	             <div component-model  ng-click="deleteSysRole()" class="button-op"
+		             component-form-englishName="roleManage"
+		             component-englishName="deleteBtn"
+		             component-dataName="devplatformApp.sysRole.deleteRole"
+		             component-icon-class="glyphicon glyphicon-minus"></div>
+			 </div>
+			<div class="table-view-defalut" style="top: 80px">
+				<div class="table-view" tables-model2
+					tables-data-model="tablesConfig"></div>
+			</div>
+	        <div tables-model tables-data-model="tablesConfig"></div>
+	    </div>
+    </div>
+</div>
+
+
+ -->

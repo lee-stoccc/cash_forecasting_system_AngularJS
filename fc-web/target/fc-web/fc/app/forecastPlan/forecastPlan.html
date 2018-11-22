@@ -1,0 +1,161 @@
+<link rel="stylesheet" href="fc/css/forecastPlan/forecastPlan.css">
+<div class="panel ng-scope default-controller"
+	ng-controller="ForecastPlanController" ng-init="init()">
+	<div class="default-container">
+		<form class="form-inline">
+			<div class="wrapper-md row">
+				<div class="col-sm-12">
+					<span class="form-group"> <label
+						data-translate="forecastPlan.termNo"></label> <input type="text"
+						placeholder="{{'forecastPlan.termNo' | translate}}"
+						ng-model="formParam.termNo" />
+					</span> 
+					
+					 <span class="form-group"> 
+					 	<!-- <label data-translate="forecastPlan.bankName"></label> -->
+					 	 <!-- <span class="padder inline input-group bankDiv"> <input type="text" placeholder="{{'forecastPlan.bankName' | translate}}"
+							 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.bankId" />
+							<input ng-model="bankName" placeholder="{{'global.pleaseSelect' | translate}}" /> 
+							<span id="bankForecast_icon"></span>
+							<span id="bank_icon" class="glyphicon glyphicon-triangle-bottom"></span>  
+							<tree-select
+								id="bankForecast_div" class="tree configuration-nav-tree" tree-view="true"
+								tree-id="bankForecast" tree-list="bankList" object-id="id"
+								object-label="bankName" object-children="children"
+								model-key="bankName" model-val="bankId" select="true" single="false">
+							</tree-select>
+						</span> -->
+					
+					 <!-- // 鍙互濉啓鐨勯�夋嫨涓嬫媺妗� -->
+					<span class="form-group">
+  	 					<label class="forecastLabel" data-translate="forecastPlan.bankName"></label>
+  	 					<select ng-model="formParam.bankId" id="bankName" ng-verify ng-options="bank.id as bank.bankName for bank in bankList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select>
+					</span> 
+					
+					<!-- </span> <span class="form-group"> <label
+						data-translate="forecastPlan.termType"></label> <input type="text" placeholder="{{'forecastPlan.termType' | translate}}"
+							 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.termType" />
+						<select ng-model="formParam.termType"  id="termTypePlan"
+							ng-options="type.dictKey as type.dictDesc for type in termTypeList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select>
+					</span> 
+					<span class="form-group"> <label
+						data-translate="forecastPlan.regionName"></label> <input type="text" placeholder="{{'forecastPlan.regionName' | translate}}"
+							 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.cusRegionId" />
+						<select ng-model="formParam.cusRegionId" ng-verify  id="regionNamePlan"
+						ng-options="cusgion.id as cusgion.regionName for cusgion in cusgionList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select>
+					</span>  -->
+					<span class="form-group"> <label
+						data-translate="forecastPlan.replenishDate"></label> <span
+						class="input-group input-group-time"> <!-- <input type="text" placeholder="{{'forecastPlan.replenishDate' | translate}}"
+								 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.replenishDate" /> -->
+							<input type="text"
+							placeholder="{{'forecastPlan.replenishDate' | translate}}"
+							readonly="readonly" uib-datepicker-popup="{{dateformat}}"
+							ng-model="formParam.replenishDate"
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							is-open="datePickerOpenStatus.replenishDate"
+							datepicker-options="dateOptions" /> <span class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('replenishDate')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>
+						</span>
+					</span>
+					</span>
+
+					<!-- <span class="form-group">
+						<label data-translate="forecastPlan.forecastStatus"></label>
+						<input type="text" placeholder="{{'forecastPlan.forecastStatus' | translate}}"
+							 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.forecastStatus" />
+					</span> -->
+
+					<span class="form-group button-block">
+						<button ng-click="loadAll()">
+							<span class="glyphicon glyphicon-search"></span> <span
+								data-translate="global.go"></span>
+						</button>
+						<button ng-click="resetSearch()">
+							<span class="glyphicon glyphicon-refresh"></span> <span
+								data-translate="global.reset"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+		<div class="wrapper-md">
+			<div class="op-div button-block">
+				<button ng-click="addForecastPlan()">
+					<span class="glyphicon glyphicon-plus"></span> <span
+						data-translate="entity.action.add"></span>
+				</button>
+				<button ng-click="addForecastPlan('1')">
+					<span class="glyphicon glyphicon-edit"></span> <span
+						data-translate="entity.action.edit"></span>
+				</button>
+				<button ng-click="batchDelete()">
+					<span class="glyphicon glyphicon-minus"></span> <span
+						data-translate="global.batchDelete"></span>
+				</button>
+<!-- 				<button ng-click="noPlanShow()">
+					<span class="glyphicon glyphicon-list-alt"></span> <span
+						data-translate="forecastPlan.NotForecastTerm"></span>
+				</button>
+				<button ng-click="stockManage()">
+					<span class="glyphicon glyphicon-list-alt"></span> <span
+						data-translate="forecastPlan.stock"></span>
+				</button> -->
+				<!-- 预测！！！！ -->
+				<button ng-click="createPlan()">   
+					<span class="glyphicon glyphicon-grain"></span> <span
+						data-translate="forecastPlan.forecast"></span>
+				</button>
+				<!-- 到处计划！！！ -->
+				<button ng-click="forecast()">
+					<span class="glyphicon glyphicon-grain"></span> <span
+					data-translate="forecastPlan.export">Export</span>
+				</button>
+			</div>
+		</div>
+		<div class="table-view-defalut" style="">   
+			<div class="table-view" tables-model2
+				tables-data-model="tablesConfig"></div>
+		</div>
+		<!-- 鏃ョ敤閲忛娴嬪浘琛� -->
+		<div class="forecastEchart">
+			<div class="forecastEchart-left button-block">
+				<button ng-click="echartShow()">
+					<span class="glyphicon glyphicon-stats" style="font-size: 22px"></span>
+				</button>
+			</div>
+			<div ng-click="goEchartShow()" class="forecastEchart-right">
+				<div e-chart-line echart-data="echartData"></div>
+			</div>
+		</div>
+
+		<div class="noPlanDiv" ng-controller="NoForecastPlanController">
+			<div class="modal-header">
+				<h4 class="modal-title font-mu"
+					data-translate="forecastPlan.NotForecastTerm"></h4>
+				<span class="glyphicon glyphicon-remove modal-delete"
+					ng-click="noPlanShow()"></span>
+			</div>
+			<div class="wrapper-md">
+				<div class="op-div button-block">
+					<button ng-click="addForecastPlan()">
+						<span class="glyphicon glyphicon-plus"></span> <span
+							data-translate="forecastPlan.addForecastPlan"></span>
+					</button>
+				</div>
+				<div tables-model2 table-id="noPlan"
+					tables-data-model="tablesConfig"></div>
+			</div>
+		</div>
+	</div>
+</div>

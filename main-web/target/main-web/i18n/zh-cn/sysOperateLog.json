@@ -1,0 +1,26 @@
+{
+    "devplatformApp": {
+        "sysOperateLog": {
+            "sort": "排序",
+            "account": "账号",
+            "userName": "用户名",
+            "enterAccount": "请输入账号",
+            "enterName": "请输入用户名",
+            "type": "类型",
+            "select": {
+            	"noValue": "--请选择--",
+            	"login": "登陆记录",
+            	"action": "操作记录"
+            },
+            "time": "时间",
+            "inquire": "查询",
+            "reset": "重置",
+            "enterContent": "请输入内容",
+	        "operationContent": "操作内容",
+	        "address": "ip地址",
+	        "logTime": "日志时间",
+	        "timeMsg1": "起始日期需小于截止日期",
+	        "timeMsg2": "截止日期需大于起始日期"
+        }
+    }
+}

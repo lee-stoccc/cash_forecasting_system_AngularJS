@@ -1,0 +1,1 @@
+(function(){angular.module("devplatformApp").factory("RoleUserService",a);a.$inject=["globalConstant","utilService"];function a(f,d){function e(g){return d.requestPost(f.devplatform_web_apiPath+"api/sysUserRole/getAllUsers",g)}function c(g){return d.requestPost(f.devplatform_web_apiPath+"api/sysUserRole/saveSysUserRole",g)}var b={getAllUsers:e,saveSysUserRole:c};return b}})();

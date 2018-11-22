@@ -1,0 +1,59 @@
+ <div class="panel ng-scope default-controller" ng-controller="inventoryStatisticsController" ng-init="init()">
+	<div class="default-container">
+		<form class="form-inline">
+			<div class="wrapper-md row">
+				<div class="col-sm-12">
+					<span class="form-group">  <label 
+						data-translate="termMonitor.date"></label>
+					</span>
+					 <span class="input-group input-group-time">
+					 	<input type="text" readonly="readonly"  uib-datepicker-popup="{{format}}" 
+					 		uib-datepicker-popup 
+					 		current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+					 		ng-model="formParam.startTime"
+							is-open="datePickerOpenStatus.startTime" /> 
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default dateFisrtBtn"
+									ng-click="openCalendar('startTime')">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</button>
+							</span>  
+							&mdash; 
+							<input type="text" readonly="readonly"  uib-datepicker-popup="{{format}}" 
+							uib-datepicker-popup 
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							ng-model="formParam.endTime"
+							is-open="datePickerOpenStatus.endTime" /> <span
+							class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('endTime')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>  
+						</span> 
+					</span> 
+					
+					<span class="form-group button-block">
+						<button ng-click="loadAll()">
+							<span class="glyphicon glyphicon-search"></span> <span
+								data-translate="global.go"></span>
+						</button>
+						<button ng-click="resetSearch()">
+							<span class="glyphicon glyphicon-refresh"></span> <span
+								data-translate="global.reset"></span>
+						</button>
+						<button ng-click="exporting()">
+							<span class="glyphicon glyphicon-grain"></span> <span
+								data-translate="">Export</span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+
+		 <div class="table-view-defalut" style="">
+			<div class="table-view" tables-model4  tables-data-model="tablesConfig"></div>
+		</div> 
+	</div>
+</div> 

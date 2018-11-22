@@ -1,0 +1,76 @@
+<div class="panel ng-scope openwindow-panel" ng-init="init()" 	style="width:480px">
+    <form class="form-inline page-top" ng-submit="save()" verify-scope>
+	    <div class="modal-header">
+	          <h4 class="modal-title font-mu" data-translate="">Add</h4>
+			<!--   <span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>	 -->      
+		</div>
+	    <div class="modal-main wrapper-md row" >
+			 <div class="col-sm-12">
+				<span class="form-group" style="margin-right:40px">
+					<label data-translate="" style="padding-right:34px">Terminal ID</label>
+					<input ng-model="forecastPlan.termNo" readonly="readonly">
+				</span>
+				<span class="form-group">
+					<label data-translate="">Replenish Date</label>
+					<span class="input-group input-group-time">
+						<input type="text" readonly="readonly" 
+						uib-datepicker-popup="{{dateformat}}"  
+						ng-verify="asterisk:false"
+						current-text="{{'global.today' | translate}}"
+						close-text="{{'global.close' | translate}}"
+						ng-model="forecastPlan.replenishDate" is-open="datePickerOpenStatus.date" ng-change="checkDate()"/>
+						<span class="input-group-btn">
+							 <button type="button" class="btn btn-default" ng-click="openCalendar('date')">
+							 <i class="glyphicon glyphicon-calendar"></i></button>
+						</span>
+					</span>
+					<span class="span_nec">*</span>
+				</span>	 
+			</div> 
+			<div ng-repeat="item in typeAndDemination">
+								 <!--  <div class="col-sm-12 col-info">
+									  <div style="text-align:center;margin-top:10px;margin-bottom:10px">
+						                    <label data-translate="">StockCeiling</label>
+						                    <label data-translate="" >Currency</label>
+											<select ng-model="item.type" ng-change="changeCurrency(item.type,$index)">
+												<option value="" data-translate="global.pleaseSelect"></option>
+												<option ng-repeat="type in deTypeList" value="{{type.dictKey}}">{{type.dictDesc}}</option>
+											</select>	
+									  			<span ng-click="add()"  class="glyphicon glyphicon-plus"></span>
+												<span ng-click="del($index)" class="glyphicon glyphicon-minus"></span><br/> 
+									  </div>   
+								 </div> -->
+								 <!--  币种 -->
+								 <div ng-model="item.type" style="font-size:12px;text-align:right;position: relative;left:-9%;width:50%;bottom: -9px;z-index: 2">Currency&nbsp;:&nbsp;{{item.type}}</div>
+								  <div class="col-sm-12 col-info">
+								 	<div style="position:relative;left:-8%">
+								     		<table class="table-bordered table-pop " style="width:100%">
+													<tr>
+															<th align="center" style="width:50%;text-align: right"><label data-translate="" >Denomination</label></th>
+															<th align="center" style="width:50%;text-align: left;left:60px"><label data-translate="" >Count</label></th>
+													</tr>
+													<tr ng-repeat="s in item.denominationList">
+															<input type="hidden" name="denomination" ng-value="{{s.dictKey}}"/>
+															<td style="width:50%;text-align: right;">{{s.dictDescs}}</td>
+															<td style="width:50%;text-align: left;right:-20px"><input type="plusInteger" name="count" id="count_{{s.dictKey}}" ng-change="calculteAmount()" ng-verify="required:false,max:5,tipStyle:1"
+																ng-model="s.count" /></td> 
+													</tr>
+											</table>
+									  </div>
+					          		</div>
+				</div>
+	  	</div>
+	  	<div class="modal-footer button-block" style="position:relative">
+			<button type="submit" ng-verify>
+				<span class="glyphicon glyphicon-save"></span>
+				<span data-translate="entity.action.save">Save</span>
+			</button>
+			 <button type="button" ng-click="clear(false)">
+                <span class="glyphicon glyphicon-ban-circle"></span>
+				<span data-translate="entity.action.cancel">Cancel</span>
+            </button>
+		 </div>
+  	</form>
+</div>
+
+

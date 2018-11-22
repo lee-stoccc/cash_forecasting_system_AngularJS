@@ -1,0 +1,312 @@
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline" ng-submit="save()"
+		verify-scope>
+		<div class="modal-header">
+			<h4 class="modal-title font-mu" data-translate="termInfo.title">缂栬緫璁惧</h4>
+			<span class="glyphicon glyphicon-remove modal-delete"
+				ng-click="clear(false)"></span>
+		</div>
+		<div class="modal-main">
+			<ul class="nav nav-tabs" ng-init="activeTab=1">
+				<li ng-class="{active: activeTab == 1}"><a href="javascript:;"
+					ng-click="activeTab = 1"><span
+						data-translate="bankRule.cashRule"></span></a></li>
+				<li ng-class="{active: activeTab == 2}"><a href="javascript:;"
+					ng-click="activeTab = 2"><span
+						data-translate="bankRule.deviceParam"></span></a></li>
+				<!-- <li ng-class="{active: activeTab == 3}"><a href="javascript:;"
+					ng-click="activeTab = 3"><span
+						data-translate="bankRule.fullAndLack"></span></a></li> -->
+			</ul>
+			<div ng-show="activeTab == 1">
+				<div class="col-sm-6 col-info input-pop verifyTips-sp">
+					<div>
+						<label data-translate="bankRule.indCashSecurit">鐜伴噾淇濋殰鐜囨潈閲�</label> 
+						<input
+							type="text" ng-model="formParam.indCashSecurity"
+							placeholder="0.900~0.999" ng-verify ng-blur="blurformParam()"/>
+					</div>
+				</div>
+				<div class="col-sm-6 col-info input-pop verifyTips-sp">
+					<div>
+						<label data-translate="bankRule.indCashReturn">鐜伴噾鎴愭湰绯绘暟</label> 
+						<input
+							type="text" ng-model="formParam.indReplenishCost"
+							placeholder="1~3" ng-verify ng-blur="blurformParam()"/>
+					</div>
+				</div>
+				<div class="col-sm-6 col-info input-pop verifyTips-sp">
+					<div>
+						<label data-translate="bankRule.unitCount">鍔犻挒寮犳暟瑙勫垯</label> <input
+							type="plusInteger" ng-verify ng-model="formParam.unitCount" />
+					</div>
+				</div>
+				<!-- 加钞平率 -->
+				<!-- 	<div class="col-sm-6 col-info input-pop">
+					<div>
+						<label data-translate="bankRule.frequency">鍔犻挒棰戞</label> 
+						<input
+							type="plusInteger"  class="cursonLen"
+							ng-model="formParam.day" /> <label
+							style="width: 30px; text-align: left;"
+							data-translate="bankRule.day"></label> 
+						<input type="plusInteger"
+							 class="cursonLen" ng-model="formParam.time" /> <label
+							style="width: 30px; text-align: left;"
+							data-translate="bankRule.time"></label>
+					</div>
+				</div> -->
+				 <div class="col-sm-6 col-info input-pop ">
+						<div>
+							<label data-translate="termInfo.fillUp">鏄惁婊￠挒</label> <select 
+								ng-model="formParam.fillUp">
+								<option value="" data-translate="global.pleaseSelect"></option>
+								<option value="1" data-translate="global.yes">Yes</option>
+								<option value="2" data-translate="global.no">No</option>
+							</select>
+
+						</div>
+					</div> 
+				<div class="col-sm-12 col-info">
+					<div>
+						<label data-translate="bankRule.replenishRule">涓�鍛ㄥ姞閽炶鍒�</label> <input
+							type="checkbox" ng-model="select_all" ng-change="selectAll()"><span
+							data-translate="bankRule.selectAll"></span> <input
+							type="checkbox" ng-model="select_workDay"
+							ng-change="selectWorkDay()"><span
+							data-translate="bankRule.workDay"></span>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-info">
+					<div>
+						<label></label> <span class="control-label marginR"
+							ng-repeat="i in replenishRule"> <input type="checkbox"
+							ng-model="i.checked" ng-change="selectOne()"> <span>{{i.value}}</span>
+						</span>
+					</div>
+				</div>
+				
+						<!-- 固定加钞星期几 -->
+					<div class="col-sm-12 col-info">
+						<div>
+							<label data-translate="bankRule.replenishRuleFixed">涓�鍛ㄥ姞閽炶鍒�</label> <input
+								type="checkbox" ng-model="select_allFixed" ng-change="selectAllFixed()"><span
+								data-translate="bankRule.selectAll"></span> <input
+								type="checkbox" ng-model="select_workDayFixed"
+								ng-change="selectWorkDayFixed()"><span
+								data-translate="bankRule.workDay"></span>
+						</div>
+					</div>
+					<div class="col-sm-12 col-info">
+						<div>
+							<label></label> <span class="marginR"
+								ng-repeat="i in replenishRuleFixed"> <input type="checkbox"
+								ng-model="i.checked" ng-change="selectOneFixed()"> <span>{{i.value}}</span>
+							</span>
+						</div>
+					</div>
+				
+				
+				<div class="col-sm-12 col-info">
+					<div style="display: flex">
+						<label data-translate="termInfo.FixedNoteAddDate">鍥哄畾鍔犻挒鏃ユ湡</label>
+						<div class="padder inline"
+							style="max-width: 710px; line-height: 36px">
+							<span style="margin-left: 1px" ng-repeat="date in dateList">
+								<span class="dateStyle  {{date.check?'dateStyleSelect':''}}"
+								ng-click="date.check = !date.check">{{date.value}}</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-info">
+					<div>
+						<label data-translate="bankRule.holidayAdd">鑺傚亣鏃ユ槸鍚﹀姞閽�</label> <input
+							type="radio" ng-model="formParam.holidayAdd" ng-value="'1'"
+							name="cashRule"><span data-translate="global.yes"></span>
+						<input type="radio" ng-model="formParam.holidayAdd" ng-value="'2'"
+							name="cashRule"><span data-translate="global.no"></span>
+					</div>
+				</div>
+				
+					<!-- 加钞时段 -->
+				<!-- <div class="col-sm-12 col-info">
+					<div style="display: flex">
+						<label data-translate="termInfo.cashTime">鍔犻挒鏃舵</label>
+						<div class="padder inline" style="max-width: 710px">
+							<span style="min-width: 230px; float: left; padding: 5px 0;"
+								ng-repeat="ct in formParam.replenishTimes"> <input
+								ng-model="ct.startTime" class="timeLen"
+								onClick="WdatePicker({dateFmt:'HH:mm',lang:'zh-cn',onpicked: function(){$(this).trigger('change')}})" />
+								<input ng-model="ct.endTime" class="timeLen"
+								onClick="WdatePicker({dateFmt:'HH:mm',lang:'zh-cn',onpicked: function(){$(this).trigger('change')}})" />
+								<span ng-click="addCashTime()" class="glyphicon glyphicon-plus"></span>
+								<span ng-click="delCashTime($index)"
+								class="glyphicon glyphicon-minus"></span>
+							</span>
+						</div>
+					</div>
+					
+				</div> -->
+			
+			</div>
+			<div ng-show="activeTab == 2">
+				<div class="col-sm-6 col-info input-pop verifyTips-sp">
+					<div>
+						<label data-translate="bankRule.fullCash">婊￠挒棰勮鍊�</label> <input
+							type="number" ng-model="formParam.fullWarn"
+							ng-change="calcultePencent()" ng-verify />
+					</div>
+				</div>
+				<div class="col-sm-6 col-info input-pop verifyTips-sp">
+					<div>
+						<label data-translate="bankRule.lackCash">缂洪挒棰勮鍊�</label> <input
+							type="number" ng-model="formParam.lackWarn"
+							ng-change="calcultePencent()" ng-verify />
+					</div>
+				</div>
+				<div class="col-sm-12 col-info input-pop">
+						<div>
+							<label data-translate="bankRule.fullJuge">婊￠挒鍒ゅ畾</label> <input
+								type="radio" ng-model="formParam.fullJudge" ng-value="'0'"><span
+								data-translate="bankRule.device">璁惧</span> <input type="radio"
+								ng-model="formParam.fullJudge" ng-value="'1'"><span
+								data-translate="bankRule.wd"></span> <br> <label
+								data-translate="bankRule.lackJuge">缂洪挒鍒ゅ畾</label> <input
+								type="radio" ng-model="formParam.lackJudge" ng-value="'0'"><span
+								data-translate="bankRule.device">璁惧</span> <input type="radio"
+								ng-model="formParam.lackJudge" ng-value="'1'"><span
+								data-translate="bankRule.wd"></span>
+						</div>
+					</div>
+					<div class="col-sm-12 col-info input-pop">
+						<div>
+							<label></label> <input type="checkbox" ng-true-value="'1'"
+								ng-false-value="'2'" ng-model="formParam.lackRule"> <span
+								data-translate="termInfo.lackRule">涓�绉嶉潰棰濈己閽炲嵆涓虹己閽�</span>
+						</div>
+					</div>
+				<div class="col-sm-12 col-info">
+					<!-- <div ng-repeat="item in formParam.termCashLimits"> -->
+					<!-- 鍘熸潵甯佺鍙互閫夋嫨涓嬫媺妗� -->
+						<!-- <div>
+							<label data-translate="bankRule.stockCeiling">甯佺</label>
+							<label data-translate="bankRule.currency" >甯佺</label> <select ng-model="item.type"
+								ng-change="changeCurrency(item.type,$index)">
+								<option value="" data-translate="global.pleaseSelect"></option>
+								<option ng-repeat="type in deTypeList" value="{{type.dictKey}}">{{type.dictDesc}}</option>
+							</select> <span ng-click="add()" class="glyphicon glyphicon-plus"></span>
+							<span ng-click="del($index)" class="glyphicon glyphicon-minus"></span><br />
+						</div> -->
+						
+						<!-- <div ng-model="item.type" style="text-align:left">Currency:{{item.type}}</div>
+						<div class="col-sm-12 col-info">
+							<div>
+								<label></label>
+								<table class="table-bordered table-pop">
+									<tr>
+										<th align="center"><label
+											data-translate="bankRule.denomination">闈㈤</label></th>
+										<th align="center"><label
+											data-translate="bankRule.stockCeiling">鏈�澶у厑璁稿簱瀛�</label></th>
+										<th align="center"><label
+											data-translate="bankRule.minStockCeiling">鏈�灏忓厑璁稿簱瀛�</label></th>
+										<th align="center"><label
+											data-translate="termInfo.fullCount">婊￠挒棰勮寮犳暟</label></th>
+										<th align="center"><label
+											data-translate="termInfo.lackCount">缂洪挒棰勮寮犳暟</label></th>
+									</tr>
+									<tr ng-repeat="denomination in item.denominationList">
+										<input type="hidden" name="denomination"
+											ng-value="{{denomination.dictDescs||denomination.dictKey || denomination.denomination}}" />
+											<td>{{denomination.dictDescs||denomination.dictKey ||
+												denomination.denomination}}</td>
+										<td><input type="number" ng-change="calcultePencent()"  ng-readonly="true"
+											 ng-model="denomination.ceilingCount" /></td>
+										<td><input type="number" ng-change="calcultePencent()"
+											ng-verify ng-model="denomination.floorCount" /></td>
+										<td><input type="number" ng-model="denomination.fullWarn"
+											ng-readonly="true" /></td>
+										<td><input type="number" ng-model="denomination.lackWarn"
+											ng-readonly="true" /></td>
+									</tr>
+								</table>
+							</div>
+						</div> -->
+					<!-- </div> -->
+				</div>
+			</div>
+			
+				<!-- <div ng-show="activeTab == 3">
+					
+				</div> -->
+			</div>
+			
+			<!-- 原来雀巢根据 -->
+			<!-- <div ng-show="activeTab == 3">
+				<div class="col-sm-12 col-info input-pop">
+					<div>
+						<label data-translate="bankRule.camFullWarn">瀛樻鏈�</label> <label
+							data-translate="bankRule.fullJuge">婊￠挒鍒ゅ畾</label> <input
+							type="radio" ng-model="formParam.camFullJudge" ng-value="'0'"><span
+							data-translate="bankRule.device">璁惧</span> <input type="radio"
+							ng-model="formParam.camFullJudge" ng-value="'1'"><span
+							data-translate="bankRule.wd">缃戠偣</span>
+					</div>
+				</div>
+				<div class="col-sm-12 col-info input-pop">
+					<div>
+						<label data-translate="bankRule.atmLackWarn">鍙栨鏈�</label> <label
+							data-translate="bankRule.lackJuge">缂洪挒鍒ゅ畾</label> <input
+							type="radio" ng-model="formParam.atmLackJudge" ng-value="'0'"><span
+							data-translate="bankRule.device">璁惧</span> <input type="radio"
+							ng-model="formParam.atmLackJudge" ng-value="'1'"><span
+							data-translate="bankRule.wd"></span>
+					</div>
+				</div>
+				<div class="col-sm-12 col-info input-pop">
+					<div>
+						<label data-translate="bankRule.crsLackWarn">寰幆鏈�</label> <label
+							data-translate="bankRule.fullJuge">婊￠挒鍒ゅ畾</label> <input
+							type="radio" ng-model="formParam.crsFullJudge" ng-value="'0'"><span
+							data-translate="bankRule.device">璁惧</span> <input type="radio"
+							ng-model="formParam.crsFullJudge" ng-value="'1'"><span
+							data-translate="bankRule.wd"></span> <br> <label></label> <label
+							data-translate="bankRule.lackJuge">缂洪挒鍒ゅ畾</label> <input
+							type="radio" ng-model="formParam.crsLackJudge" ng-value="'0'"><span
+							data-translate="bankRule.device">璁惧</span> <input type="radio"
+							ng-model="formParam.crsLackJudge" ng-value="'1'"><span
+							data-translate="bankRule.wd"></span>
+					</div>
+				</div>
+				<div class="col-sm-12 col-info input-pop">
+					<div>
+						<label data-translate="bankRule.imLackWarn">涓�浣撴満</label> <label
+							data-translate="bankRule.fullJuge">婊￠挒鍒ゅ畾</label> <input
+							type="radio" ng-model="formParam.imFullJudge" ng-value="'0'"><span
+							data-translate="bankRule.device">璁惧</span> <input type="radio"
+							ng-model="formParam.imFullJudge" ng-value="'1'"><span
+							data-translate="bankRule.wd"></span> <br> <label></label> <label
+							data-translate="bankRule.lackJuge">缂洪挒鍒ゅ畾</label> <input
+							type="radio" ng-model="formParam.imLackJudge" ng-value="'0'"><span
+							data-translate="bankRule.device">璁惧</span> <input type="radio"
+							ng-model="formParam.imLackJudge" ng-value="'1'"><span
+							data-translate="bankRule.wd"></span>
+					</div>
+				</div>
+			</div> -->
+			<div class="modal-footer button-block">
+				<button type="submit" ng-verify
+					ng-disabled="editForm.$invalid || isSaving">
+					<span class="glyphicon glyphicon-save"></span> <span
+						data-translate="entity.action.save">Save</span>
+				</button>
+				<button type="button" ng-click="clear(false)">
+					<span class="glyphicon glyphicon-ban-circle"></span> <span
+						data-translate="entity.action.cancel">Cancel</span>
+				</button>
+			</div>
+		</div>
+	</form>
+</div>

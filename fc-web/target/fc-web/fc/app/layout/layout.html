@@ -1,0 +1,28 @@
+<div data-ng-include="'fc/app/layout/header.html'" ></div>
+<div data-ng-include="'fc/app/layout/aside.html'"></div>
+
+<div class="tab-content-container">
+ <!--   <h3>内容页</h3>-->
+<!--     <a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside"></a>
+        
+    <div class="app-content-body fade-in-up" ui-view></div> -->
+    <div id="tabMenu" class="menu-rainbow">
+		<ul id="tabUl" class="menu-tab" data-ng-init="tabLoad()">
+	 		<li ng-repeat="tab in tableList track by $index" id="{{tab.id}}" class="{{activeTabView == tab.id?'active':''}}">
+				<a ng-click="selectTab($index)" data-translate="{{tab.langSwitch}}"></a>
+				<span class="font-sm iconfont glyphicon glyphicon-remove font-sm" 
+					ng-click="closeContent($index)">
+				</span>
+			</li>
+		</ul>
+	</div> 
+	<div id="tab-content-container-con">
+		<div ng-repeat="view in viewList track by $index" ng-show="activeTabView == view.id" id="{{view.id}}" data-ng-include="view.path">
+		</div>
+	</div>
+</div>
+
+<!-- <div class="footer bottom-footer">
+    	<p class="text-footer">@2018 suitong</p>
+</div> -->
+<toaster-container></toaster-container>

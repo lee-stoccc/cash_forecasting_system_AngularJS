@@ -1,0 +1,29 @@
+{
+	"forecastPlan":{
+	    "termNo":"Terminal ID",
+	    "branchNo":"Branch Code",
+	    "bankName":"Branch Name",
+	    "regionName":"District",
+	    "lastCash":"Last Cash",
+	    "replenishDate":"Replenish Date",
+	    "planCash":"Plan Cash",
+	    "termType":"Terminal Type",
+        "forecastStatus":"Forecast Status",
+        "NotForecastTerm":"Not the forecast of term",
+        "addForecastPlan":"Add ForecastPlan",
+        "detail":"Detail",
+         "stock":"Stock",
+        "AddingFailure":"Adding Failure",
+        "AddingSuccess":"Adding Success",
+        "AddOrEdit":"Add Or Edit",
+        "addCashDate":"Replenish Date",
+        "denomination":"Denomination",
+        "number":"Number",
+        "tooMuch":"The amount of the planned amount cannot exceed the stock",
+        "forecast":"Forecast",
+        "forecastDate":"Forecast Date",
+        "monitorTime":"Monitor Time",
+        "export":"Export",
+        "escort":"Escort"          
+	}
+}

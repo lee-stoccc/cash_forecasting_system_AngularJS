@@ -1,0 +1,63 @@
+<div class="panel ng-scope default-controller"
+	ng-controller="CusRegionController" ng-show="cusregionManage">
+	<div class="default-container">
+		<form class="form-inline">
+			<div class="wrapper-md row">
+				<div class="col-sm-12">
+					<span class="form-group"> <label
+						data-translate="cusRegion.regionNo"></label> <input type="text"
+						ng-model="formParam.regionNo" />
+					</span> <span class="form-group"> <label
+						data-translate="cusRegion.regionName"></label> <input type="text"
+						ng-model="formParam.regionName" />
+					</span> <span class="form-group button-block">
+						<button ng-click="loadAll()">
+							<span class="glyphicon glyphicon-search"></span> <span
+								data-translate="global.go"></span>
+						</button>
+						<button ng-click="resetSearch()">
+							<span class="glyphicon glyphicon-refresh"></span> <span
+								data-translate="global.reset"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+		<div class="wrapper-md">
+			<div class="op-div button-block">
+				<!-- 	<button ng-click="addCusRegion()">
+	                <span class="glyphicon glyphicon-plus"></span> 
+	                <span data-translate="entity.action.add">Create a new cusRegion</span>
+	            </button>
+				<button  ng-click="editCusRegion()">
+	                <span class="glyphicon glyphicon-edit"></span> 
+	                <span data-translate="entity.action.edit">edit a new cusRegion</span>
+	            </button>
+				<button ng-click="batchDelete()">
+	                <span class="glyphicon glyphicon-minus"></span> 
+	                <span data-translate="global.batchDelete"></span>
+	            </button> -->
+				<div component-model ng-click="addCusRegion()" class="button-op"
+					component-form-englishName="cusgionPage"
+					component-englishName="addBtn"
+					component-dataName="entity.action.add"
+					component-icon-class="glyphicon glyphicon-plus"></div>
+				<div component-model ng-click="editCusRegion()" class="button-op"
+					component-form-englishName="cusgionPage"
+					component-englishName="editBtn"
+					component-dataName="entity.action.edit"
+					component-icon-class="glyphicon glyphicon-plus"></div>
+				<div component-model ng-click="batchDelete()" class="button-op"
+					component-form-englishName="cusgionPage"
+					component-englishName="deleteBtn"
+					component-dataName="global.batchDelete"
+					component-icon-class="glyphicon glyphicon-minus"></div>
+			</div>
+		</div>
+		<div class="table-view-defalut" style="top: 90px">
+			<div class="table-view" tables-model2
+				tables-data-model="tablesConfig"></div>
+		</div>
+	</div>
+
+</div>

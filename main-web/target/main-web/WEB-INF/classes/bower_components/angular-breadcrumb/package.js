@@ -1,0 +1,1 @@
+Package.describe({name:"ncuillery:angular-breadcrumb",version:"0.3.3",summary:"angular-breadcrumb for meteor!",git:"https://github.com/ncuillery/angular-breadcrumb",documentation:"README.md"});Package.onUse(function(a){a.versionsFrom("METEOR@0.9.0.1");a.use("urigo:angular@0.8.4","client");a.addFiles("dist/angular-breadcrumb.js","client")});

@@ -1,0 +1,63 @@
+<!-- <div class="panel ng-scope default-controller" ng-controller="UserManagementController" ng-show="userManage">
+   <div class="default-container">
+	   <form class="form-inline page-top">
+	        <div class="wrapper-md">
+	            <div class="row">
+	                <div class="col-sm-12">
+	                    <div class="form-group">
+	                        <label data-translate="devplatformApp.user.login">login</label>
+	                        <input type="text" ng-model="formParam.login" placeholder="{{'devplatformApp.user.prompt.enterLogin' | translate}}">
+	                    </div>
+	                    <div class="form-group">
+	                        <label data-translate="devplatformApp.user.firstName">firstName</label>
+	                        <input type="text" ng-model="formParam.firstName" placeholder="{{'devplatformApp.user.prompt.enterFirstName' | translate}}">
+	                    </div>
+	                    <div class="form-group">
+	                        <label data-translate="devplatformApp.user.activated">activated</label>
+	                        <div class="padder inline input-group" >
+	                            <select class="ng-pristine ng-valid" ng-model="formParam.activated" >
+	                                <option data-translate="devplatformApp.user.prompt.pleaseChoose" value=" ">pleaseChoose</option>
+	                                <option ng-repeat="a in dictList" data-translate="{{a.group}}" value="{{a.dictKey}}"></option>
+	                            </select>
+	                        </div>
+	                    </div>
+	                   <div class="form-group button-block">
+	                        <button ng-click="loadAll()">
+	                        	<span class="glyphicon glyphicon-search"></span>
+	                        	<span data-translate="global.go"></span>
+	                        </button>
+	                        <button ng-click="clear()">
+	                        <span class="glyphicon glyphicon-refresh"></span>
+	                        <span data-translate="global.reset"></span>
+	                        </button>
+	                    </div>
+	                    <div class="form-group m-n">
+	                        <button class="btn btn-info pull-left" ng-click="exportExcel()" ng-show="exportBtn">导出</button>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </form>
+	    <div class="wrapper-md">
+	        <div class="op-div button-block">
+	            <div component-model ng-click="addUser()" class="button-op"
+	                 component-form-englishName="userManage"
+	                 component-englishName="addBtn"
+	                 component-dataName="devplatformApp.user.home.createLabel"
+	                 component-icon-class="glyphicon glyphicon-plus"></div>
+				
+				<div component-model ng-click="deleteUser()" class="button-op"
+	                 component-form-englishName="userManage"
+	                 component-englishName="deleteBtn"
+	                 component-dataName="devplatformApp.user.home.delete"
+	                 component-icon-class="glyphicon glyphicon-minus"></div>
+	        </div>
+	       	<div class="table-view-defalut" style="top: 80px">
+				<div class="table-view" tables-model2
+					tables-data-model="tablesConfig"></div>
+			</div>
+	        <div tables-model tables-data-model="tablesConfig"></div>
+	    </div>
+   </div>
+</div>
+ -->

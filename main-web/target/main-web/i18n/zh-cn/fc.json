@@ -1,0 +1,30 @@
+{
+    "menu": {
+        "privilegeManage":"权限管理",
+        "baseSetting":"参数配置",
+        "resourceMessage":"资源管理",
+        "cusRegion": "自定义区域",
+        "holiday": "节假日管理",
+        "bankInfo": "银行管理",
+        "bankRule": "银行加钞规则",
+        "termInfo": "设备管理",
+        "forecastPlan": "预测加钞计划",
+        "forecastReportform":"日测预用表",
+        "processData": "过程数据管理",
+        "termMonitorData": "设备监控数据",
+        "dailyUsing": "日用量",
+        "castData": "加钞数据",
+        "returnData": "回笼数据",
+        "eventManagement":"事件管理",
+        "reportManagement":"报表管理",
+        "cashUseRate":"现金使用率",
+        "cashGuaranteeRate":"现金保障率",
+        "inventoryStatistics":"库存统计"
+    },
+    "privilege": {
+        "mine": "个人中心",
+        "editPassword": "修改密码",
+        "logout": "退出登录",
+         "title": "现金智能预测系统"
+        }
+}

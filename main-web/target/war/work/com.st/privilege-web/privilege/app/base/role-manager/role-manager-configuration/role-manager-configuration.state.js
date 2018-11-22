@@ -1,0 +1,1 @@
+(function(){angular.module("devplatformApp").config(a);a.$inject=["$stateProvider"];function a(b){}})();

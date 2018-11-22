@@ -1,0 +1,24 @@
+.role-container{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 650px;
+    position: relative;
+}
+
+.role-manager-nav{
+    margin: -1px;
+    width: 200px;
+    height: 100%;
+    min-height: 650px;
+    background-color: #eee;
+}
+
+.role-manager-info{
+    position: absolute;
+    top: 0;
+    left: 210px;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+}

@@ -1,0 +1,17 @@
+{
+    "devplatformApp":{
+        "roleManagerConfiguration":{
+            "home":"Home",
+            "parentTitle":"Role Manager",
+            "configTitle":"Role Manager Configuration",
+            "configForm":"Authorization Form",
+            "configBtn":"Authorization Button",
+            "formName":"Form Name",
+            "btnName":"Button Name",
+            "state":"State",
+            "save":"Save",
+            "back":"Back",
+            "success":"Save Success"
+        }
+    }
+}

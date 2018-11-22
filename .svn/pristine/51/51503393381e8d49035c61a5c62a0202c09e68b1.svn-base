@@ -1,0 +1,20 @@
+{
+    	"detailTitle":"详情页面",
+    	"holiday":{
+            "title": "编辑节假日",
+			"year": "年份",
+			"date": "节假日日期",
+			"holidayName": "节日名称",
+			"typeName": "类别", 
+			"supplement":"补班时间",
+			"formError":{
+				"duplicateHoliday":"重复的节日",
+				"sameYear":"请跟你选择的年份保持一致",
+				"chooseHoliday":"请选择节日",
+				"dateConflict":"时间已有冲突",
+				"startDateConflict":"跟开始时间已有冲突",
+				"endDateConflict":"跟结束时间已有冲突",
+				"lastOne":"最后一个不能删除"
+					}             
+			}
+}

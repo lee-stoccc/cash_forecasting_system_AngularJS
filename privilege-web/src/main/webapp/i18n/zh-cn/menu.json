@@ -1,0 +1,23 @@
+{
+    "menu": {
+        "menuManagement": "菜单",
+		"sys-operateLog": "日志",
+		"sys-dict": "字典",
+		"role-manager": "角色",
+		"activityManege": "活动",
+		"act-activity": "活动管理",
+		"act-type": "活动类型",
+		"act-user": "用户查询",
+		"member-type": "会员类型",
+		"userManage": "用户",
+		"playerTest": "视频",
+		"shop": "店况",
+		"bb": "商品",
+		"act-activity": "活动",
+		"singleItem": "单品",
+		"act-user": "用户",
+		"orgManagement": "机构管理",
+		"deviceManagement": "设备管理",
+		"cusRegion": "区域"
+    }
+}

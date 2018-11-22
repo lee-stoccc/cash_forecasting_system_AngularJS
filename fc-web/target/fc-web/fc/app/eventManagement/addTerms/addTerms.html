@@ -1,0 +1,114 @@
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline">
+		<div class="modal-header">
+			<h4 class="modal-title font-mu" data-translate="eventManagement.addTerms">添加设备</h4>
+			<span class="glyphicon glyphicon-remove modal-delete"
+				ng-click="clear(false)"></span>
+		</div>
+		<div class="edit-container add-container-height">
+			<div class="left">
+				<h4 class="modal-title font-mu" data-translate="eventManagement.baseInfo"></h4>
+				<div class="wrapper-md">
+					<div style="margin-left: 5px;">
+						<button ng-click="batchDelete()">
+							<span class="glyphicon glyphicon-minus"></span> <span
+								data-translate="global.batchDelete"></span>
+						</button>
+					</div>
+				</div>
+				
+				<div class="table-view-defalut" style="top:80px;bottom:0">
+					<div class="addTermsHeader">
+						<div class="inputItem"><input type="checkbox"></div>
+						<div class="textItem"><label data-translate="forecastReportform.regionName"></label></div>
+						<div class="textItem"><label data-translate="termInfo.termNo"></label></div>
+						<div class="textItem"><label data-translate="eventManagement.effectValue"></label></div>
+					</div>
+					<div class="addTermsContrainer">
+						<div class="addTermsHeader {{($index%2)==0?'tr-white-background':'tr-gray-background'}}" ng-repeat="item in addTermsList">
+							<div class="inputItem"><input type="checkbox"></div>
+							<div class="textItem">{{item.branchName}}</div>
+							<div class="textItem">{{item.termNo}}</div>
+							<div class="textItem">{{item.effectValue}}</div>
+						</div>
+					</div>
+<!-- 					<div class="table-view" tables-model2
+						tables-data-model="tablesConfig"></div> -->
+				</div>
+			</div>
+			<div class="right">
+				<h4 class="modal-title font-mu" data-translate="eventManagement.rulesSet"></h4>
+					<div class="add-search">
+						<div class="search-item">
+		  	 				<span>
+		  	 					<label class="forecastLabel" data-translate="forecastReportform.bankName"></label>
+		  	 					<select ng-model="formParam.bankName" ng-verify ng-options="bank.id as bank.bankName for bank in bankList">
+									<option data-translate="global.pleaseSelect"></option>
+								</select>
+							</span>
+						</div>
+						
+						<div class="search-item">
+		  	 				<span>
+		  	 					<label class="forecastLabel" data-translate="termInfo.branchNo"></label>
+		  	 					<select ng-model="formParam.branchNo" ng-verify ng-options="branch.dictKey as branch.dictDesc for branch in branchList">
+									<option data-translate="global.pleaseSelect"></option>
+								</select>
+							</span>
+						</div>
+						
+						<div class="search-item">
+							<span>
+								<label class="forecastLabel" data-translate="forecastReportform.regionName"></label>
+								<select ng-model="formParam.regionName" ng-verify ng-options="cusgion.id as cusgion.regionName for cusgion in cusgionList">
+									<option data-translate="global.pleaseSelect"></option>
+								</select>
+							</span>	
+						</div>
+
+					</div>
+					<div class="add-search">
+						<div class="search-item">
+		  	 				<span>
+		  	 					<label class="forecastLabel" data-translate="termInfo.commercial"></label>
+		  	 					<select ng-model="formParam.commercial" ng-verify ng-options="c.dictKey as c.dictDesc for c in commercialList">
+									<option data-translate="global.pleaseSelect"></option>
+								</select>
+							</span>
+						</div>
+						
+						<div class="search-item">
+							<span>
+								<label class="forecastLabel" data-translate="eventManagement.effectValue"></label>
+								 <input
+										type="text"
+										placeholder="{{'eventManagement.effectValue' | translate}}"
+										ng-model="formParam.effectValue" />
+							</span>	
+						</div>
+						
+						<div class="search-item">
+							<span class="button-block">
+								<button ng-click="loadAll()">
+									<span class="glyphicon glyphicon-search"></span> <span
+										data-translate="global.go"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+					
+				<div class="table-view-defalut" style="top:120px;bottom:65px">
+					<div class="table-view" tables-model2
+						tables-data-model="tablesConfig"></div>
+				</div>	
+				
+				<div class="add-save">
+					<button type="button" ng-click="save()">
+						<span class="glyphicon glyphicon-save"></span> <span
+							data-translate="entity.action.save">Save</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

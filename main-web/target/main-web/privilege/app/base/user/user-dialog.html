@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="privilege/css/user/user-dialog.css">
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+        <div class="modal-header">
+           	<h4 class="modal-title font-mu" data-translate="">Creat</h4>
+        	<span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>
+        </div>
+        <div class="modal-main">
+             <div class="modal-body">
+             <div class="col-sm-12 col-info input-pop">
+                 <div>
+                     <label data-translate="devplatformApp.user.login" for="field_login">login</label>
+                     <input type="text" ng-verify="max:25,pattern:/^[a-zA-Z0-9_-]{1,25}$/,errmsg:'devplatformApp.user.error.errorAccount'" name="login" 
+                     id="field_login" ng-model="$parent.user.login" ng-if="type != 'edit'"/>
+                     <input type="text" readonly="readonly" name="login" id="field_login2" ng-model="user.login" ng-if="type == 'edit'"/>
+                 </div>
+             </div>
+             <div class="col-sm-12 col-info input-pop">
+                  <div>
+                     <label data-translate="devplatformApp.user.firstName" for="field_firstName">firstName</label>
+                     <input type="text" ng-verify="max:50" name="firstName" id="field_firstName" ng-model="user.firstName"/>
+                  </div>
+             </div>
+             <div class="col-sm-12 col-info input-pop">
+                 <div>
+                     <label data-translate="devplatformApp.user.password" for="field_password">password</label>
+                     <input type="text" readonly="readonly" name="password" id="field_password" value="111111" ng-if="type != 'edit'"/>
+                     <input type="password" readonly="readonly" name="password" id="field_password2" value="111111111111" ng-if="type == 'edit'"/>
+                 </div>
+             </div>
+             <div class="col-sm-12 col-info input-pop">
+                 <div>
+                     <label data-translate="devplatformApp.user.department" for="field_department">department</label>
+                     <input type="text" ng-verify="max:50,required:false" name="department" id="field_department" ng-model="user.department"/>
+                 </div>
+             </div>
+             <div class="col-sm-12 col-info input-pop">
+                 <div>
+                     <label data-translate="devplatformApp.user.charNo" for="field_charNo">charNo</label>
+                     <input type="variable" ng-verify="max:20,required:false" name="charNo" id="field_charNo" ng-model="user.charNo"/>
+                 </div>
+             </div>
+             <div class="col-sm-12 col-info input-pop">
+                 <div>
+                     <label data-translate="devplatformApp.user.email" for="field_email">email</label>
+                     <input type="email" ng-verify="max:100,required:false" name="email" id="field_email" ng-model="user.email"/>
+                 </div>
+             </div>
+             <div class="col-sm-12 col-info input-pop">
+                 <div >
+                     <label data-translate="devplatformApp.user.mobile" for="field_mobile">mobile</label>
+                     <input type="phone" ng-verify="max:15,required:false" name="mobile" id="field_mobile" ng-model="user.mobile"/>
+                 </div>
+             </div>
+             <div class="col-sm-12 col-info input-pop" style="position:relative;left:-27px">
+                 <div >
+                     <label data-translate="devplatformApp.user.expireDate" for="field_expireDate" style="width:147px">expireDate</label>
+                      <div class="input-group input-group-time">
+                        <input id="field_expireDate" readonly="readonly" type="dates" name="expireDate" ng-verify="asterisk:false" 
+                        datetime-picker="{{dateformat}}"  ng-model="user.expireDate" is-open="datePickerOpenStatus.expireDate"/>
+                         <span class="input-group-btn">
+                             <button type="button" class="btn btn-default" ng-click="openCalendar('expireDate')">
+                             <i class="glyphicon glyphicon-calendar"></i></button>
+                         </span><span class="span_nec">*</span>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-sm-12 col-info input-pop" style="position:relative;left:-27px">
+                 <div>
+                     <label data-translate="devplatformApp.user.passwordExpireDate" for="field_passwordExpireDate" style="width:147px">passwordExpireDate</label>
+                     <div class="input-group input-group-time">
+                         <input  id="field_passwordExpireDate" readonly="readonly" type="dates" name="passwordExpireDate" ng-verify="asterisk:false" datetime-picker="{{dateformat}}" ng-model="user.passwordExpireDate" is-open="datePickerOpenStatus.passwordExpireDate"/>
+                         <span class="input-group-btn">
+                                 <button type="button" class="btn btn-default" ng-click="openCalendar('passwordExpireDate')">
+                                 <i class="glyphicon glyphicon-calendar"></i></button>
+                         </span><span class="span_nec">*</span>
+                     </div>
+                 </div>
+             </div>
+             <div>
+                 <div>
+                     <div class="user-activated-check">
+                         <label data-translate="devplatformApp.user.activated"></label>
+                     </div>
+                     <div class="user-padder user-state">
+                         <div class="user-state" data-translate="entity.action.disable">disable</div>
+                         <label class="i-switch i-switch-md bg-info user-m-t-xs m-r state switch">
+                             <input type="checkbox" ng-model="isOpen" name="enable_flag"
+                                    class="ng-valid ng-dirty ng-valid-parse ng-touched">
+                             <i></i>
+                         </label>
+                         <div class="user-state" data-translate="entity.action.enable">enable</div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+        </div>
+			<div class="modal-footer button-block">
+				<button type="submit" ng-verify >
+					<span class="glyphicon glyphicon-save"></span>
+					<span data-translate="entity.action.save">Save</span>
+				</button>
+				 <button type="button" ng-click="clear(false)">
+	                <span class="glyphicon glyphicon-ban-circle"></span>
+	                <span data-translate="entity.action.cancel">Cancel</span>
+	            </button>
+			 </div>
+		</div>
+	</form>
+</div>

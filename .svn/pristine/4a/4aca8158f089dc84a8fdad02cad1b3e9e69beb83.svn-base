@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="privilege/css/login/login.css">
+<div class="login-container" ng-controller="SingleLoginController">
+    <div class="login-container-layout">
+    	<!--<div class="col-xs-1 col-sm-3 col-md-4 col-lg-4"></div>-->
+    	<div ng-if="showError">
+    		<img style="height:780px;width:100%" src="privilege/images/layout/error.jpg">
+    	</div>
+    </div>
+</div>

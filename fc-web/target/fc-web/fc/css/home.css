@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+
+.combo{
+	top:200px;
+	position: absolute;
+}
+
+.combo>input{
+	color: black;
+}
+
+.panelDiv{
+	display: none;
+	background-color: white;
+	color: black;
+}
+
+.panelDiv>div{
+	cursor: pointer;
+}
+
+.panelDiv>div:hover{
+	background-color: blue;
+}
+
+
+.tree-select{
+	position: absolute;
+	top: 300px;
+	left: 600px;
+	/* width: 156px; */
+	/* background-color: white; */
+}
+
+.tree-span{
+	border: 1px solid;
+    height: 24px;
+    position: inherit;
+    top: 0;
+    left: 136px;
+}
+
+.tree-div{
+	display: none;
+}
+
+

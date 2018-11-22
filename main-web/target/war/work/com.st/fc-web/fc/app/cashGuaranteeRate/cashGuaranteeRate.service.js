@@ -1,0 +1,1 @@
+(function(){angular.module("devplatformApp").factory("cashGuaranteeRateService",a);a.$inject=["globalConstant","utilService"];function a(d,c){var b={};return b}})();

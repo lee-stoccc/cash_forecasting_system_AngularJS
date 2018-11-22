@@ -1,0 +1,48 @@
+{
+    "devplatformApp": {
+        "sysDict" : {
+            "home": {
+                "createLabel": "Create",
+                "createOrEditLabel": "Create or Edit",
+                "edit":"Edit",
+                "delete":"Delete"
+            },
+            "created": "Created Succeed!",
+            "updated": "Updated Succeed!",
+            "deleted": "Deleted Succeed!",
+            "delete": {
+                "question": "Are you sure you want to delete the data dictionary?"
+            },
+            "detail": {
+                "title": "Data Dictionary Details"
+            },
+            "prompt": {
+            	"selectOne" : "Please select a data first!",
+            	"confirmExport" : "Confirm export?",
+            	"uploadNotExcel" : "Uploading files is not a Excel file!",
+            	"exportSuccess" : "Import success!",
+            	"importNotExcel" : "Importing is not a excel file!",
+            	"invalidFile" : "File parsing error!",
+            	"enterGroup" : "Please enter group",
+            	"enterKey" : "Please enter key",
+            	"enterDesc" : "Please enter description",
+            	"confirmEnable" : "Confirm enabled?",
+            	"confirmDisable" : "Confirm disable?"
+            },
+            "group": "Group",
+            "dictKey": "Key",
+            "dictDesc": "Description",
+            "parentGroup": "Parent Group",
+            "childrenCount": "Children Count",
+            "sort": "Sort",
+            "delFlag": "Status",
+            "error": {
+            	"duplicateGroup": "Duplicate group!",
+            	"duplicateKey": "Duplicate Key!",
+            	"invalidGroup": "Invalid group!",
+            	"invalidKey": "Invalid key!",
+            	"invalidDesc": "Invalid description!"
+            }
+        }
+    }
+}

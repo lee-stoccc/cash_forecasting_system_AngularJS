@@ -1,0 +1,10 @@
+{
+	"cashUseRate":{
+	    "termNo":"设备编号",
+        "branchNo":"网点编号",
+        "bankName":"银行名称",
+        "regionName":"自定义区域",
+        "replenishDate":"使用时间",
+        "termType":"设备类型"
+	}
+}

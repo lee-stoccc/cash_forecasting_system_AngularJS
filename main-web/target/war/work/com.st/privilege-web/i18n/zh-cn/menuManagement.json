@@ -1,0 +1,52 @@
+{
+    "devplatformApp":{
+        "menuManagement":{
+            "home":"首页",
+            "menuManagement":"菜单管理",
+            "checkTitle":"菜单名称：",
+            "menuName":"菜单名称",
+            "query":"查询",
+            "checkOut":"导出",
+            "new":"新增",
+            "del":"删除",
+            "CNM":"菜单中文名称",
+            "ENM":"菜单英文名称",
+            "url":"菜单url",
+            "order":"顺序",
+            "pId":"父级菜单ID",
+            "pName":"父级菜单名称",
+            "operation":"操作",
+            "reviser":"修改",
+            "menuSetting":"菜单设置",
+            "formName":"表单名称",
+            "componentName":"控件名称",
+            "englishName":"英语名称",
+            "formList":"表单列表",
+            "componentList":"控件列表",
+            "delFlag":"状态",
+            "langSwitch":"语言切换源",
+            "select": {
+            	"noValue": "--请选择--",
+            	"enabled": "启用",
+            	"disabled": "禁用"
+            },
+            "selectOne": "请至少选中一条数据再操作！",
+            "delConfirm": "您确定要删除所选菜单吗？\n\n请确认！",
+            "enableConfirm": "您确定要启用该菜单吗？\n\n请确认！",
+            "disableConfirm": "您确定要禁用该菜单吗？\n\n请确认！",
+            "notParent": "你当前选择项不能作为父级菜单",
+            "noMenuMsg": "未获取到菜单信息，请重试!",
+            "mustSelect": "请选择一条数据",
+            "delConfirmForm": "您确定要删除所选表单吗？\n\n请确认！",
+            "onlyDelDisable": "只能删除禁用状态的数据",
+            "newMenu": "新增菜单",
+            "delMenu": "删除菜单",
+            "newForm": "新增表单",
+            "newComponent": "新增控件",
+            "editForm":"编辑表单",
+            "editComponent":"编辑控件",
+            "delForm":"删除表单",
+            "delComponent":"删除控件"
+        }
+    }
+}

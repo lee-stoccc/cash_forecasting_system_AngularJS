@@ -1,0 +1,23 @@
+{
+        "termMonitor" : {
+        	"tempName": "Device monitor data",
+        	"branchName":"branchName",
+			"status": "Status",
+			"date": "Date",
+			"allAmount": "AllAmount",
+			"amount": "Amount(Count)", 
+			"dateMsg": "Please input vary within 14 days, the date has difference is {{day}} days", 
+			"formError":{
+				"emptyCusTermNo":"Empty CusTermNo",
+				"invalidCusTermNo":"Invalid CusTermNo",
+				"invalidDenomination":"Invalid Denomination",
+				"emptyStatus":"Empty Status",
+				"emptyMonitorTime":"Empty Monitor Time",
+				"fileFormatError":"Export Excel File",
+				"emptyData":"Empty Excel",
+				"importError":"import Failure,please call administrator",
+				"currencyMismatch":"currency Mismatch",
+				"uploadError":"upload failure"
+			}       
+		 }
+}

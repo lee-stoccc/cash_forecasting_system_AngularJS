@@ -1,0 +1,134 @@
+@CHARSET "UTF-8";
+.aside{
+	float: left;
+	width: 50px;
+	height: 100%;
+	top: 0;
+	position: absolute;
+	z-index: 1049;
+}
+
+.span{
+	font-weight: bold;
+	color: #004040;
+	padding-left: 5px;	
+}
+
+.menuDiv{
+	color: #00ff80;
+	position: fixed;
+	width: 50px;
+	height: 100%;
+	background-color: #2d5346;
+	transition: all 0.25s;
+	float: left;
+	overflow: hidden;	
+}
+
+.menuDiv:hover{
+	width: 200px;
+}
+
+li{
+	list-style: none;
+}
+
+.meunUl1{
+	float: left;
+	margin: 0;
+	list-style: none;
+	clear: both;
+	padding:0px;
+	line-height: 46px;
+}
+
+.meunLi1{
+	display: block;
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+.menuSpan1{
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	width:50px;
+	line-height: 46px;
+}
+
+/* .menuSpan1:hover{
+	background:#328ee3;
+	color:#fff;
+} */
+
+.menuSpan2{
+	left: 50px;
+	display: inline-block;
+	float: left;
+	white-space: nowrap;
+	position: absolute;
+	/* color: white; */
+	margin-left: 2px;
+}
+
+.menuSpan3{
+	color: black;
+}
+
+.menuSpan2:hover,.menuSpan3:hover{
+	color:#328ee3;
+}
+
+.a1{
+	display: block;
+	line-height: 46px;
+	white-space: nowrap;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.nav{
+	position: relative;
+	display: block;
+}
+
+.menuDiv2{
+    display: none;
+    white-space: nowrap;
+    margin-left: 50px;
+}
+
+.menuUl2{
+	padding: 0;
+	line-height: 46px;
+}
+
+.tab{
+	border: 1px solid #0080ff;
+	border-radius: 25px;
+	width: 100px;
+	height: 25px;
+	margin-top: 5px;
+	cursor: pointer;
+	line-height: 0;
+	float: left;
+}
+
+.header{
+	height: 30px;
+	background-color: white;
+	width: 80%;
+	margin-top: 24px;
+	overflow: hidden;
+}
+
+.tab-content{
+	padding-left: 10px;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.tab-icon{
+	color: black;
+}

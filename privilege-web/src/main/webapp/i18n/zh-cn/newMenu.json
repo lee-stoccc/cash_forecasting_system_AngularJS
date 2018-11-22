@@ -1,0 +1,30 @@
+{
+    "devplatformApp":{
+        "newMenu":{
+            "home":"首页",
+            "menuManagement":"菜单管理",
+            "newMenu":"新增菜单",
+            "reviserMenu":"修改菜单",
+            "menuInfo":"菜单信息",
+            "fatherMenuName":"父级名称",
+            "menuName":"菜单名称",
+            "menuNameError":"请输入菜单名称",
+            "ENM":"菜单英文名称",
+            "englishNameError":"请输入菜单英文名称",
+            "menuUrl":"菜单Url",
+            "menuLangSwitch":"语言切换源",
+			"menuLangSwitchError":"请输入语言切换源",
+            "urlError":"请输入菜单Url",
+            "chnError":"不能包含中文",
+            "order":"顺序",
+            "state":"状态",
+            "save":"保存",
+            "back":"返回",
+            "select": {
+            	"noValue": "--请选择--",
+            	"enabled": "开启",
+            	"disabled": "关闭"
+            }
+        }
+    }
+}

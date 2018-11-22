@@ -1,0 +1,13 @@
+{
+	"forecastReportform":{
+	    "title":"",
+	    "other":"Other Term",
+	   	"termNo":"Terminal ID",
+	    "branchNo":"Branch Code",
+	    "bankName":"Branch Name",
+	    "regionName":"Region Name",
+	    "region":"District",  
+	    "termType":"Terminal Type",
+	    "replenishDate":"Replenish Date"   
+	}
+}

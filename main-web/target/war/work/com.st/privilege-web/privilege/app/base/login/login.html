@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="privilege/css/login/login.css">
+<div class="login-container" ng-controller="loginCtrl">
+    <div class="login-container-layout">
+    	<!--<div class="col-xs-1 col-sm-3 col-md-4 col-lg-4"></div>-->
+    	<div class="login-content">
+    	   <form class="form panel" role="form" style="width:530px" ng-submit="login()">
+            <div style="color:#fff" class="panel-heading b-b b-light" data-translate="login.title"></div>
+            <div class="panel-body">
+	            <div class="form-group form-group-left">
+	                <label style="color:#fff" for="username" data-translate="global.form.username">Login</label>
+	                <input type="text" class="form-control" style="width:100%" id="username" placeholder="{{'global.form.username.placeholder' | translate}}" ng-model="form.username">
+	            </div>
+	            <div class="form-group form-group-left">
+	                <label style="color:#fff" for="password" data-translate="login.form.password">Password</label>
+	                <input type="password" class="form-control" style="width:100%" id="password" placeholder="{{'login.form.password.placeholder' | translate}}"
+	                       ng-model="form.password">
+	            </div>
+	            <div class="form-group form-group-left">
+	                <label style="color:#fff" for="password" data-translate="login.form.verifyCode">verifyCode</label>
+	                <input type="text" class="form-valid" id="verifyCode" ng-model="form.verifyCode">
+	                <img id="Img" src="#" ng-click="reImg()" data-ng-init="reImg()"/>
+	            </div>
+	            <div class="form-group button-block" style="margin-top: 20px">
+	            	<button type="submit" data-translate="login.form.button">Sign in</button>
+	            </div>
+                <div class="">
+                    <div class="alert-error alert-danger" ng-show="authenticationError">
+                        <strong>
+                        <span data-translate="{{msg}}"></span>
+                        <span data-translate="{{count}}" ng-show="times"></span>
+                        <span data-translate="{{msgBack}}" ng-show="times"></span>
+                        </strong>
+                    </div>
+                </div>
+	        </div>
+           <!-- <div class="form-group">
+                <label for="rememberMe">
+                    <input type="checkbox" id="rememberMe" ng-model="form.rememberMe" checked>
+                    <span data-translate="login.form.rememberme">Remember me</span>
+                </label>
+            </div>-->
+
+        </form>
+    	</div>
+        <p></p>
+      <!--  <div class="alert alert-warning">
+            <a class="alert-link" href="" ng-click="vm.requestResetPassword()" data-translate="login.password.forgot">Did you forget your password?</a>
+        </div>
+        <div class="alert alert-warning" data-translate="global.messages.info.register" translate-compile>
+            You don't have an account yet? <a class="alert-link" href="" ng-click="vm.register()">Register a new account</a>
+        </div>-->
+    </div>
+</div>

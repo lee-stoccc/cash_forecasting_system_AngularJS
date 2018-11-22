@@ -1,0 +1,1 @@
+describe("roundedEquals",function(){var a;var b;before(function(c){var d=requirejs.config({context:Math.random().toString().slice(2),baseUrl:"../src",paths:{cleanup:"../test/cleanup"}});d(["roundedEquals","cleanup"],function(e,f){a=e;b=f;c()})});it("works",function(){expect(a(1,2)).to.be(true);expect(a(2,2)).to.be(true);expect(a(3,2)).to.be(true)});after(function(){b()})});

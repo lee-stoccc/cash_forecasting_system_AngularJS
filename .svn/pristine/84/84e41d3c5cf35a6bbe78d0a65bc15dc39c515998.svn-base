@@ -1,0 +1,39 @@
+.user-activated-check {
+    height: 40px;
+    width: 100px;
+    text-align: right;
+    float: left;
+    line-height: 40px;
+}
+.menu-activated-check {
+    height: 40px;
+    text-align: right;
+    float: left;
+    line-height: 40px;
+}
+
+.user-state {
+    line-height: 40px;
+    float: left;
+}
+
+.user-padder {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.user-m-t-xs {
+    margin-top: 7px;
+}
+
+.user-width{
+    width: 100%;
+}
+
+.user-top{
+    margin-top: 10px;
+}
+
+.user-edit-btn {
+    float: right;
+}

@@ -1,0 +1,48 @@
+{
+    "devplatformApp": {
+        "sysDict" : {
+            "home": {
+                "createLabel": "创建",
+                "createOrEditLabel": "创建或编辑",
+                "edit":"编辑",
+                "delete":"删除"
+            },
+            "created": "创建成功！",
+            "updated": "更新成功！",
+            "deleted": "删除成功！",
+            "delete": {
+                "question": "你确定删除数据字典吗？"
+            },
+            "detail": {
+                "title": "数据字典详情"
+            },
+            "prompt": {
+            	"selectOne" : "请至少选中一条数据再操作！",
+            	"confirmExport" : "您确定要导出全部数据吗？请确认！",
+            	"uploadNotExcel" : "上传文件不是Excel文件！",
+            	"exportSuccess" : "导入成功！",
+            	"importNotExcel" : "导入的不是excel文件！",
+            	"invalidFile" : "文件解析错误！",
+            	"enterGroup" : "请输入组别",
+            	"enterKey" : "请输入键",
+            	"enterDesc" : "请输入描述",
+            	"confirmEnable" : "确认启用吗？",
+            	"confirmDisable" : "确认禁用吗？"
+            },
+            "group": "组别",
+            "dictKey": "键",
+            "dictDesc": "描述",
+            "parentGroup": "父组别",
+            "childrenCount": "子组别数",
+            "sort": "排序",
+            "delFlag": "状态",
+            "error": {
+            	"duplicateGroup": "重复的组别！",
+            	"duplicateKey": "重复的键！",
+            	"invalidGroup": "无效的组别！",
+            	"invalidKey": "无效的键！",
+            	"invalidDesc": "无效的描述！"
+            }
+        }
+    }
+}

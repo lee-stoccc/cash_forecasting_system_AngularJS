@@ -1,0 +1,23 @@
+{
+    	
+      "castData":{
+			"tempName": "Cast Template",
+			"returnTempName": "Return Template",
+			"cast": "Cast(Count)",
+			"return": "Return(Count)",
+			"castAmount": "Cast Amount",
+			"returnAmount": "Return Amount",
+			"castTime": "Cast Time",
+			"returnTime": "Return Time",
+			"formError":{
+				"fileFormatError":"import Excel",
+				"emptyData":"including empty data",
+				"emptyCusTermNo":"Empty CusTermNo",
+				"invalidCusTermNo":"Invalid CusTermNo",
+				"importError":"import Failure,please call administrator",
+				"currencyMismatch":"currency Mismatch",
+				"invalidDenomination":"Invalid Denomination",
+				"emptySnNo":"Empty SnNo"
+			}       
+		 }
+}

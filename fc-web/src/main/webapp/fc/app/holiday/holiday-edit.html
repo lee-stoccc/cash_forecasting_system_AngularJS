@@ -1,0 +1,93 @@
+<div class="panel ng-scope openwindow-panel" ng-init="init()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+        <div class="modal-header">
+           <h4 class="modal-title font-mu" data-translate="holiday.title">编辑Holiday</h4>
+           <span class="glyphicon glyphicon-remove modal-delete" ng-click="clear(false)"></span>
+        </div>
+        <div class="modal-main" style="min-height: 500px;    max-height: 500px;">
+        	<div class="modal-body">         
+                    <div class="col-sm-12 col-info  input-pop verifyTips-sp">
+						<div style="display:flex">
+                            <label data-translate="holiday.year">年份</label>
+							 <select ng-verify ng-model="holiday.year" id="yearHoliday">
+						 		<option value="" data-translate="global.pleaseSelect"></option>
+						 		<option ng-repeat="year in yearArr" value="{{year}}">{{year}}</option>
+							</select>
+                        </div>                
+                    </div>  
+                     <div class="col-sm-12 col-info input-pop verifyTips-sp">
+						<div style="display:flex">
+                            <label data-translate="holiday.holidayName">节日名称</label>
+							<select id="holidayNameHoliday" ng-model="holiday.holidayNo" ng-change="getHoliday()" ng-verify>
+								<option value="" data-translate="global.pleaseSelect"></option>
+							 	<option ng-repeat="list in holidayList" value="{{list.dictKey}}">{{list.dictDesc}}</option>
+							</select>
+							<span class="span_nec">*</span>
+                        </div>                
+                    </div>
+  	 				<div class="col-sm-12 col-info">
+						<div id="holidayDay" style="display:flex">
+				            <label data-translate="holiday.date">节假日日期</label>
+				            <div class="padder inline">
+							     <div ng-repeat="item in dateObj">
+								       <div class="input-group input-group-time">
+				                          <input type="text" style="width:100px;" ng-change="checkStartTime($index)" ng-readonly="true" ng-if="type != 'edit'" 
+				                          		uib-datepicker-popup="{{dateformat}}" 
+				                          		current-text="{{'global.today' | translate}}"
+												close-text="{{'global.close' | translate}}"
+				                          		ng-model="item.startDate" 
+				                          		is-open="datePickerOpenStatus['startDate' + $index]"/>
+				                          <input type="text" style="width:100px;" ng-change="checkStartTime($index)" ng-readonly="true" ng-if="type=='edit'"
+				                          		uib-datepicker-popup="{{dateformat}}" 
+				                          		current-text="{{'global.today' | translate}}"
+												close-text="{{'global.close' | translate}}"
+				                          		ng-model="item.startDate" is-open="datePickerOpenStatus['startDate' + $index]"/>
+				                         <span class="input-group-btn">
+				                 		  		<button type="button" class="btn btn-default"  ng-click="openCalendar('startDate',$index)">
+				                 		  		<i class="glyphicon glyphicon-calendar"></i>
+				                 		  		</button>
+				             			 </span>
+				             			 <span class="span_nec">*</span>&nbsp;
+				                         <input type="text" style="width:100px;" ng-change="checkEndTime($index)" ng-readonly="true" ng-if="type != 'edit'" 
+				                          		uib-datepicker-popup="{{dateformat}}" 
+				                          		current-text="{{'global.today' | translate}}"
+												close-text="{{'global.close' | translate}}"
+				                          		ng-model="item.endDate" is-open="datePickerOpenStatus['endDate' + $index]"/>
+				                         <input type="text" style="width:100px;" ng-change="checkEndTime($index)" ng-readonly="true" ng-if="type == 'edit'" 
+				                          		uib-datepicker-popup="{{dateformat}}" 
+				                          		current-text="{{'global.today' | translate}}"
+												close-text="{{'global.close' | translate}}"
+												ng-model="item.endDate" is-open="datePickerOpenStatus['endDate' + $index]"/>
+				                         <span class="input-group-btn">
+				                 		  		<button type="button" class="btn btn-default" ng-click="openCalendar('endDate',$index)">
+				                 		  		<i class="glyphicon glyphicon-calendar"></i></button>
+				            	 		</span>
+				            	 		<span class="span_nec">*</span>&nbsp;
+				            	 		<span >
+				            	 		  	<label data-translate="holiday.typeName">类别</label>
+											    <select   ng-model="item.type" ng-verify>
+									 				<option value="" data-translate="global.pleaseSelect"></option>
+									 				<option ng-repeat="list in typeList" value="{{list.dictKey}}">{{list.dictDesc}}</option>
+											  	</select>
+											  </span>
+						              	</div>
+						              	<span ng-click="addDate()"  class="glyphicon glyphicon-plus"></span>
+										<span ng-click="delDate($index)" class="glyphicon glyphicon-minus"></span><br/> 
+									</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="modal-footer button-block">
+				<button type="submit" ng-verify >
+					<span class="glyphicon glyphicon-save"></span>
+					<span data-translate="entity.action.save">Save</span>
+				</button>
+				 <button type="button" ng-click="clear(false)">
+	                <span class="glyphicon glyphicon-ban-circle"></span>
+	                <span data-translate="entity.action.cancel">Cancel</span>
+	            </button>
+			 </div>
+		</div>
+	</form>
+</div>

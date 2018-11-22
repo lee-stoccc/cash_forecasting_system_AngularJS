@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="fc/css/eventManagement/eventManagement.css">
+<div class="panel ng-scope default-controller"
+	ng-controller="EventManagementController" ng-init="init()">
+	<div class="default-container">
+		<form class="form-inline"> 
+			<div class="wrapper-md row">  
+				<div class="col-sm-12">
+					<span class="form-group"> <label
+						data-translate="eventManagement.eventType"></label> 
+						<input type="text" style="" placeholder="{{'eventManagement.eventType' | translate}}" ng-model="formParam.eventKind" />
+					</span> 
+					<span class="form-group"> <label
+						data-translate="eventManagement.eventName"></label> 
+						<input type="text" style="" placeholder="{{'eventManagement.eventName' | translate}}" ng-model="formParam.eventName" />
+					</span> 
+					<span class="form-group"> <label
+						data-translate="eventManagement.startDate"></label> <span
+						class="input-group input-group-time"> <!-- <input type="text" placeholder="{{'forecastPlan.replenishDate' | translate}}"
+								 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.replenishDate" /> -->
+							<input type="text"
+							placeholder="{{'eventManagement.startDate' | translate}}"
+							readonly="readonly" uib-datepicker-popup="{{dateformat}}"
+							ng-model="formParam.startDate"
+							ng-change="checkStartTime()"
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							is-open="datePickerOpenStatus.startDate"
+							datepicker-options="dateOptions" /> <span
+							class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('startDate')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>
+						</span>
+					</span>
+					</span> <span class="form-group"> <label
+						data-translate="eventManagement.endDate"></label> <span
+						class="input-group input-group-time"> <!-- <input type="text" placeholder="{{'forecastPlan.replenishDate' | translate}}"
+								 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.replenishDate" /> -->
+							<input type="text"
+							placeholder="{{'eventManagement.endDate' | translate}}"
+							readonly="readonly" uib-datepicker-popup="{{dateformat}}"
+							ng-model="formParam.endDate"
+							ng-change="checkEndTime()"
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							is-open="datePickerOpenStatus.endDate"
+							datepicker-options="dateOptions" /> <span
+							class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('endDate')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>
+						</span>
+					</span>
+					</span> 
+					<span class="form-group button-block">
+						<button ng-click="loadAll()">
+							<span class="glyphicon glyphicon-search"></span> <span
+								data-translate="global.go"></span>
+						</button>
+						<button ng-click="resetSearch()">
+							<span class="glyphicon glyphicon-refresh"></span> <span
+								data-translate="global.reset"></span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+		<div class="wrapper-md">
+			<div class="op-div button-block">
+				<button ng-click="addNewEvent()">
+					<span class="glyphicon glyphicon-plus"></span> <span
+						data-translate="entity.action.add"></span>
+				</button>
+				<button ng-click="editEvent()">
+					<span class="glyphicon glyphicon-edit"></span> 
+					<span data-translate="entity.action.edit">edit</span>
+				</button> 
+				<button ng-click="batchDelete()">
+					<span class="glyphicon glyphicon-minus"></span> <span
+						data-translate="global.batchDelete"></span>
+				</button>
+			</div>
+		</div>
+		<div class="table-view-defalut"  style="top:10px;position:relative">
+			<div class="table-view" tables-model2
+				tables-data-model="tablesConfig"></div>
+		</div>
+	</div>  
+
+</div>

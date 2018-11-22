@@ -1,0 +1,102 @@
+ <div class="panel ng-scope default-controller" ng-controller="cashUseRateController" ng-init="init()">
+	<div class="default-container">
+		<form class="form-inline">
+			<div class="wrapper-md row">
+				<div class="col-sm-12">
+					<span class="form-group"> <label
+						data-translate="termInfo.termNo">璁惧缂栧彿</label> <input type="text" placeholder="Terminal ID"
+						ng-model="formParam.termNo" />
+					</span> 
+					
+					<span class="form-group">
+  	 					<label class="forecastLabel" data-translate="termInfo.bankName"></label>
+  	 					<select id="bankNameMonitor" ng-model="formParam.bankId" ng-verify ng-options="bank.id as bank.bankName for bank in bankList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select>
+					</span>
+					
+					<!--   区2 -->
+					<span class="form-group">
+						<label data-translate="termInfo.district2">鎵�灞為摱琛�</label> 
+							<select class="eventSelect"  
+								ng-model="formParam.district2" 
+								id="cashUseRateDistrict2" 
+								ng-options="district2.dictKey as district2.dictDesc for district2 in district2List">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+					</span>
+					<!--   区3-->
+					<span class="form-group">
+						<label data-translate="termInfo.district3">鎵�灞為摱琛�</label> 
+							<select class="eventSelect"  
+								ng-model="formParam.district3" 
+								id="cashUseRateDistrict3" 
+								ng-options="district3.dictKey as district3.dictDesc for district3 in district3List">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+					</span>
+					<!--   location2 -->
+					<span class="form-group">
+						<label data-translate="termInfo.location2">鎵�灞為摱琛�</label> 
+							<select class="eventSelect"  
+								ng-model="formParam.location2" 
+								id="cashUseRateLocation2" 
+								ng-options="location2.dictKey as location2.dictDesc for location2 in location2List">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+					</span>
+					
+					<!-- <span class="form-group">  
+					</span> -->
+					 <span class="input-group input-group-time">
+					 <label data-translate="termInfo.date"></label> &nbsp;
+					 	<input type="text" readonly="readonly"  uib-datepicker-popup="{{format}}" 
+					 		uib-datepicker-popup 
+					 		current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+					 		ng-model="formParam.startTime"
+							is-open="datePickerOpenStatus.startTime" /> 
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default dateFisrtBtn"
+									ng-click="openCalendar('startTime')">
+									<i class="glyphicon glyphicon-calendar"></i>
+								</button>
+							</span>&mdash; 
+							<input type="text" readonly="readonly"  uib-datepicker-popup="{{format}}" 
+							uib-datepicker-popup 
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							ng-model="formParam.endTime"
+							is-open="datePickerOpenStatus.endTime" /> <span
+							class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('endTime')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>
+						</span>
+					</span> 
+					
+					<span class="form-group button-block">
+						<button ng-click="loadAll()">
+							<span class="glyphicon glyphicon-search"></span> <span
+								data-translate="global.go"></span>
+						</button>
+						<button ng-click="resetSearch()">
+							<span class="glyphicon glyphicon-refresh"></span> <span
+								data-translate="global.reset"></span>
+						</button>
+						<button ng-click="exporting()">
+							<span class="glyphicon glyphicon-grain"></span> <span
+								data-translate="">Export</span>
+						</button>
+					</span>
+				</div>
+			</div>
+		</form>
+
+		<div class="table-view-defalut" style="">
+			<div class="table-view" tables-model4
+				tables-data-model="tablesConfig"></div>
+		</div>
+	</div>
+</div> 

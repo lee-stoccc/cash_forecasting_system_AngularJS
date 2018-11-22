@@ -1,0 +1,160 @@
+<div class="panel ng-scope openwindow-panel" ng-init="initData()">
+	<form class="form-horizontal form-inline" ng-submit="save()" verify-scope>
+		<div class="modal-header">
+			<h4 class="modal-title font-mu" data-translate="eventManagement.newEvent">新增事件</h4>
+			<span class="glyphicon glyphicon-remove modal-delete"
+				ng-click="clear(false)"></span>
+		</div>
+		<div class="edit-container">
+			<div class="left">
+				<h4 class="modal-title font-mu" data-translate="eventManagement.baseInfo"></h4>
+				
+				<div class="edit-item left-top">
+					<span class="form-inline">
+						<label data-translate="eventManagement.eventType" style="padding-right:9px"></label> 
+							<select class="eventSelect" 
+								ng-model="formParam.eventType"  ng-verify
+								ng-options="eventType.dictKey as eventType.dictDesc for eventType in eventTypeList"
+								ng-change="changeEventType(formParam.eventType)">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+					</span>
+				</div>
+			
+				<div class="edit-item left-top" style="margin-top: 0px">
+					<span class="form-inline">
+						<label data-translate="eventManagement.eventName"></label> 
+							<select class="eventSelect"  
+								ng-model="formParam.eventCategory"  ng-verify
+								ng-options="eventCategory.dictKey as eventCategory.dictDesc for eventCategory in eventCategoryList">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+					</span>
+				</div>
+				
+				<!-- 区域 -->
+				<div class="edit-item left-top" style="margin-top: 0px">
+					<span class="form-inline">
+						<label data-translate="eventManagement.region" style="padding-right:30px">Region</label> 
+							<select class="eventSelect"  
+								ng-model="formParam.region" 
+								ng-options="region.dictKey as region.dictDesc for region in regionList">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+					</span>
+				</div>
+				<!--  去除Id 后 -->
+				 <!--  <div class="edit-item left-top">
+					<span class="form-inline">
+						<label data-translate="eventManagement.eventName">事件类别</label> 
+							<select class="eventSelect" 
+								ng-model="formParam.eventCategory" 
+								id="eventName" 
+								ng-options="eventCategory.dictKey as eventCategory.dictDesc for eventCategory in eventCategoryList">
+								<option data-translate="global.pleaseSelect"></option>
+							</select>
+					</span>
+				</div>  --> 
+				<div class="edit-item">
+					<span class="form-inline"> <label
+						data-translate="eventManagement.startDate"></label> <span
+						class="input-group input-group-time"> <input type="text"
+							placeholder="{{'eventManagement.startDate' | translate}}"
+							readonly="readonly" uib-datepicker-popup="{{dateformat}}"
+							ng-model="formParam.startDate"
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							ng-change="checkStartTime()"
+							is-open="datePickerOpenStatus.startDate"
+							datepicker-options="dateOptions" /> <span class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('startDate')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>
+						</span>
+					</span>
+					</span>
+				</div>
+
+				<div class="edit-item">
+					<span class=" form-inline"> 
+					<label data-translate="eventManagement.endDate "></label> 
+					<span class="input-group input-group-time"> 
+					<input type="text" id="field_passwordExpireDate"  type="dates"
+							placeholder="{{'eventManagement.endDate' | translate}}"
+							readonly="readonly" uib-datepicker-popup="{{dateformat}}"
+							ng-model="formParam.endDate"
+							ng-change="checkEndTime()"
+							current-text="{{'global.today' | translate}}"
+							close-text="{{'global.close' | translate}}"
+							is-open="datePickerOpenStatus.endDate"
+							datepicker-options="dateOptions" />   
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default"
+									ng-click="openCalendar('endDate')">
+									<i class="glyphicon  glyphicon-calendar"></i>
+								</button>
+						</span>
+					</span>
+					</span>
+				</div>
+			</div>
+			<div class="right">
+				<h4 class="modal-title font-mu" data-translate="eventManagement.rulesSet"></h4>
+				<div class="edit-container-right-container" style="margin-top:50px ">
+					<div class="right-top">
+						<h4 class="modal-title font-mu" data-translate="eventManagement.cashRule"></h4>
+						<div class="right-col-info">
+							<div>
+								<label data-translate="eventManagement.replenishRule">一周加钞规则</label> 
+								<input type="checkbox" ng-model="select_all" ng-change="selectAll()">
+								<span class="marginR" data-translate="eventManagement.selectAll"></span>
+								<input type="checkbox" ng-model="select_workDay" ng-change="selectWorkDay()">
+								<span class="marginR" data-translate="eventManagement.workDay"></span>
+							</div>
+						</div>
+						<div class="right-col-info">
+							<div>
+								<span class="marginR" ng-repeat="i in replenishRule"> 
+									<input type="checkbox" ng-model="i.checked" ng-change="selectOne()">
+									<span>{{i.value}}</span>
+								</span>
+							</div>
+						</div>
+
+					</div>
+				<!-- 	<div class="right-bottom">
+						<h4 class="modal-title   font-mu" data-translate="eventManagement.limits"></h4>
+						<div class="right-col-info">
+							<label data-translate="eventManagement.maxCash"></label> 
+							<input 
+								type="number" min="0" ng-verify
+								placeholder="{{'eventManagement.maxCash' | translate}}"
+								ng-model="formParam.ceiling" />
+						</div>
+						<div class="right-col-info">
+							<label data-translate="eventManagement.minCash"></label> <input
+								type="number" min="0" ng-verify
+								placeholder="{{'eventManagement.minCash' | translate}}"
+								ng-model="formParam.lowest" />
+						</div>
+
+						</span> 
+					</div> -->
+				</div>
+
+			</div>
+			<div class="modal-footer button-block">
+				<button type="submit" ng-verify
+					ng-disabled="editForm.$invalid || isSaving">
+					<span class="glyphicon glyphicon-save"></span> <span
+						data-translate="entity.action.save">Save</span>
+				</button>
+				<button type="button" ng-click="clear(false)">
+					<span class="glyphicon glyphicon-ban-circle"></span> <span
+						data-translate="entity.action.cancel">Cancel</span>
+				</button>
+			</div>
+		</div>
+	</form>
+</div>

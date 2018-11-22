@@ -1,0 +1,75 @@
+<div ng-controller="PrivilegeHeadController"> 
+	<div class="navbar-header {{app.settings.navbarHeaderColor}}">
+        <button class="pull-right visible-xs dk" ui-toggle-class="show" data-target=".navbar-collapse">
+            <i class="iconfont icon-shouqi"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle-class="off-screen" data-target=".app-aside" ui-scroll="app">
+            <i class="iconfont icon-zhankai"></i>
+        </button>
+        <a href="" class="navbar-brand text-lt">
+          <!--   <i class="privilegeLogo"></i>
+            <span class="name hidden-folded m-l-xs">{{app.name}}</span> -->
+            <img src="{{app.productLogo}}">
+        </a>
+    </div>
+	    <div class="collapse pos-rlt navbar-collapse box-shadow {{app.settings.navbarCollapseColor}}" style="line-height:54px;">
+	        <ul class="nav navbar-nav navbar-right">
+	            <li class="dropdown b-l">
+	                <a href="" class="dropdown-toggle clear" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					<span class="avatar pull-right m-t-n-sm m-b-n-sm text-center">
+	                    <span class="iconfont icon-kefu"></span>
+	                   
+					</span>
+	                </a>
+	                <ul class="dropdown-menu animated fadeInRight" style="width: 200px">
+	                  <li>
+	                        <a href="" target="_blank">
+	                            <span class="iconfont icon-mine"></span><span data-translate="privilege.mine"> 个人中心</span>
+	                        </a>
+	                    </li>
+	                     <li>
+	                          <a ng-click="editPassword()">
+	                              <span class="iconfont icon-mine"></span><span data-translate="privilege.editPassword"> 修改密码</span>
+	                          </a>
+	                      </li>
+	                    <li>
+	                        <a ng-click="logout()">
+	                            <span class="iconfont icon-logout"></span> <span data-translate="privilege.logout">退出登录</span>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </li>
+	        </ul>
+	        <ul class="nav navbar-nav navbar-right">
+	            <li ui-sref-active="active" uib-dropdown class="dropdown b-1" ng-controller="JhiLanguageController as languageVm">
+	                <a class="dropdown-toggle clear" uib-dropdown-toggle href="" ng-if="languageVm.languages.length > 1">
+	                <span class="avatar pull-right m-t-n-sm m-b-n-sm text-center">
+	                	<span class="iconfont glyphicon glyphicon-globe"></span>
+	                </span>
+	
+	                </a>
+	                <ul class="dropdown-menu" uib-dropdown-menu ng-if="languageVm.languages.length > 1">
+	                    <li active-menu="{{language}}" ng-repeat="language in languageVm.languages">
+	                       <a href="" ng-click="languageVm.changeLanguage(language);vm.collapseNavbar();">{{language | findLanguageFromKey}}</a>
+	                    </li>
+	                </ul>
+	            </li>
+	        </ul>
+	         <ul class="nav navbar-nav navbar-right">
+	              <li>
+	                  <a href class="clear">
+	                      <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm text-center">
+	                          <span class="iconfont icon-bell"></span>
+	                      </span>
+	                  </a>
+	              </li>
+	          </ul>
+	    </div>
+	</div>  
+	
+	<script>
+	 $('.nav navbar-nav navbar-right').mouseover(function(){
+     	$(this).children('span').css('color','black')
+     })
+	
+	</script>

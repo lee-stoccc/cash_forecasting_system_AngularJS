@@ -1,0 +1,1 @@
+define(["is"],function(b){var a;(function(){var c=({}).hasOwnProperty;if(!b(c,"undefined")&&!b(c.call,"undefined")){a=function(d,e){return c.call(d,e)}}else{a=function(d,e){return((e in d)&&b(d.constructor.prototype[e],"undefined"))}}})();return a});

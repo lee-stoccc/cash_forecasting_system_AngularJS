@@ -1,0 +1,93 @@
+.configuration-container{
+    height: 600px;
+    position: relative;
+}
+
+.configuration-container-left{
+    display:table-row;
+    height: 100%;
+    float: left;
+    width: 210px;
+    height: 580px;
+}
+
+.configuration-nav-tree{
+    width: 210px;
+    height: 600px !important;
+    max-height: 600px !important;
+    background-color: #eee;
+    padding-top: 20px;
+}
+
+
+.configuration-container-right{
+    position: absolute;
+    top: 0;
+    left: 210px;
+    bottom: 0;
+    right: 0;
+    border: 1px solid #ccc;
+}
+
+.configuration-header{
+    height: 40px;
+    width: auto;
+    line-height: 40px;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.right-container{
+    height: 500px;
+    padding: 0;
+    border-top:  1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.configuration-table{
+    height: 400px !important;
+    width: 175px !important;
+}
+
+.right-container-item{
+    width: 46%;
+    height: 480px;
+    margin: 10px 2%;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+.table-th-border-10{
+    width: 10%;
+    text-align: center;
+    border:1px solid #ccc;
+}
+
+.table-th-border-60{
+    width: 60%;
+    text-align: center;
+    border:1px solid #ccc;
+}
+
+.table-th-border-30{
+    width: 30%;
+    text-align: center;
+    border:1px solid #ccc;
+}
+
+.right-container-footer{
+    height: 60px;
+}
+
+.right-container-footer div{
+    width: 200px;
+    height: 30px;
+    margin: auto auto;
+}
+
+.right-container-footer button{
+    float: left;
+    margin: 15px 15px;
+}

@@ -1,0 +1,30 @@
+
+<div class="aside" ng-controller="navCtrl">
+	<nav class="nav">
+		<div class="navbar-header">
+			      <a href="" class="navbar-brand text-lt">
+                    <img src="privilege/images/layout/logo.png">
+                 </a>
+		   </div>
+		<div class="menuDiv sidebar bg-layout">
+			<ul class="meunUl1">
+				<li class="meunLi1" ng-repeat="item in items">
+					<a class="a1" id="item.englishName" ng-click="check(item,item.children)"  ng-show="item.checked">
+						<span class="iconfont menuSpan1 font-mu black glyphicon {{item.icon}}"></span>
+						<span class="menuSpan2 font-mu black" data-translate="{{item.langSwitch}}"></span>
+					</a>
+					<div class="menuDiv2" id="{{item.englishName}}Menu" ng-if="item.children">
+						<ul class="menuUl2">
+							<li ng-repeat="item in item.children">
+								<a ng-show="item.checked" ng-click="addContent(item)">
+									<span class="menuSpan3" data-translate="{{item.langSwitch}}"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+

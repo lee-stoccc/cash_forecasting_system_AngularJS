@@ -1,0 +1,24 @@
+{
+    	"detailTitle":"Detail",
+        "stock" : {
+             "title": "Edit Bank Stock",
+             "setBankStock": "Setting Bank Stock",
+			"bankId": "BankId",
+			"date": "Date",
+			"bankName": "Branch Name",
+			"time": "Time",
+			"currentStock": "CurrentStock",
+			"denomination": "Denomination",
+			"actualCount": "ActualCount",
+			"returnAmount": "ReturnAmount",
+			"total": "Total",
+			"currentCount": "CurrentCount"       
+			 },
+			"formError":{
+				"currentTime": "beyond current Time",    
+				"overflowCount": "denomination beyond bank stock",
+				"actualCount": "it exist",
+				"notNull": "not empty",
+				"duplicateTime": "it existed"
+			}
+}

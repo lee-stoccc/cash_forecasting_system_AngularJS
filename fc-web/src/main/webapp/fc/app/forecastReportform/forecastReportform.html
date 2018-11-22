@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="fc/css/forecastReportform/forecastReportform.css">
+<div class="panel ng-scope default-controller" ng-controller="ForecastReportformController" ng-init="init()">
+	<div class="reportform default-container" style="margin:5px">
+		<div class="col-sm-9 reportformLeft">
+			<div class="forecastEchartItem">
+				<div e-chart-line echart-data="echartData1"></div>
+			</div>
+			<div class="forecastEchartItem">
+				<div e-chart-line echart-data="echartData2"></div>
+			</div>
+		</div>
+		<div class="col-sm-3 reportformRight">
+			<h4 class="otherTitle" data-translate="forecastReportform.other"></h4>
+			<div class="col-sm-12" style="padding:0">
+			<!-- 自定义区域 -->
+				<div class="col-sm-12 itemPadding">
+					<span class="form-group">
+						<label class="forecastLabel" data-translate="forecastReportform.regionName"></label>
+						<select ng-model="formParam.regionName" ng-verify ng-options="cusgion.id as cusgion.regionName for cusgion in cusgionList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select>
+					</span>	
+				</div>
+				<!-- 银行 -->
+				<div class="col-sm-12 itemPadding">
+  	 				<span class="form-group">
+  	 					<label class="forecastLabel" data-translate="forecastReportform.bankName"></label>
+  	 					<select ng-model="formParam.bankName" ng-verify ng-options="bank.id as bank.bankName for bank in bankList">
+							<option data-translate="global.pleaseSelect"></option>
+						</select>
+					</span>
+				</div>
+				<!-- 设备类型 -->
+				<div class="col-sm-12 itemPadding">
+					<span class="form-group">
+						<label class="forecastLabel" data-translate="forecastReportform.termType"></label>
+						<!-- <input type="text" placeholder="{{'forecastPlan.termType' | translate}}"
+							 class="form-control ng-pristine ng-valid ng-touched" ng-model="formParam.termType" /> -->
+					  	<select ng-model="formParam.termType"  ng-options="type.dictKey as type.dictDesc for type in termTypeList">
+					  		<option data-translate="global.pleaseSelect"></option>
+					  	</select>
+					</span>	
+				</div>	
+				<!-- 设备编号 -->
+				<div class="col-sm-12 itemPadding">
+					<span class="form-group">
+						<label class="forecastLabel" data-translate="forecastReportform.termNo"></label>
+						<select ng-model="formParam.termNo" id="termNo" ng-change="getTermNoList()">
+							<option ng-repeat="list in TermNoList" value="{{list.termNo}}">{{list.termNo}}</option>
+						</select>
+					</span>		
+				</div>
+				<!-- 时间 -->
+				<div class="col-sm-12 itemPadding">
+					<span class="form-group form-inline">
+						<label class="forecastLabel" data-translate="forecastReportform.replenishDate"></label>
+						 <span class="input-group input-group-time">
+								<input type="text" placeholder="{{'forecastReportform.replenishDate' | translate}}" readonly="readonly" 
+								 uib-datepicker-popup="{{dateformat}}" 
+								 current-text="{{'global.today' | translate}}"
+								 close-text="{{'global.close' | translate}}"
+								 ng-model="formParam.date" 
+								 is-open="datePickerOpenStatus.date" datepicker-options="dateOptions"/>
+	                        <span class="input-group-btn">
+			                	<button type="button" class="btn btn-default" ng-click="openCalendar('date')"><i class="glyphicon  glyphicon-calendar"></i></button>
+			                </span>
+		                </span>
+					</span>
+				</div>
+				<div class="col-sm-12 button-block itemPadding reportformFooter">
+					<button ng-click="loadAll()">
+						<span class="glyphicon glyphicon-search"></span>
+						<span data-translate="global.go"></span>
+					</button>
+					<button ng-click="resetSearch()">
+						<span class="glyphicon glyphicon-refresh"></span>
+						<span data-translate="global.reset"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

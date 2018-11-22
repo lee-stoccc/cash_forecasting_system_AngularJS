@@ -1,0 +1,1 @@
+describe("slice",function(){var b;var a;before(function(c){var d=requirejs.config({context:Math.random().toString().slice(2),baseUrl:"../src",paths:{cleanup:"../test/cleanup"}});d(["slice","cleanup"],function(f,e){b=f;a=e;c()})});it("returns an instance of `slice`",function(){expect(b).to.equal([].slice)});after(function(){a()})});

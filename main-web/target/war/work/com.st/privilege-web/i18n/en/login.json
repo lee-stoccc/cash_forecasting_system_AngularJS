@@ -1,0 +1,31 @@
+{
+    "login": {
+        "title": "Sign in",
+        "form": {
+            "password": "Password",
+            "password.placeholder": "Your password",
+            "rememberme": "Remember me",
+            "button": "Sign in",
+            "verifyCode": "Verification Code"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Failed to sign in!</strong> Please check your credentials and try again.",
+                "invalidLogin": "Account does not exist!",
+                "loginDisable": "Account unavailable!",
+                "expireLogin": "Account expiration!",
+                "expirePassword": "Password expired!",
+                "errorPassword": "Password error reached",
+                "errorPasswordBack": ".Please pay attention!",
+                "errorPasswordFiveBack": "Password error up to 5 times, your account is disabled!",
+                "AccountEmpty": "Account cannot be empty!",
+                "PasswordEmpty": "Password cannot be empty!",
+                "PasswordLengthWrong": "Wrong password length!",
+                "errorVerifyCode": "Verification code error!"
+            }
+        },
+        "password" : {
+            "forgot": "Did you forget your password?"
+        }
+    }
+}

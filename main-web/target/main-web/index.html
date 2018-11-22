@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="devplatformApp">
+<head>
+    <meta charset="utf-8"/>
+    <title data-translate="privilege.title">Cash intelligent forecasting system </title>
+    <meta name="description" content="{{'privilege.title' | translate}}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" type="image/png" href="images/app_layout/icon.png">
+    <link rel="stylesheet" href="content/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="content/css/app.min.css" type="text/css"/>
+    <!-- <link rel="stylesheet" href="content/css/newframe.css" type="text/css"/> -->
+    <link rel="stylesheet" href="privilege/css/role-manager/role-manager.css">
+    <link rel="stylesheet" href="privilege/css/role-manager/role-manager-configuration.css">
+    <link rel="stylesheet" href="privilege/css/menu-management/menu-management.css">
+    <link rel="stylesheet" href="privilege/css/menu-management/new-menu.css">
+    <link rel="stylesheet" href="content/css/tree/angular.treeview.css">
+    <link rel="stylesheet" href="content/css/base.css">
+    <link rel="stylesheet" href="content/css/angular.tables.css">
+    <link rel="stylesheet" href="content/css/ngVerify.css">
+    <link rel="stylesheet" href="content/css/select2.min.css">
+    <link rel="stylesheet" href="app/ueditor/xiumi/xiumi-ue-v5.css">  
+      	
+    <link href="fc/css/layout.css" rel="stylesheet">
+    <link href="fc/css/black/base.css" rel="stylesheet">
+    <link href="fc/css/black/aside.css" rel="stylesheet">
+    <link href="fc/css/black/top.css" rel="stylesheet">
+    <link href="fc/css/treeSelect.css" rel="stylesheet">
+    <link rel="stylesheet" href="content/css/select2.min.css">
+    
+</head>
+<!--<page-ribbon></page-ribbon>-->
+<body ng-controller="devplatformCtrl" ng-init="showHeader()">
+<div id="app" class="app"
+     ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}">
+    <div ui-view></div>
+    <object  id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
+       <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0 />
+</object>
+</div>
+<script src="bower_components/jquery/dist/jquery.js?rev=@@hash"></script>
+<script src="bower_components/messageformat/messageformat.js?rev=@@hash"></script>
+<script src="bower_components/json3/lib/json3.js?rev=@@hash"></script>
+<script src="bower_components/angular/angular.js?rev=@@hash"></script>
+<script src="bower_components/angular-aria/angular-aria.js?rev=@@hash"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js?rev=@@hash"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js?rev=@@hash"></script>
+<script src="bower_components/angular-cache-buster/angular-cache-buster.js?rev=@@hash"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js?rev=@@hash"></script>
+<script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js?rev=@@hash"></script>
+<script src="bower_components/ngstorage/ngStorage.js?rev=@@hash"></script>
+<script src="bower_components/angular-loading-bar/build/loading-bar.js?rev=@@hash"></script>
+<script src="bower_components/angular-resource/angular-resource.js?rev=@@hash"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js?rev=@@hash"></script>
+<script src="bower_components/angular-translate/angular-translate.js?rev=@@hash"></script>
+<script src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js?rev=@@hash"></script>
+<script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js?rev=@@hash"></script>
+<script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js?rev=@@hash"></script>
+<script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.min.js?rev=@@hash"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js?rev=@@hash"></script>
+<script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js?rev=@@hash"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload.js?rev=@@hash"></script>
+<script src="bower_components/ng-file-upload/ng-file-upload-shim.js?rev=@@hash"></script>
+<script src="bower_components/oclazyload/dist/ocLazyLoad.min.js?rev=@@hash"></script>
+<script src="bower_components/angular-breadcrumb/release/angular-breadcrumb.min.js?rev=@@hash"></script>
+<script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js?rev=@@hash"></script>
+<script src="app/ueditor/angular-ueditor.min.js?rev=@@hash"></script>
+<script src="app/common/suitong.util.service.js?rev=@@hash"></script>
+<script src="app/common/public.service.js?rev=@@hash"></script>
+<script src="app/js/angular.menu-tree.js?rev=@@hash"></script>
+<script src="app/js/angular.table.js?rev=@@hash"></script>
+<script src="app/js/angular.component.js?rev=@@hash"></script>
+<script src="app/js/angular.tables.js?rev=@@hash"></script>
+<script src="bower_components/angular-ui-select/select2.min.js?rev=@@hash"></script>
+
+<script src="app/app.module.js?rev=@@hash"></script>
+<script src="app/services/user/user.service.js?rev=@@hash"></script>
+<script src="app/services/profiles/profile.service.js?rev=@@hash"></script>
+<script src="app/services/profiles/page-ribbon.directive.js?rev=@@hash"></script>
+<script src="app/services/auth/register.service.js?rev=@@hash"></script>
+<script src="app/services/auth/principal.service.js?rev=@@hash"></script>
+<script src="app/services/auth/password-reset-init.service.js?rev=@@hash"></script>
+<script src="app/services/auth/password-reset-finish.service.js?rev=@@hash"></script>
+<script src="app/services/auth/password.service.js?rev=@@hash"></script>
+<script src="app/services/auth/has-authority.directive.js?rev=@@hash"></script>
+<script src="app/services/auth/has-any-authority.directive.js?rev=@@hash"></script>
+<script src="app/services/auth/auth.service.js?rev=@@hash"></script>
+<script src="app/services/auth/auth.jwt.service.js?rev=@@hash"></script>
+<script src="app/services/auth/activate.service.js?rev=@@hash"></script>
+<script src="app/services/auth/account.service.js?rev=@@hash"></script>
+<!-- <script src="privilege/app/base/layouts/navbar/layout.controller.js?rev=@@hash"></script> -->
+<script src="fc/app/layout/layout.controller.js?rev=@@hash"></script>
+<script src="privilege/app/base/layouts/navbar/navbar.controller.js?rev=@@hash"></script>
+<script src="privilege/app/base/layouts/navbar/active-menu.directive.js?rev=@@hash"></script>
+<script src="privilege/app/base/layouts/error/error.state.js?rev=@@hash"></script>
+<script src="privilege/app/base/role-manager/role-manager.service.js?rev=@@hash"></script>
+<script src="privilege/app/base/layouts/navbar/layout.service.js?rev=@@hash"></script>
+<script src="app/components/util/truncate-words.filter.js?rev=@@hash"></script>
+<script src="app/components/util/truncate-characters.filter.js?rev=@@hash"></script>
+<script src="app/components/util/sort-by.directive.js?rev=@@hash"></script>
+<script src="app/components/util/sort.directive.js?rev=@@hash"></script>
+<script src="app/components/util/parse-links.service.js?rev=@@hash"></script>
+<script src="app/components/util/pagination-util.service.js?rev=@@hash"></script>
+<script src="app/components/util/jhi-item-count.directive.js?rev=@@hash"></script>
+<script src="app/components/util/date-util.service.js?rev=@@hash"></script>
+<script src="app/components/util/data-util.service.js?rev=@@hash"></script>
+<script src="app/components/util/capitalize.filter.js?rev=@@hash"></script>
+<script src="app/components/util/base64.service.js?rev=@@hash"></script>
+<script src="app/components/login/login.service.js?rev=@@hash"></script>
+<script src="app/components/login/login.controller.js?rev=@@hash"></script>
+<script src="app/components/language/language.service.js?rev=@@hash"></script>
+<script src="app/components/language/language.filter.js?rev=@@hash"></script>
+<script src="app/components/language/language.controller.js?rev=@@hash"></script>
+<script src="app/components/language/language.constants.js?rev=@@hash"></script>
+<script src="app/components/form/show-validation.directive.js?rev=@@hash"></script>
+<script src="app/components/form/pagination.constants.js?rev=@@hash"></script>
+<script src="app/components/form/minbytes.directive.js?rev=@@hash"></script>
+<script src="app/components/form/maxbytes.directive.js?rev=@@hash"></script>
+<script src="app/components/alert/alert-error.directive.js?rev=@@hash"></script>
+<script src="app/components/alert/alert.service.js?rev=@@hash"></script>
+<script src="app/components/alert/alert.directive.js?rev=@@hash"></script>
+<script src="app/blocks/interceptor/notification.interceptor.js?rev=@@hash"></script>
+<script src="app/blocks/interceptor/errorhandler.interceptor.js?rev=@@hash"></script>
+<script src="app/blocks/interceptor/auth-expired.interceptor.js?rev=@@hash"></script>
+<script src="app/blocks/interceptor/auth.interceptor.js?rev=@@hash"></script>
+<script src="app/blocks/handlers/translation.handler.js?rev=@@hash"></script>
+<script src="app/blocks/handlers/state.handler.js?rev=@@hash"></script>
+<script src="app/blocks/config/uib-pagination.config.js?rev=@@hash"></script>
+<script src="app/blocks/config/uib-pager.config.js?rev=@@hash"></script>
+<script src="app/blocks/config/translation-storage.provider.js?rev=@@hash"></script>
+<script src="app/blocks/config/translation.config.js?rev=@@hash"></script>
+<script src="app/blocks/config/localstorage.config.js?rev=@@hash"></script>
+<script src="app/blocks/config/http.config.js?rev=@@hash"></script>
+<script src="app/blocks/config/compile.config.js?rev=@@hash"></script>
+<script src="app/blocks/config/alert.config.js?rev=@@hash"></script>
+<!-- <script src="app/common/onFinishRenderFilters.js?rev=@@hash"></script> -->
+
+<script src="app/app.state.js?rev=@@hash"></script>
+<script src="privilege/js/privilege.state.js?rev=@@hash"></script>
+<script src="fc/js/fc.public.service.js?rev=@@hash"></script>
+<script src="fc/js/fc.state.js?rev=@@hash"></script>
+
+<script src="app/app.constants.js?rev=@@hash"></script>
+<script src="app/js/bootstrap.js?rev=@@hash"></script>
+<script src="app/app.webconstants.js?rev=@@hash"></script>
+<script src="app/js/ngDialog.js?rev=@@hash"></script>
+<script src="app/js/ngVerify.js?rev=@@hash"></script>
+<script src="app/js/ngImage.js?rev=@@hash"></script>
+<script src="app/js/qrcode.js?rev=@@hash"></script>
+<script src="app/js/formatDate.js?rev=@@hash"></script>
+<script src="app/js/LodopFuncs.js?rev=@@hash"></script>
+
+<script src="fc/js/echarts.js?rev=@@hash"></script>
+<script src="fc/js/echarts-all.js?rev=@@hash"></script>
+<script src="fc/js/angular.tree.js?rev=@@hash"></script>
+<script src="fc/js/echart-directive.js?rev=@@hash"></script>
+
+<!-- endinject -->
+<!-- endbuild -->
+
+<!-- build:js app/app.js?rev=@@hash  -->
+</body>
+</html>

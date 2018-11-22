@@ -1,0 +1,72 @@
+{
+    "devplatformApp": {
+        "user" : {
+            "home": {
+                "createLabel": "Create",
+                "createOrEditLabel": "Create or Edit",
+                "edit":"Edit",
+                "delete":"Delete",
+                "selectRoles":"Select Roles",
+                "resetPassword":"Reset Password",
+                "add":"Add",
+                "remove":"Remove",
+                "addAll":"Add All",
+                "removeAll":"Remove All"
+            },
+            "created": "Created Succeed!",
+            "updated": "Updated Succeed!",
+            "deleted": "Deleted Succeed!",
+            "delete": {
+                "question": "Are you sure you want to delete users?"
+            },
+            "detail": {
+                "title": "User Details"
+            },
+            "prompt": {
+            	"inDevelopment" : "This function is being developed!",
+            	"selectOne" : "Please select a data first!",
+            	"cannotBeDelete" : "The enabled user cannot be deleted!",
+            	"confirmReset" : "Are you sure you want to reset the password?",
+            	"confirmEnable" : "Confirm enabled?",
+            	"confirmDisable" : "Confirm disable?",
+            	"resetSuccess" : "Password reset succeeded!",
+            	"pleaseChoose" : "--Please choose--",
+            	"oldPasswordError" : "Original password error!",
+            	"samePassword" : "The new password cannot be the same as the original password!",
+            	"passwordLength" : "The minimum password length is 4 bits!",
+            	"passwordStrength" : "Must contain both numbers and letters!",
+            	"differentPasswords" : "The two password is not the same!",
+            	"enterLogin" : "Please enter account",
+            	"enterFirstName" : "Please enter user name",
+            	"failedData" : "Failed to obtain data!",
+            	"selectRoles" : "Please select roles first!",
+            	"saveSuccess" : "Save successfully!",
+            	"saveFailed" : "Save failed!"
+            },
+            "login": "Account",
+            "firstName": "User Name",
+            "password": "Password",
+            "deptId": "Department ID",
+            "charNo": "Job Number",
+            "email": "Email",
+            "mobile": "Mobile",
+            "expireDate": "Account Expiration Time",
+            "passwordExpireDate": "Password Expiration Time",
+            "activated": "Activated",
+            "oldPassword": "Original Password",
+            "newPassword1": "New Password",
+            "newPassword2": "Confirmation Password",
+            "department": "Department",
+            "error": {
+            	"duplicateLogin": "Duplicate account!",
+            	"invalidLogin": "Invalid Account!",
+            	"invalidFirstName": "Invalid User Name!",
+            	"invalidExpireDate": "Invalid Account Expiration Time!",
+            	"invalidPasswordExpire": "Invalid Password Expiration Time!",
+            	"errorOldPassword": "Original password error!",
+            	"errorAccount": "Account number can only contain letters, Numbers, underline and minus sign！",
+            	"duplicateEmail": "Email has been used!"
+            }
+        }
+    }
+}

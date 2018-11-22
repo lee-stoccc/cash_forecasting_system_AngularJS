@@ -1,0 +1,4 @@
+<div ng-if="app.key==='wuzhi'" data-ng-include="'wuzhi/app/shopHome/wuzhiHeader.html'" class="app-header navbar"></div>
+<div ng-if="app.key==='privilege'" data-ng-include="'privilege/app/base/layouts/navbar/privilegeHeader.html'" class="app-header navbar"></div>
+
+

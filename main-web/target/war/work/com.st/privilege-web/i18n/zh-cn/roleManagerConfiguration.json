@@ -1,0 +1,17 @@
+{
+    "devplatformApp":{
+        "roleManagerConfiguration":{
+            "home":"首页",
+            "parentTitle":"角色管理",
+            "configTitle":"角色配置",
+            "configForm":"授权表单",
+            "configBtn":"授权按钮",
+            "formName":"表单名",
+            "btnName":"按钮名",
+            "state":"状态",
+            "save":"保存",
+            "back":"返回",
+            "success":"保存成功"
+        }
+    }
+}

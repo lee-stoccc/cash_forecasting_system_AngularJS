@@ -1,0 +1,1 @@
+define(["ModernizrProto","injectElementWithStyles"],function(c,a){var b=c.testStyles=a;return b});

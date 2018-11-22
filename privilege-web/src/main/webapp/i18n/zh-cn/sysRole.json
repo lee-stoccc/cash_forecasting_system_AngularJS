@@ -1,0 +1,60 @@
+{
+    "devplatformApp": {
+        "sysRole" : {
+	            "home": {
+	                "createLabel": "新增",
+	                "createOrEditLabel": "编辑角色",
+	                "roleConfiguration":"角色配置"
+	            },
+	            "created": "A new Sys Role is created with identifier {{ param }}",
+	            "updated": "A Sys Role is updated with identifier {{ param }}",
+	            "deleted": "A Sys Role is deleted with identifier {{ param }}",
+	            "delete": {
+	                "question": "Are you sure you want to delete Sys Role {{ id }}?"
+	            },
+	            "detail": {
+	                "title": "角色"
+	            },
+	            "roleNo": "角色编号",
+	            "roleName": "角色名称",
+	            "description": "描述",
+	            "delFlag": "状态",
+	            "createBy": "创建于",
+	            "createAt": "创建时间",
+	            "lastUpdateBy": "Last Update By",
+	            "lastUpdateAt": "最后更新时间",
+	            "sysAdmin": "Sys Admin",
+	            "operation":"操作",
+	            "configuration":"角色配置",
+	            "enterName":"请输入名称",
+	            "enterNo":"请输入编号",
+	            "enterDescription":"请输入描述",
+	            "inquire": "查询",
+	            "reset": "重置",
+	            "createRole": "新增角色",
+	            "deleteRole": "删除角色",
+	            "operation": "操作",
+	            "assignUser": "分配用户",
+	            "select": {
+	            	"noValue": "--请选择--",
+	            	"enabled": "启用",
+	            	"disabled": "禁用"
+	            },
+	            "selectOne": "请至少选中一条数据再操作！",
+	            "delDisabled": "只能删除禁用状态的数据。",
+	            "delConfirm": "您确定要删除所选角色吗？\n\n请确认！",
+	            "enableConfirm": "您确定要启用该角色吗？\n\n请确认！",
+	            "disableConfirm": "您确定要禁用该角色吗？\n\n请确认！",
+	            "selectUser": "请选择用户",
+	            "userName": "用户名",
+	            "department": "部门",
+	            "codeExists": "该编号已存在，请重新输入",
+	            "regular": "编号只能为字母和数字，且长度为3到10",
+	            "messages": {
+	            	"error": {
+	            		"repeatRoleNo": "角色编号重复"
+	            	}
+	            }
+        }
+    }
+}

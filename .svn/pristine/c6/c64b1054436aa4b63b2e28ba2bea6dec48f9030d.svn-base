@@ -1,0 +1,77 @@
+.marginL{
+	text-align: left !important;
+    width: 200px !important;
+    margin-left:5px;
+    margin-right:7px;
+}
+.marginR{
+	margin-right:15px;
+}
+.cursonLen{
+	width:70px !important;
+}
+.timeLen{
+	width:80px !important;
+}
+/*弹窗里面的table*/
+.table-bordered > tbody > tr > td,.table-bordered > tbody > tr > th{
+	border-color:#eee;
+}
+.table-bordered{
+	border:none;
+	margin-left:5px;
+}
+.table-bordered > tbody > tr > th{
+
+}
+.table-bordered > tbody > tr > th>label{
+	font-weight:bold;
+}
+.table-pop{
+	display: inline-block;
+}
+.pd-right{
+	padding:0 15px 0 0;
+}
+.input-pop>div>.verifyTips{
+	display:inline-block;
+}
+/* .form-group>input[type=checkbox], .form-group>input[type=radio],.form-group>span>input[type=checkbox]{
+	margin:0 5px 3px 10px
+} */
+.table-pop>tbody>tr>td>input[type="number"]{
+	width:160px;
+}
+.verifyTips-sp>div>.verifyTips{
+	display:block;
+}
+.per-span{
+	width: 15px;
+    display: inline-block;
+    margin-right:10px;
+}
+/* .configuration-nav-tree>ul>li>input[type=checkbox],.configuration-nav-tree>ul>li>div>ul>li>input[type=checkbox],.configuration-nav-tree>ul>li>div>ul>li>div>ul>li>input[type=checkbox]{
+	margin: 0 5px 4px 5px;
+} */
+div[data-tree-model] li .selected{
+	background-color:#328ee3;
+	color:#fff;
+	font-weight:100;
+}
+
+.modal-main{
+	max-height:600px;
+	height:auto;
+}
+.dateStyle{
+	border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px 6px;
+    cursor:pointer; 
+}
+
+.dateStyleSelect{
+	border: 1px solid #328EE3;
+	background:#328EE3;
+	color:#fff;
+}

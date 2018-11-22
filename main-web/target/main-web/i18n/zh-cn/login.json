@@ -1,0 +1,31 @@
+{
+    "login": {
+        "title": "用户登录",
+        "form": {
+            "password": "密码",
+            "password.placeholder": "您的密码",
+            "rememberme": "自动登录",
+            "button": "登录",
+            "verifyCode": "验证码"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>登录失败!</strong> 请检查您的登录信息, 并重试一次.",
+                "invalidLogin": "账号不存在！",
+                "loginDisable": "账号不可用！",
+                "expireLogin": "账号过期！",
+                "expirePassword": "密码过期！",
+                "errorPassword": "账号或密码错误达到",
+                "errorPasswordBack": "次，请注意！",
+                "errorPasswordFiveBack": "密码错误达到5次，您的账号被禁用！",
+                "AccountEmpty": "账号不能为空",
+                "PasswordEmpty": "密码不能为空",
+                "PasswordLengthWrong": "账号或者密码错误",
+                "errorVerifyCode": "验证码错误"
+            }
+        },
+        "password" : {
+            "forgot": "忘记密码?"
+        }
+    }
+}
